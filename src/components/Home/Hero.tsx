@@ -9,8 +9,8 @@ import MainButton from "../MainButton";
 
 function Hero() {
   return (
-    <section>
-      <div className="flex flex-col items-center pt-[8vh]">
+    <section className="py-[8vh]">
+      <div className="flex flex-col items-center">
         <Header1 text="Jasmine" />
         <Header1 text="Maduafokwa" />
       </div>

@@ -18,7 +18,7 @@ const config: Config = {
         darkText: "#F5E7D3",
         darkText60: "rgba(245, 231, 211, 0.6)",
         darkText20: "rgba(245, 231, 211, 0.2)",
-        accent: "#552908",
+        accent: "#323816",
       },
       screens: {
         xs: "480px",
