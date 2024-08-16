@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 
 function DarkLightSwitch() {
     const [mounted, setMounted] = useState(false)
@@ -16,12 +17,13 @@ function DarkLightSwitch() {
     }
 
   return (
-    <div className="py-[1px] px-2 border-[1px] border-lightText dark:border-darkText rounded-full">
-      <button
-        onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      >
-        {theme === "light" ? 'Light' : 'Dark'}
-      </button>
+    <div className="p-1 flex items-center gap-1 border-[1px] border-lightText dark:border-darkText rounded-full">
+      <div onClick={() => setTheme('light')} className="cursor-pointer rounded-full p-1 bg-lightText dark:bg-transparent">
+        <SunIcon className="text-lightBg dark:text-darkText w-5"/>
+      </div>
+      <div onClick={() => setTheme('dark')} className="cursor-pointer rounded-full p-1 bg-transparent dark:bg-darkText">
+        <MoonIcon className="text-lightText dark:text-darkBg w-5"/>
+      </div>
     </div>
   );
 }

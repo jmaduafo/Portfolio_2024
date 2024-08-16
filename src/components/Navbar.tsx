@@ -5,17 +5,19 @@ import { rigata } from "@/fonts/font";
 
 function Navbar() {
   return (
-    <header>
-      <div className="flex justify-between items-center">
-        <Link href={"/"}>
-          <p className={`${rigata.className} text-[3em] tracking-tighter`}>
-            JM
-          </p>
-        </Link>
-        <DarkLightSwitch />
-        <button>Menu</button>
-      </div>
-    </header>
+    <div className="relative">
+      <header className="sticky top-0 bg-lightBg dark:bg-darkBg">
+        <div className="flex justify-between items-center">
+          <Link href={"/"}>
+            <p className={`${rigata.className} text-[3em] tracking-tighter`}>
+              JM
+            </p>
+          </Link>
+          <DarkLightSwitch />
+          <button>Menu</button>
+        </div>
+      </header>
+    </div>
   );
 }
 
