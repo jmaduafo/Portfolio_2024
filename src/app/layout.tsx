@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${satoshiRegular.className} bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText px-8`}>
+      <body className={`${satoshiRegular.className} bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText px-[6vw]`}>
         <Provider>
           <Navbar />
           <main className="">

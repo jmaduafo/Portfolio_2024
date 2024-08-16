@@ -12,8 +12,12 @@ const config: Config = {
       colors: {
         lightBg: "#F5E7D3",
         lightText: "#AC4800",
+        lightText60: "rgba(172, 72, 0, 0.6)",
+        lightText20: "rgba(172, 72, 0, 0.2)",
         darkBg: "#1D1C1C",
         darkText: "#F5E7D3",
+        darkText60: "rgba(245, 231, 211, 0.6)",
+        darkText20: "rgba(245, 231, 211, 0.2)",
         accent: "#552908",
       },
       screens: {
