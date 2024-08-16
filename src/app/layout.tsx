@@ -4,6 +4,7 @@ import { Provider } from "@/components/Provider";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LenisScroll from "@/components/LenisScroll";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,14 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${satoshiRegular.className} bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText px-[6vw]`}>
-        <Provider>
-          <Navbar />
-          <main className="">
-            {children}
-          </main>
-          <Footer />
-        </Provider>
+      <body
+        className={`${satoshiRegular.className} duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText px-[6vw]`}
+      >
+        <LenisScroll>
+          <Provider>
+            <Navbar />
+            <main className="">{children}</main>
+            <Footer />
+          </Provider>
+        </LenisScroll>
       </body>
     </html>
   );

@@ -7,7 +7,7 @@ type Header = {
 
 function Header6({ text }: Header) {
   return (
-    <h1 className={`${spectralBridgeRegular.className} text-[2.5em] text-lightText60 dark:text-darkText60`}>{text}</h1>
+    <h1 className={`${spectralBridgeRegular.className} text-[4.5vw] lg:text-[2.7vw] text-lightText60 dark:text-darkText60`}>{text}</h1>
   )
 }
 
