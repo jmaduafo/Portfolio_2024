@@ -32,15 +32,15 @@ function About() {
           />
         </div>
       </div>
-      <div className="flex mt-8">
-        <div className="flex-[1.5]"></div>
-        <div className="flex-[1] flex gap-8">
+      <div className="sm:flex mt-8">
+        <div className="md:flex-[1] lg:flex-[1.5] hidden md:block"></div>
+        <div className="md:flex-[1.5] lg:flex-[1] flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
             <Paragraph text="Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. " />
           </div>
           <div className="flex-1">
             <Paragraph text="Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum." />
-            <div className="mt-2">
+            <div className="mt-3">
               <Paragraph text="Em quam semper libero, sit amet adipiscing sem neque sed ipsum. " />
             </div>
           </div>

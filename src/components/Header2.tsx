@@ -1,8 +1,12 @@
 import React from 'react'
 
-function Header2() {
+type Header = {
+  text: string;
+}
+
+function Header2({ text }: Header) {
   return (
-    <div>Header2</div>
+    <h2 className='text-[15vw] leading-[1] tracking-tighter mb-[-.2em] uppercase'>{text}</h2>
   )
 }
 
