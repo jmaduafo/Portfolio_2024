@@ -3,6 +3,7 @@ import { satoshiMediumItalic, spectralBridgeRegular } from "@/fonts/font";
 import Image1 from "../../../public/images/general/home/about_image.jpg";
 import Image2 from "../../../public/images/general/home/about-screenshot.png";
 import Image from "next/image";
+import Paragraph from "../Paragraph";
 
 function About() {
   return (
@@ -24,7 +25,25 @@ function About() {
           <Image src={Image1} alt="sjsh" className="w-full h-full" />
         </div>
         <div className="bg-accent object-cover object-left-top md:flex-1 flex justify-center items-center">
-          <Image src={Image2} alt="sjsh" className="w-full h-full md:w-[70%] md:h-[70%]" />
+          <Image
+            src={Image2}
+            alt="sjsh"
+            className="w-full h-full md:w-[70%] md:h-[70%]"
+          />
+        </div>
+      </div>
+      <div className="flex mt-8">
+        <div className="flex-[1.5]"></div>
+        <div className="flex-[1] flex gap-8">
+          <div className="flex-1">
+            <Paragraph text="Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. " />
+          </div>
+          <div className="flex-1">
+            <Paragraph text="Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum." />
+            <div className="mt-2">
+              <Paragraph text="Em quam semper libero, sit amet adipiscing sem neque sed ipsum. " />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -5,8 +5,8 @@ import { rigata } from "@/fonts/font";
 
 function Navbar() {
   return (
-    <div className="">
-      <header className="duration-300 sticky top-0 bg-lightBg dark:bg-darkBg">
+    // bg-lightBg dark:bg-darkBg
+      <header className="z-[99] duration-300 sticky top-0 bg-transparent mix-blend-multiply dark:mix-blend-difference">
         <div className="flex justify-between items-center">
           {/* JASMINE'S INITIAL LOGO */}
           <Link href={"/"}>
@@ -17,10 +17,9 @@ function Navbar() {
           {/* DARK MODE/LIGHT MODE TOGGLE */}
           <DarkLightSwitch />
           {/* MENU BUTTON */}
-          <button>Menu</button>
+          <button className="">Menu</button>
         </div>
       </header>
-    </div>
   );
 }
 
