@@ -11,8 +11,8 @@ type Work = {
 function IndividualWork({ work }: Work) {
   return (
     <div className={`flex ${work?.position} ${work?.marginBottom}`}>
-      <div className={`${work?.padding}`}>
-        <div className={`max-w-[30vw] object-cover`}>
+      <div className={`max-w-[30vw] ${work?.padding}`}>
+        <div className={`object-cover`}>
           {work?.mainImage && (
             <Image
               src={work?.mainImage}
@@ -27,7 +27,7 @@ function IndividualWork({ work }: Work) {
             {work?.title}
           </h5>
         </div>
-        <div className="flex gap-4 items-center mt-[-5px]">
+        <div className="flex gap-x-3 gap-y-2 items-center flex-wrap mt-[-5px]">
           {work?.roles?.map((role) => {
             return (
               <p
