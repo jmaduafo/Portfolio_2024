@@ -10,27 +10,35 @@ type Work = {
 
 function IndividualWork({ work }: Work) {
   return (
-    <div className="max-w-[8vw]">
-      <div>
-        {work?.mainImage && (
-          <Image src={work?.mainImage} alt={`${work?.title} project`} />
-        )}
-      </div>
-      <p className="mt-1">{work?.year}</p>
-      <h5 className={`${spectralBridgeRegular.className} text-[26px] mt-2`}>
-        {work?.title}
-      </h5>
-      <div className="mt-2 flex gap-4 items-center">
-        {work?.roles?.map((role) => {
-          return (
-            <p
-              className="py-[1px] px-2 border-[1px] border-lightText dark:border-darkText text-[14px] capitalize"
-              key={role}
-            >
-              {role}
-            </p>
-          );
-        })}
+    <div className={`flex ${work?.position} ${work?.marginBottom}`}>
+      <div className={`${work?.padding}`}>
+        <div className={`max-w-[30vw] object-cover`}>
+          {work?.mainImage && (
+            <Image
+              src={work?.mainImage}
+              alt={`${work?.title} project`}
+              className="w-full"
+            />
+          )}
+        </div>
+        <div className="flex flex-row-reverse justify-between items-start mt-1">
+          <p className="">{work?.year}</p>
+          <h5 className={`${spectralBridgeRegular.className} text-[36px]`}>
+            {work?.title}
+          </h5>
+        </div>
+        <div className="flex gap-4 items-center mt-[-5px]">
+          {work?.roles?.map((role) => {
+            return (
+              <p
+                className="py-[1px] whitespace-nowrap px-2 border-[1px] rounded-full border-lightText dark:border-darkText text-[13px] capitalize"
+                key={role}
+              >
+                {role}
+              </p>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from "react";
 import Header2 from "../Header2";
+import { allProjects } from "@/utils/works";
+import IndividualWork from "./IndividualWork";
 
 function Works() {
   return (
@@ -11,6 +13,15 @@ function Works() {
             <Header2 text="Projects" />
           </div>
         </div>
+        {
+          allProjects?.map(work => {
+            return (
+              <div>
+                <IndividualWork work={work}/>
+              </div>
+            )
+          })
+        }
       </div>
     </section>
   );

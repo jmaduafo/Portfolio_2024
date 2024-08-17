@@ -6,6 +6,10 @@ export type Projects = {
     roles: string[];
     technologies?: string[];
     year: string;
+    position?: string;
+    size?: string;
+    marginBottom?: string;
+    padding?: string;
     website?: string;
     github?: string;
     duration?: string;
