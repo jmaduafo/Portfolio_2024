@@ -82,7 +82,7 @@ const projects = [
     ],
   },
   {
-    title: "Oracle",
+    title: "Oracle Music",
     alt: "a couple laughing and enjoying each other's company",
     year: "2024",
     roles: ["frontend", "creative direction", "web design"],

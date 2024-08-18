@@ -7,28 +7,28 @@ import Paragraph from "../Paragraph";
 
 function About() {
   return (
-    <section className="py-[10vh]">
+    <section className="py-[15vh]">
       <div>
         <h3
           className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1]`}
         >
-          Lorem ipsum dolor sit amet, consecte adipiscing elit.
+          Lorem ipsum dolor sit <span className="italic font-semibold">amet</span>, consecte adipiscing elit.
         </h3>
         <h3
           className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1]`}
         >
-          Aenean commodo ligula eget dolor. Aenean massa.
+          Aenean <span className="italic font-semibold">commodo</span> ligula eget dolor. Aenean <span className="italic font-semibold">massa</span>.
         </h3>
       </div>
       <div className="mt-10 flex md:flex-row gap-y-4 md:gap-y-0 flex-col-reverse md:max-h-screen">
         <div className="md:flex-1 object-cover object-center">
           <Image src={Image1} alt="sjsh" className="w-full h-full" />
         </div>
-        <div className="bg-accent object-cover object-left-top md:flex-1 flex justify-center items-center">
+        <div className="object-cover object-left-top md:flex-1 flex justify-center items-center">
           <Image
             src={Image2}
             alt="sjsh"
-            className="w-full h-full md:w-[70%] md:h-[70%]"
+            className="w-full h-full md:w-[80%] md:h-[80%]"
           />
         </div>
       </div>
