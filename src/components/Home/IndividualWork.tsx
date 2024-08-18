@@ -1,17 +1,16 @@
 import React from "react";
 import { Projects } from "@/types/type";
 import Image from "next/image";
-import Paragraph from "../Paragraph";
 import { spectralBridgeRegular } from "@/fonts/font";
 
 type Work = {
-  work: Projects;
+  readonly work: Projects;
 };
 
 function IndividualWork({ work }: Work) {
   return (
-    <div className={`flex ${work?.position} ${work?.marginBottom}`}>
-      <div className={`max-w-[30vw] ${work?.padding}`}>
+    <div className={`flex ${work?.position} mb-[10vh]`}>
+      <div className={`max-w-[30vw]`}>
         <div className={`object-cover`}>
           {work?.mainImage && (
             <Image

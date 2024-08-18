@@ -16,7 +16,7 @@ function Works() {
         {
           allProjects?.map(work => {
             return (
-              <div>
+              <div key={work.title}>
                 <IndividualWork work={work}/>
               </div>
             )

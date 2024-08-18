@@ -4,8 +4,8 @@ import Link from "next/link";
 import { spectralBridgeRegular } from "@/fonts/font";
 
 type Open = {
-  menuOpen: boolean;
-  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  readonly menuOpen: boolean;
+  readonly setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 function Menu({ menuOpen, setMenuOpen }: Open) {
