@@ -9,8 +9,8 @@ type Work = {
 
 function IndividualWork({ work }: Work) {
   return (
-    <div className={`flex ${work?.position} mb-[10vh]`}>
-      <div className={`max-w-[30vw]`}>
+    <div className={`flex justify-center ${work?.id === 1 ? 'md:justify-start' : work?.position} ${work.id === 0 || work.id === 3 ? 'mb-[15vw]' : 'mb-[20vw]'}`}>
+      <div className={`w-full sm:max-w-[60vw] md:max-w-[30vw] ${work.id === 0 || work.id === 3 ? 'md:translate-x-[-2vw]' : 'md:translate-x-[4vw]'}`}>
         <div className={`object-cover`}>
           {work?.mainImage && (
             <Image
