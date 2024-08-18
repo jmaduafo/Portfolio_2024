@@ -18,6 +18,7 @@ function IndividualWork({ work }: Work) {
               src={work?.mainImage}
               alt={`${work?.title} project`}
               className="w-full"
+              placeholder="blur"
             />
           )}
         </div>
