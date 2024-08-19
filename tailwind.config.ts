@@ -42,11 +42,16 @@ const config: Config = {
         smooth: {
           '0%': { opacity:  '0' },
           '100%': { opacity: '1' },
-        }
+        },
+        carousel: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-110%)' },
+        },
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
         'appear': 'smooth 0.6s ease',
+        'carousel': 'carousel 7s linear infinite backwards',
       },
 
     },
