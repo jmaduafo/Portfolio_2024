@@ -34,7 +34,7 @@ function Hero() {
               <Paragraph text="My full stack development and design expertise allows me to build projects from the ground up, transforming ideas into powerful, user-centric solutions that elevate my clients' brands and drive their success." />
             </div>
             <div className="mt-3">
-              <MainButton text="Learn More" />
+              <MainButton text="Learn More" link="/about"/>
             </div>
           </div>
         </div>

@@ -37,14 +37,14 @@ function Footer() {
   ];
   return (
     <footer className="mb-[20px]">
-      <div className="flex justify-center mb-[5vh]">
-        <StarSpin classNameSize="w-[10vw]" />
+      <div className="flex justify-center mb-[8vh]">
+        <StarSpin classNameSize="w-[8vw]" />
       </div>
-      <div className="flex justify-between">
-        <div className="flex-1">
+      <div className="flex flex-col-reverse md:flex-row md:justify-between gap-y-6">
+        <div className="flex-1 flex flex-row justify-between md:justify-normal md:flex-col md:gap-y-1">
           {links.map((link) => {
             return (
-              <p key={link.title} className="text-[18px] mb-1 capitalize">
+              <p key={link.title} className="text-[14px] md:text-[18px] capitalize">
                 <a href={link.href} target="_blank">
                   {link.title}
                 </a>
@@ -54,17 +54,17 @@ function Footer() {
         </div>
         <div className="flex-1">
           <h5
-            className={`${spectralBridgeRegular.className} text-[4vw] leading-[1]`}
+            className={`${spectralBridgeRegular.className} text-[8vw] md:text-[4vw] leading-[1]`}
           >
             Any questions? Interested in utilizing my services? Don’t hesitate
             to hit me up!
           </h5>
           <div className="mt-2">
-            <MainButton text="Email Me" fontSize="text-[16px]" />
+            <MainButton text="Email Me" fontSize="text-[16px]" email="jmaduafokwa@hotmail.com"/>
           </div>
         </div>
       </div>
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between flex-wrap mt-8 gap-y-3 gap-x-6">
         <div className="flex items-center gap-10">
           <div>
             <p className="text-[14px] text-lightText60 dark:text-darkText60">Design & Development</p>
