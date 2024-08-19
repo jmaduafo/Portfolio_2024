@@ -42,7 +42,7 @@ function Services() {
   ];
 
   return (
-    <section>
+    <section className="mb-[15vh]">
       {/* HEADER WITH SURROUNDING IMAGES */}
       <div className="mb-[10vh]">
         <div className="flex justify-evenly items-end">

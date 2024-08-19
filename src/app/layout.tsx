@@ -24,7 +24,6 @@ export default function RootLayout({
       >
         <LenisScroll>
           <Provider>
-          {/* <PreLoading/> */}
             <Navbar />
             <main className="">{children}</main>
             <Footer />

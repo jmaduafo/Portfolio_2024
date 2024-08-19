@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { satoshiLight } from "@/fonts/font";
+import { satoshiLight, satoshiLightItalic } from "@/fonts/font";
 
 type Button = {
   text: string;

@@ -18,11 +18,11 @@ function StarSpin({ classNameSize }: { classNameSize: string }) {
   }
 
   return (
-    <div className="animate-spin-slow">
+    <div className={`${classNameSize} object-cover`}>
       <Image
         src={theme === "light" ? Light : Dark}
         alt={theme === "light" ? "light themed star" : "dark themed star"}
-        className={`${classNameSize}`}
+        className={`w-full h-full animate-spin-slow`}
       />
     </div>
   );
