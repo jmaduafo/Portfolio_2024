@@ -62,7 +62,7 @@ const projects = [
     size: "w-[10vw]",
     position: "md:justify-end",
     marginBottom: "mb-[20vh]",
-    padding: "pr-[8vw]",
+    // padding: "translateX-[8vw]",
     mainImage: ElysianMiddle3,
     introImage: ElysianIntro,
     imagesMiddle: [
@@ -111,7 +111,7 @@ const projects = [
     size: "w-[10vw]",
     position: "md:justify-start",
     marginBottom: "mb-[10vh]",
-    padding: "pl-[8vw]",
+    // padding: "translateX-[-8vw]",
     mainImage: SylvanOutro1,
     introImage: SylvanIntro,
     imagesMiddle: [
@@ -152,7 +152,7 @@ const projects = [
     size: "w-[20vw]",
     marginBottom: "mb-[20vh]",
     position: "md:justify-center",
-    padding: "pl-[8vw]",
+    // padding: "translateX-[-8vw]",
     mainImage: OracleMiddle3,
     introImage: OracleIntro,
     imagesMiddle: [
@@ -178,7 +178,7 @@ const projects = [
     size: "w-[20vw]",
     marginBottom: "mb-[20vh]",
     position: "md:justify-end",
-    padding: 'pr-[10vw]',
+    // padding: 'translateX-[10vw]',
     description1: [
       "Whether it's a romantic evening or a casual meetup, keep track of your experiences and make every date count! Elysian is a comprehensive web application designed for users to record their romantic and non-romantic dates, schedule future meetups, and plan dates effortlessly. Featuring interactive visual charts to showcase dating activity, Elysians helps users track their social life and stay organized. Additionally, users can share date ideas and post their success or horror dating stories, fostering a community of shared experiences and creativity.",
       "",
