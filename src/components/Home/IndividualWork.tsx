@@ -9,7 +9,7 @@ type Work = {
 
 function IndividualWork({ work }: Work) {
   return (
-    <div className={`flex justify-center ${work?.id === 1 ? 'md:justify-start' : work?.position} ${work.id === 0 || work.id === 3 ? 'mb-[15vw]' : 'mb-[20vw]'}`}>
+    <div className={`flex justify-center ${work?.id === 1 ? 'md:justify-start' : work?.position} ${work.id === 0 || work.id === 3 ? 'mb-[10vw]' : 'mb-[15vw]'}`}>
       <div className={`w-full sm:max-w-[60vw] md:max-w-[30vw] ${work.id === 0 || work.id === 3 ? 'md:translate-x-[-2vw]' : 'md:translate-x-[4vw]'}`}>
         <div className={`object-cover`}>
           {work?.mainImage && (
@@ -31,7 +31,7 @@ function IndividualWork({ work }: Work) {
           {work?.roles?.map((role) => {
             return (
               <p
-                className="py-[1px] whitespace-nowrap px-2 border-[1px] rounded-full border-lightText dark:border-darkText text-[13px] capitalize"
+                className="py-[1px] whitespace-nowrap px-2 border-[1px] rounded-full border-lightText60 dark:border-darkText60 text-[13px] capitalize"
                 key={role}
               >
                 {role}

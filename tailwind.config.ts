@@ -38,9 +38,17 @@ const config: Config = {
 
         "2xl": "1920px",
       },
+      keyframes: {
+        smooth: {
+          '0%': { opacity:  '0' },
+          '100%': { opacity: '1' },
+        }
+      },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
+        'appear': 'smooth 0.6s ease',
       },
+
     },
   },
   plugins: [],

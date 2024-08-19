@@ -1,7 +1,7 @@
 import React from 'react'
 
 type Header = {
-  text: string;
+  readonly text: string;
 }
 
 function Header2({ text }: Header) {
