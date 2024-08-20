@@ -48,6 +48,7 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
                 <li
                   className={`${spectralBridgeRegular.className} text-[16vw] sm:text-[13vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] leading-[1] uppercase text-lightText dark:text-darkText text-center`}
                   key={link.title}
+                  onClick={() => setMenuOpen(false)}
                 >
                   <Link href={link.route}>{link.title}</Link>
                 </li>
@@ -55,6 +56,7 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
                 <li
                   className={`${spectralBridgeRegular.className} text-[16vw] sm:text-[13vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] leading-[1] uppercase text-lightText  dark:text-darkText text-center`}
                   key={link.title}
+                  onClick={() => setMenuOpen(false)}
                 >
                   {link.title}
                 </li>

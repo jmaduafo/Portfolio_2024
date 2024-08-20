@@ -5,6 +5,7 @@ import { Projects } from "@/types/type";
 import Image from "next/image";
 import { satoshiLight, spectralBridgeRegular } from "@/fonts/font";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Work = {
   readonly work: Projects;
@@ -36,24 +37,26 @@ function IndividualWork({ work }: Work) {
         
         `}
       >
-        <div
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onMouseMove={windowMouse}
-          className={`${
-            isHovered ? "cursor-none" : "cursor-default"
-          } relative w-full object-cover`}
-        >
-          <WorkHover x={x} y={y} isHovered={isHovered} />
-          {work?.mainImage && (
-            <Image
-              src={work?.mainImage}
-              alt={`${work?.title} project`}
-              className="w-full"
-              placeholder="blur"
-            />
-          )}
-        </div>
+        <Link href={`/work/${work?.title?.toLowerCase()}`}>
+          <div
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onMouseMove={windowMouse}
+            className={`${
+              isHovered ? "cursor-none" : "cursor-default"
+            } relative w-full object-cover`}
+          >
+            <WorkHover x={x} y={y} isHovered={isHovered} />
+            {work?.mainImage && (
+              <Image
+                src={work?.mainImage}
+                alt={`${work?.title} project`}
+                className="w-full"
+                placeholder="blur"
+              />
+            )}
+          </div>
+        </Link>
         <div className="flex flex-row-reverse justify-between items-start mt-1">
           <p className="">{work?.year}</p>
           <h5 className={`${spectralBridgeRegular.className} text-[36px]`}>
