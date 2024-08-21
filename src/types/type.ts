@@ -1,3 +1,4 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { StaticImageData } from "next/image";
 
 export type Projects = {
@@ -16,7 +17,7 @@ export type Projects = {
     description1?: string[];
     description2?: string[];
     mainImage?: StaticImageData;
-    mainImageAlt?: string;
+    mainImageAlt?: string | undefined;
     introImage?: StaticImageData;
     imagesMiddle?: StaticImageData[];
     imagesOutro?: StaticImageData[];

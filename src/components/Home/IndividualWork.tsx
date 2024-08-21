@@ -37,7 +37,7 @@ function IndividualWork({ work }: Work) {
         
         `}
       >
-        <Link href={`/work/${work?.title?.toLowerCase()}`}>
+        <Link href={`/works/${work?.title?.toLowerCase()}`}>
           <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

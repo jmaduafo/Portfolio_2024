@@ -52,6 +52,7 @@ const config: Config = {
         'spin-slow': 'spin 8s linear infinite',
         'appear': 'smooth 0.6s ease',
         'carousel': 'carousel 7s linear infinite backwards',
+        'carousel-slow': 'carousel 20s linear infinite backwards',
       },
 
     },

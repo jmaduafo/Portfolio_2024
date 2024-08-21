@@ -35,8 +35,8 @@ function ServicesList({ services }: List) {
       </div>
       <div
         className={`${
-          isOpen ? "block animate-appear" : "hidden animate-appear"
-        } overflow-hidden duration-500 pt-4 pb-5 px-3`}
+          isOpen ? "scale-y-100" : "scale-y-0 hidden"
+        } animate-appear overflow-hidden duration-500 pt-4 pb-5 px-3`}
       >
         <div className="w-[95%] sm:w-[90%] md:w-[80%]">
           <div className="flex flex-wrap gap-y-2 gap-x-3">
