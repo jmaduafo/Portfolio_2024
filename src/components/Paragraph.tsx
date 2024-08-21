@@ -2,11 +2,12 @@ import React from 'react'
 
 type Text = {
     text: string;
+    className?: string;
 }
 
-function Paragraph({ text }: Text) {
+function Paragraph({ text, className }: Text) {
   return (
-    <p className='text-[15px]'>{text}</p>
+    <p className={`${className} text-[15px]`}>{text}</p>
   )
 }
 
