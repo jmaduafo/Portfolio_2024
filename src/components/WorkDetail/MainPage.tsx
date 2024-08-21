@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
 import { Projects } from "@/types/type";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
-import { profileEnd } from "console";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Paragraph from "../Paragraph";
@@ -14,7 +13,7 @@ function MainPage({ project }: { project: Projects }) {
       {/* CAROUSEL WITH TOP IMAGE */}
       <section className="mt-[8vh]">
         <div className="overflow-hidden">
-          <div className="flex flex-nowrap gap-[6vw] animate-carousel-slow">
+          <div className="flex flex-nowrap gap-[15vw] animate-carousel-slow">
             {[
               project?.title,
               project?.title,
@@ -23,9 +22,10 @@ function MainPage({ project }: { project: Projects }) {
               project?.title,
               project?.title,
               project?.title,
-            ].map((proj) => {
+            ].map((proj, i) => {
               return (
                 <h1
+                  key={`${proj}_i`}
                   className={`${spectralBridgeRegular.className} leading-[1] mb-[-.15em] text-[23vw] uppercase whitespace-nowrap`}
                 >
                   {proj}
@@ -103,7 +103,11 @@ function MainPage({ project }: { project: Projects }) {
               <Heading text="Roles" />
               <div className="">
                 {project?.roles?.map((role) => {
-                  return <Paragraph text={role} className="capitalize" />;
+                  return (
+                    <Fragment key={role}>
+                      <Paragraph text={role} className="capitalize" />
+                    </Fragment>
+                  );
                 })}
               </div>
             </div>
@@ -112,7 +116,11 @@ function MainPage({ project }: { project: Projects }) {
         {/* PARAGRAPH SECTION */}
         <div className="flex-1 lg:flex-[1.5] flex flex-col gap-y-6">
           {project?.description1?.map((desc) => {
-            return <Paragraph text={desc} />;
+            return (
+              <Fragment key={desc}>
+                <Paragraph text={desc} />
+              </Fragment>
+            );
           })}
         </div>
       </section>
@@ -121,22 +129,14 @@ function MainPage({ project }: { project: Projects }) {
           <div className="flex flex-col md:flex-row items-center gap-3">
             <div className="flex-1">
               <div className="mb-3">
-                <Image
-                  src={project?.imagesMiddle[0]}
-                  alt=""
-                  placeholder="blur"
-                />
+                <Image src={project?.imagesMiddle[0]} alt="" unoptimized />
               </div>
               <div>
-                <Image
-                  src={project?.imagesMiddle[1]}
-                  alt=""
-                  placeholder="blur"
-                />
+                <Image src={project?.imagesMiddle[1]} alt="" unoptimized />
               </div>
             </div>
             <div className="flex-1">
-              <Image src={project?.imagesMiddle[2]} alt="" placeholder="blur" />
+              <Image src={project?.imagesMiddle[2]} alt="" unoptimized />
             </div>
           </div>
         )}
@@ -145,29 +145,43 @@ function MainPage({ project }: { project: Projects }) {
         {/* PARAGRAPH SECTION */}
         <div className="flex flex-col gap-y-6 w-full sm:w-[80%] lg:w-[60%] mx-auto">
           {project?.description2?.map((desc) => {
-            return <Paragraph text={desc} className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%]" />;
+            return (
+              <Fragment key={desc}>
+                <Paragraph
+                  text={desc}
+                  className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%]"
+                />
+              </Fragment>
+            );
           })}
         </div>
       </section>
       <section>
         {project?.imagesOutro && (
           <div className="">
-            <div className="mb-3">
-              <Image src={project?.imagesOutro[0]} alt="" placeholder="blur" />
+            <div className="mb-3 w-full object-cover">
+              <Image
+                src={project?.imagesOutro[0]}
+                alt=""
+                unoptimized
+                className="w-full h-full"
+              />
             </div>
             <div className="flex flex-col md:flex-row gap-3">
               <div className="flex-1 object-cover">
                 <Image
                   src={project?.imagesOutro[1]}
                   alt=""
-                  placeholder="blur"
+                  unoptimized
+                  className="w-full h-full"
                 />
               </div>
               <div className="flex-1 object-cover">
                 <Image
                   src={project?.imagesOutro[2]}
                   alt=""
-                  placeholder="blur"
+                  unoptimized
+                  className="w-full h-full"
                 />
               </div>
             </div>

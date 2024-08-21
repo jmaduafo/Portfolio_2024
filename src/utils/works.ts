@@ -25,12 +25,12 @@ import OracleOutro3 from '../../public/images/oracle/imagesOutro3.jpg'
 import OracleIntro from '../../public/images/oracle/introImage.png'
 
 import LofiMiddle1 from '../../public/images/lofi_train/imagesMiddle1.gif'
-import LofiMiddle2 from '../../public/images/lofi_train/imagesMiddle2.png'
+import LofiMiddle2 from '../../public/images/lofi_train/imagesMiddle2.jpg'
 import LofiMiddle3 from '../../public/images/lofi_train/imagesMiddle3.jpg'
 import LofiOutro1 from '../../public/images/lofi_train/imagesOutro1.gif'
 import LofiOutro2 from '../../public/images/lofi_train/imagesOutro2.png'
 import LofiOutro3 from '../../public/images/lofi_train/imagesOutro3.png'
-import LofiIntro from '../../public/images/lofi_train/introImage.png'
+import LofiIntro from '../../public/images/lofi_train/introImage.jpg'
 
 const projects = [
   {

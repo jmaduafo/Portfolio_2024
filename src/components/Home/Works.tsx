@@ -5,7 +5,7 @@ import IndividualWork from "./IndividualWork";
 
 function Works() {
   return (
-    <section className="py-[10vh]">
+    <section className="py-[10vh]" id='works'>
       <div>
         <div>
           <Header2 text="Selected" />
