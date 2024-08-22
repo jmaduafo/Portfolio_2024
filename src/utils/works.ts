@@ -44,6 +44,7 @@ const projects = [
       "Supabase",
       "Tailwind",
       "Shadcn UI",
+      "Chart.js",
       "Framer Motion",
       "GSAP",
       "Figma",
@@ -101,8 +102,8 @@ const projects = [
     website: "https://sylvan-127ad.web.app/",
     duration: "2.5 weeks",
     description1: [
-      "Whether it's a romantic evening or a casual meetup, keep track of your experiences and make every date count! Elysian is a comprehensive web application designed for users to record their romantic and non-romantic dates, schedule future meetups, and plan dates effortlessly. Featuring interactive visual charts to showcase dating activity, Elysians helps users track their social life and stay organized. Additionally, users can share date ideas and post their success or horror dating stories, fostering a community of shared experiences and creativity.",
-      "",
+      "Introducing Sylvan Furniture, the ultimate destination for exquisite luxury furniture to make your home shine! Our curated collections are meticulously designed to transform living spaces into havens of sophistication. At Sylvan, we hold a steadfast commitment to customer satisfaction, understanding that every home is unique.",
+      "Taking on the challenge of crafting Sylvan Home Furniture, I assumed both the design and development roles for this full-stack ecommerce site that centered around luxury furniture. Utilizing an array of coding languages, I ensured a robust technical foundation. Opting for a subtle 2D animation approach, the user experience was dynamically enriched without overwhelming simplicity. Prior to the development phase, Figma served as my design blueprint, ensuring that aesthetics seamlessly merged with functionality. The project, from conceptualization to execution, wrapped up within 2.5 weeks. Collaborating closely with Firebase, data integrity and user authentication were meticulously handled, contributing to the seamless functioning of Sylvan Home Furniture.",
     ],
     description2: [
       "I spearheaded the design, front-end, and back-end development of Elysian, tackling each problem systematically and breaking tasks into manageable pieces. This methodical approach ensured that each feature was developed efficiently and effectively, from creating a seamless user interface with engaging design elements to implementing robust backend functionalities for data management. Throughout the project, I relished the challenges and enjoyed the creative process, ultimately delivering a dynamic and user-friendly web application.",

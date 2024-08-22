@@ -8,8 +8,10 @@ import Link from "next/link";
 import Paragraph from "../Paragraph";
 
 function MainPage({ project }: { project: Projects }) {
-
-    console.log(project.imagesMiddle && project.imagesMiddle[0].src.split('/').pop()?.split('.').pop())
+  console.log(
+    project.imagesMiddle &&
+      project.imagesMiddle[0].src.split("/").pop()?.split(".").pop()
+  );
 
   return (
     <main>
@@ -48,7 +50,7 @@ function MainPage({ project }: { project: Projects }) {
           )}
         </div>
       </section>
-        {/* INFO ABOUT WEBSITE, GITHUB, TOOLS, YEAR, DURATION, ROLES, AND DESC */}
+      {/* INFO ABOUT WEBSITE, GITHUB, TOOLS, YEAR, DURATION, ROLES, AND DESC */}
       <section className="my-[9vh] flex flex-col md:flex-row gap-8">
         <div className="flex-1">
           {/* VISIT WEBSITE AND GITHUB */}
@@ -65,7 +67,7 @@ function MainPage({ project }: { project: Projects }) {
             </div>
             <div className="group flex items-center gap-2">
               <p className="">
-                <a href={project?.github} target="_blank">
+                <a href={`https://github.com/${project.github}`} target="_blank">
                   Visit Github
                 </a>
               </p>
@@ -91,7 +93,7 @@ function MainPage({ project }: { project: Projects }) {
             </div>
           </div>
           <div className="flex gap-20 mt-6">
-          {/* YEAR & DURATION */}
+            {/* YEAR & DURATION */}
             <div>
               <div>
                 <Heading text="Year" />
@@ -102,7 +104,7 @@ function MainPage({ project }: { project: Projects }) {
                 {project.duration && <Paragraph text={project?.duration} />}
               </div>
             </div>
-          {/* ROLES */}
+            {/* ROLES */}
             <div>
               <Heading text="Roles" />
               <div className="">
@@ -133,14 +135,47 @@ function MainPage({ project }: { project: Projects }) {
           <div className="flex flex-col md:flex-row items-center gap-3">
             <div className="flex-1">
               <div className="mb-3">
-                <Image src={project?.imagesMiddle[0]} alt="" unoptimized={project.imagesMiddle[0].src.split('/').pop()?.split('.').pop() === 'gif' ?? false} />
+                <Image
+                  src={project?.imagesMiddle[0]}
+                  alt=""
+                  unoptimized={
+                    project.imagesMiddle[0].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif" ?? false
+                  }
+                  placeholder={project.imagesMiddle[0].src.split('/').pop()?.split('.').pop() === 'gif' ? 'empty' : 'blur'}
+                />
               </div>
               <div>
-                <Image src={project?.imagesMiddle[1]} alt="" unoptimized={project.imagesMiddle[1].src.split('/').pop()?.split('.').pop() === 'gif' ?? false} />
+                <Image
+                  src={project?.imagesMiddle[1]}
+                  alt=""
+                  unoptimized={
+                    project.imagesMiddle[1].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif" ?? false
+                  }
+                  placeholder={project.imagesMiddle[1].src.split('/').pop()?.split('.').pop() === 'gif' ? 'empty' : 'blur'}
+                />
               </div>
             </div>
             <div className="flex-1">
-              <Image src={project?.imagesMiddle[2]} alt="" unoptimized={project.imagesMiddle[2].src.split('/').pop()?.split('.').pop() === 'gif' ?? false} />
+              <Image
+                src={project?.imagesMiddle[2]}
+                alt=""
+                unoptimized={
+                  project.imagesMiddle[2].src
+                    .split("/")
+                    .pop()
+                    ?.split(".")
+                    .pop() === "gif" ?? false
+                }
+                placeholder={project.imagesMiddle[2].src.split('/').pop()?.split('.').pop() === 'gif' ? 'empty' : 'blur'}
+              />
             </div>
           </div>
         )}
@@ -168,7 +203,22 @@ function MainPage({ project }: { project: Projects }) {
                 src={project?.imagesOutro[0]}
                 alt=""
                 className="w-full h-full"
-                unoptimized={project.imagesOutro[0].src.split('/').pop()?.split('.').pop() === 'gif' ?? false}
+                unoptimized={
+                  project.imagesOutro[0].src
+                    .split("/")
+                    .pop()
+                    ?.split(".")
+                    .pop() === "gif" ?? false
+                }
+                placeholder={
+                  project.imagesOutro[0].src
+                    .split("/")
+                    .pop()
+                    ?.split(".")
+                    .pop() === "gif"
+                    ? "empty"
+                    : "blur"
+                }
               />
             </div>
             <div className="flex flex-col md:flex-row gap-3">
@@ -177,7 +227,22 @@ function MainPage({ project }: { project: Projects }) {
                   src={project?.imagesOutro[1]}
                   alt=""
                   className="w-full h-full"
-                  unoptimized={project.imagesOutro[1].src.split('/').pop()?.split('.').pop() === 'gif' ?? false}
+                  unoptimized={
+                    project.imagesOutro[1].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif" ?? false
+                  }
+                  placeholder={
+                    project.imagesOutro[1].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif"
+                      ? "empty"
+                      : "blur"
+                  }
                 />
               </div>
               <div className="flex-1 object-cover">
@@ -185,7 +250,22 @@ function MainPage({ project }: { project: Projects }) {
                   src={project?.imagesOutro[2]}
                   alt=""
                   className="w-full h-full"
-                  unoptimized={project.imagesOutro[2].src.split('/').pop()?.split('.').pop() === 'gif' ?? false}
+                  unoptimized={
+                    project.imagesOutro[2].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif" ?? false
+                  }
+                  placeholder={
+                    project.imagesOutro[2].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif"
+                      ? "empty"
+                      : "blur"
+                  }
                 />
               </div>
             </div>
