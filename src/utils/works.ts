@@ -15,6 +15,7 @@ import SylvanOutro1 from '../../public/images/sylvan/imagesOutro1.jpg'
 import SylvanOutro2 from '../../public/images/sylvan/imagesOutro2.png'
 import SylvanOutro3 from '../../public/images/sylvan/imagesOutro3.png'
 import SylvanIntro from '../../public/images/sylvan/introImage.png'
+import SylvanMain from '../../public/images/sylvan/mainImage.jpg'
 
 import OracleMiddle1 from '../../public/images/oracle/imagesMiddle1.png'
 import OracleMiddle2 from '../../public/images/oracle/imagesMiddle2.png'
@@ -113,7 +114,7 @@ const projects = [
     position: "md:justify-start",
     marginBottom: "mb-[10vh]",
     // padding: "translateX-[-8vw]",
-    mainImage: SylvanOutro1,
+    mainImage: SylvanMain,
     introImage: SylvanIntro,
     imagesMiddle: [
       SylvanMiddle1,
@@ -172,7 +173,7 @@ const projects = [
     alt: "a couple laughing and enjoying each other's company",
     year: "2023",
     roles: ["frontend", "web design"],
-    technologies: ["React", "SASS", "Javascript", "Figma"],
+    technologies: ["React.js", "SCSS", "Javascript", "Figma"],
     github: "jmaduafo/Lofi-Train",
     website: "https://jmaduafo.github.io/Lofi-Train/",
     duration: "2 weeks",
@@ -181,8 +182,8 @@ const projects = [
     position: "md:justify-end",
     // padding: 'translateX-[10vw]',
     description1: [
-      "Whether it's a romantic evening or a casual meetup, keep track of your experiences and make every date count! Elysian is a comprehensive web application designed for users to record their romantic and non-romantic dates, schedule future meetups, and plan dates effortlessly. Featuring interactive visual charts to showcase dating activity, Elysians helps users track their social life and stay organized. Additionally, users can share date ideas and post their success or horror dating stories, fostering a community of shared experiences and creativity.",
-      "",
+      "Ever wish that you could go to a place to destress from a long day of work, school, or life? This application is a great place to not only listen to cozy, lofi music but also gives you the opportunity to customize the site to fit your vibe, making it your own personal safe space.",
+      "Lofi Train is a personal side project that's surrounded by one of my favorite hobbies: music, specifically lofi music. Lofi brings a calm, serene energy that helps to balance out mental strain, especially when going through a stressful time or being absorbed in work. I wanted there to be a place for users to be absorbed in that feeling of inner peace that can mediate their feelings of stress. I was inspired by Rainmeter and wanted to create a similar aesthetic, thus Lofi Train was born.",
     ],
     description2: [
       "I spearheaded the design, front-end, and back-end development of Elysian, tackling each problem systematically and breaking tasks into manageable pieces. This methodical approach ensured that each feature was developed efficiently and effectively, from creating a seamless user interface with engaging design elements to implementing robust backend functionalities for data management. Throughout the project, I relished the challenges and enjoyed the creative process, ultimately delivering a dynamic and user-friendly web application.",

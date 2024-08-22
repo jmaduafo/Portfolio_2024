@@ -12,7 +12,7 @@ function Footer() {
       href: "mailto:jmaduafokwa@hotmail.com",
     },
     {
-      title: "linkedin",
+      title: "linkedIn",
       href: "https://www.linkedin.com/in/jasmine-maduafokwa-48070a180/",
     },
     {
@@ -44,7 +44,7 @@ function Footer() {
         <div className="flex-1 flex flex-row justify-between md:justify-normal md:flex-col md:gap-y-1">
           {links.map((link) => {
             return (
-              <p key={link.title} className="text-[14px] md:text-[18px] capitalize">
+              <p key={link.title} className="relative w-fit text-[14px] md:text-[18px] capitalize after:duration-300 after:ease hover:after:w-full after:absolute after:w-0 after:h-[2px] after:top-full after:left-0 after:bg-lightText after:dark:bg-darkText">
                 <a href={link.href} target="_blank">
                   {link.title}
                 </a>

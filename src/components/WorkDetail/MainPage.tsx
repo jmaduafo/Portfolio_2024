@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Projects } from "@/types/type";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
@@ -8,10 +8,6 @@ import Link from "next/link";
 import Paragraph from "../Paragraph";
 
 function MainPage({ project }: { project: Projects }) {
-  console.log(
-    project.imagesMiddle &&
-      project.imagesMiddle[0].src.split("/").pop()?.split(".").pop()
-  );
 
   return (
     <main>
@@ -67,7 +63,10 @@ function MainPage({ project }: { project: Projects }) {
             </div>
             <div className="group flex items-center gap-2">
               <p className="">
-                <a href={`https://github.com/${project.github}`} target="_blank">
+                <a
+                  href={`https://github.com/${project.github}`}
+                  target="_blank"
+                >
                   Visit Github
                 </a>
               </p>
@@ -145,7 +144,15 @@ function MainPage({ project }: { project: Projects }) {
                       ?.split(".")
                       .pop() === "gif" ?? false
                   }
-                  placeholder={project.imagesMiddle[0].src.split('/').pop()?.split('.').pop() === 'gif' ? 'empty' : 'blur'}
+                  placeholder={
+                    project.imagesMiddle[0].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif"
+                      ? "empty"
+                      : "blur"
+                  }
                 />
               </div>
               <div>
@@ -159,7 +166,15 @@ function MainPage({ project }: { project: Projects }) {
                       ?.split(".")
                       .pop() === "gif" ?? false
                   }
-                  placeholder={project.imagesMiddle[1].src.split('/').pop()?.split('.').pop() === 'gif' ? 'empty' : 'blur'}
+                  placeholder={
+                    project.imagesMiddle[1].src
+                      .split("/")
+                      .pop()
+                      ?.split(".")
+                      .pop() === "gif"
+                      ? "empty"
+                      : "blur"
+                  }
                 />
               </div>
             </div>
@@ -174,7 +189,15 @@ function MainPage({ project }: { project: Projects }) {
                     ?.split(".")
                     .pop() === "gif" ?? false
                 }
-                placeholder={project.imagesMiddle[2].src.split('/').pop()?.split('.').pop() === 'gif' ? 'empty' : 'blur'}
+                placeholder={
+                  project.imagesMiddle[2].src
+                    .split("/")
+                    .pop()
+                    ?.split(".")
+                    .pop() === "gif"
+                    ? "empty"
+                    : "blur"
+                }
               />
             </div>
           </div>
