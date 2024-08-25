@@ -12,14 +12,14 @@ function About() {
         <h3
           className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1]`}
         >
-          I promote <span className="italic font-semibold">fresh</span> and
-          creative <span className="italic font-semibold">ideas</span> and bring them to life.
+          I promote <span className="italic">fresh</span> and
+          creative <span className="italic">ideas</span> and bring them to life.
         </h3>
         <h3
           className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1]`}
         >
-          With my skills,{' '} I <span className="italic font-semibold">deliver </span>
-          quality products from start to <span className="italic font-semibold">finish</span> .
+          With my skills,{' '} I <span className="italic">deliver </span>
+          quality products from start to <span className="italic">finish</span> .
         </h3>
       </div>
       <div className="mt-10 flex md:flex-row gap-y-4 md:gap-y-0 flex-col-reverse md:max-h-screen">
