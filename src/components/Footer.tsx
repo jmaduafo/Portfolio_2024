@@ -1,9 +1,7 @@
 import React from "react";
 import StarSpin from "./StarSpin";
 import { spectralBridgeRegular } from "@/fonts/font";
-import Header5 from "./Header5";
 import MainButton from "./MainButton";
-import Header6 from "./Header6";
 
 function Footer() {
   const links = [
@@ -25,16 +23,7 @@ function Footer() {
     },
   ];
 
-  const leftSide = [
-    {
-      title: "design & development",
-      content: "Jasmine Maduafokwa",
-    },
-    {
-      title: "based in",
-      content: "united states & nigeria",
-    },
-  ];
+  
   return (
     <footer className="mb-[20px]">
       <div className="flex justify-center mb-[8vh]">

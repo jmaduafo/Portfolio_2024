@@ -44,19 +44,7 @@ function Services() {
 
   return (
     <section className="mb-[15vh]">
-      {/* TRANSITION TEXT */}
-      {/* <div className="mb-[15vh]">
-        <h3
-          className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[25vw] leading-[1]`}
-        >
-          I promote <span className="italic font-semibold">fresh</span> and
-          creative ideas and bring them to life with my combined skills in
-          design and development, all from scratch.{" "}
-          <span className="italic font-semibold">Quality</span> over quantity is
-          my motto.
-        </h3>
-      </div> */}
-      {/* HEADER WITH SURROUNDING IMAGES */}
+      {/* SERVICE HEADER WITH SURROUNDING IMAGES */}
       <div className="mb-[10vh]">
         <div className="flex justify-evenly items-end">
           {topImages.map((img) => {

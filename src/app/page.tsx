@@ -7,11 +7,11 @@ import PreLoading from '@/components/Home/PreLoading';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero/>
       <About/>
       <Works/>
       <Services/>
-    </div>
+    </>
   );
 }

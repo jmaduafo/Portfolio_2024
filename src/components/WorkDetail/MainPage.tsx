@@ -10,7 +10,7 @@ import Paragraph from "../Paragraph";
 function MainPage({ project }: { project: Projects }) {
 
   return (
-    <main>
+    <>
       {/* CAROUSEL WITH TOP IMAGE */}
       <section className="mt-[8vh]">
         <div className="overflow-hidden">
@@ -118,7 +118,7 @@ function MainPage({ project }: { project: Projects }) {
             </div>
           </div>
         </div>
-        {/* FIRST PARAGRAPH SECTION */}
+        {/* INTRO PARAGRAPH SECTION */}
         <div className="flex-1 lg:flex-[1.5] flex flex-col gap-y-6">
           {project?.description1?.map((desc) => {
             return (
@@ -129,6 +129,7 @@ function MainPage({ project }: { project: Projects }) {
           })}
         </div>
       </section>
+      {/* SET OF IMAGES AFTER THE INTRO IMAGE */}
       <section>
         {project?.imagesMiddle && (
           <div className="flex flex-col md:flex-row items-center gap-3">
@@ -203,6 +204,7 @@ function MainPage({ project }: { project: Projects }) {
           </div>
         )}
       </section>
+      {/* SECOND PARAGRAPH */}
       <section className="my-[8vh]">
         {/* PARAGRAPH SECTION */}
         <div className="flex flex-col gap-y-6 w-full sm:w-[80%] lg:w-[60%] mx-auto">
@@ -218,6 +220,7 @@ function MainPage({ project }: { project: Projects }) {
           })}
         </div>
       </section>
+      {/* LAST SET OF IMAGES */}
       <section>
         {project?.imagesOutro && (
           <div className="">
@@ -226,6 +229,7 @@ function MainPage({ project }: { project: Projects }) {
                 src={project?.imagesOutro[0]}
                 alt=""
                 className="w-full h-full"
+                // ONLY UNOPTIMIZE IF IMAGE IS A GIF
                 unoptimized={
                   project.imagesOutro[0].src
                     .split("/")
@@ -233,6 +237,7 @@ function MainPage({ project }: { project: Projects }) {
                     ?.split(".")
                     .pop() === "gif" ?? false
                 }
+                // ONLY ADD A BLUR PLACEHOLDER IF IMAGE IS NOT A GIF
                 placeholder={
                   project.imagesOutro[0].src
                     .split("/")
@@ -295,7 +300,7 @@ function MainPage({ project }: { project: Projects }) {
           </div>
         )}
       </section>
-    </main>
+    </>
   );
 }
 
