@@ -3,6 +3,8 @@ import { spectralBridgeRegular, satoshiLight } from "@/fonts/font";
 import Image from "next/image";
 import AboutIntro1 from "../../../public/images/general/about/aboutIntro1.jpg";
 import AboutIntro2 from "../../../public/images/general/about/aboutIntro2.jpg";
+import AboutOutro1 from "../../../public/images/general/about/aboutOutro1.jpg";
+import AboutOutro2 from "../../../public/images/general/about/aboutOutro2.jpg";
 import Paragraph from "../Paragraph";
 import { items } from "@/utils/resume";
 
@@ -17,7 +19,7 @@ function MainPage() {
           </p>
           <div className="flex-1">
             <h3
-              className={`${spectralBridgeRegular.className} text-[5.5vw] leading-[1]`}
+              className={`${spectralBridgeRegular.className} indent-[10%] text-[5.5vw] leading-[1]`}
             >
               Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
               Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
@@ -33,11 +35,21 @@ function MainPage() {
       <section className="mt-[5vh]">
         <div className="flex flex-col md:flex-row items-end gap-6 md:pl-[8vw]">
           <div className="flex-1 object-cover">
-            <Image src={AboutIntro1} alt="" className="w-full h-full" />
+            <Image
+              src={AboutIntro1}
+              alt=""
+              className="w-full h-full"
+              placeholder="blur"
+            />
           </div>
           <div className="flex-[1.5]">
             <div className="w-full object-cover">
-              <Image src={AboutIntro2} alt="" className="w-full h-full" />
+              <Image
+                src={AboutIntro2}
+                alt=""
+                className="w-full h-full"
+                placeholder="blur"
+              />
             </div>
             <div className="mt-[4vh]">
               <h2
@@ -77,14 +89,14 @@ function MainPage() {
       <section className="mt-[7vw]">
         {items.map((item, l) => {
           return (
-            <div className="flex" key={item.category}>
+            <div className="flex gap-5" key={item.category}>
               <div className="flex-1 py-5">
                 <Paragraph text={item.category} />
               </div>
               <div
-                className={`flex-[3] border-y-[1px] border-t-lightText20 dark:border-t-darkText20 ${
+                className={`flex-[3] border-t-[1px] border-t-lightText20 dark:border-t-darkText20 ${
                   l === items.length - 1 &&
-                  "border-b-lightText20 dark:border-b-darkText20"
+                  "border-b-[1px] border-b-lightText20 dark:border-b-darkText20"
                 } px-3 py-5`}
               >
                 {item.list.map((list, i) => {
@@ -104,7 +116,7 @@ function MainPage() {
                           <p className="text-[13.5px]">
                             {list.role
                               ? list.role
-                              : `${list.primary_concentration}, ${list.primary_qualification}`}
+                              : `${list.primary_qualification}, ${list.primary_concentration}`}
                           </p>
                           {list.secondary_concentration ? (
                             <p className="text-[13.5px]">{`${list.secondary_qualification}, ${list.secondary_concentration}`}</p>
@@ -121,9 +133,50 @@ function MainPage() {
         })}
       </section>
       {/* SAMPLE MOCKUP IMAGES OF MY PAST WORKS */}
-      <section></section>
+      <section className="mt-[8vh]">
+        <div className="flex items-start gap-3 pl-[20vw]">
+          <div className="flex-1 object-cover mt-16">
+            <Image
+              src={AboutOutro1}
+              alt=""
+              className="w-full h-full"
+              placeholder="blur"
+            />
+          </div>
+          <div className="flex-1 object-cover">
+            <Image
+              src={AboutOutro2}
+              alt=""
+              className="w-full h-full"
+              placeholder="blur"
+            />
+          </div>
+        </div>
+      </section>
       {/* CLOSING PARAGRAPH WITH SPOTIFY PLAYLIST */}
-      <section></section>
+      <section className="my-[4vh] md:my-[8vh]">
+        <h3
+          className={`${spectralBridgeRegular.className} indent-[10%] text-[5.5vw] leading-[1]`}
+        >
+          Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+          Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+          fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+        </h3>
+        <div className="flex mt-10">
+          <div className="flex-1 hidden md:block"></div>
+          <div className="flex-[2]">
+            <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/34nezoDEAzvnCSREPqaurN?utm_source=generator"
+              width="100%"
+              height="152"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

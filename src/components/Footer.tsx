@@ -26,8 +26,8 @@ function Footer() {
   
   return (
     <footer className="mb-[20px]">
-      <div className="flex justify-center mb-[8vh]">
-        <StarSpin classNameSize="w-[8vw]" />
+      <div className="flex justify-center mb-[4vh] md:mb-[8vh]">
+        <StarSpin classNameSize="w-[16vw] sm:w-[12vw] lg:w-[8vw]" />
       </div>
       <div className="flex flex-col-reverse md:flex-row md:justify-between gap-y-6">
         <div className="flex-1 flex flex-row justify-between md:justify-normal md:flex-col md:gap-y-1">
