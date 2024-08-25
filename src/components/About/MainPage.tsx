@@ -4,6 +4,7 @@ import Image from "next/image";
 import AboutIntro1 from "../../../public/images/general/about/aboutIntro1.jpg";
 import AboutIntro2 from "../../../public/images/general/about/aboutIntro2.jpg";
 import Paragraph from "../Paragraph";
+import { items } from "@/utils/resume";
 
 function MainPage() {
   return (
@@ -69,12 +70,56 @@ function MainPage() {
             <div className="mt-6">
               <Paragraph text="Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum." />
             </div>
-
           </div>
         </div>
       </section>
       {/* RESUME SUMMARY */}
-      <section></section>
+      <section className="mt-[7vw]">
+        {items.map((item, l) => {
+          return (
+            <div className="flex" key={item.category}>
+              <div className="flex-1 py-5">
+                <Paragraph text={item.category} />
+              </div>
+              <div
+                className={`flex-[3] border-y-[1px] border-t-lightText20 dark:border-t-darkText20 ${
+                  l === items.length - 1 &&
+                  "border-b-lightText20 dark:border-b-darkText20"
+                } px-3 py-5`}
+              >
+                {item.list.map((list, i) => {
+                  return (
+                    <div
+                      key={list.institution}
+                      className={`${
+                        i !== item.list.length - 1 ? "mb-8" : "mb-0"
+                      } flex items-start justify-between gap-8`}
+                    >
+                      <div>
+                        <p className="text-[18px]">
+                          {list.institution},{" "}
+                          <span className="italic">{list.location}</span>
+                        </p>
+                        <div>
+                          <p className="text-[13.5px]">
+                            {list.role
+                              ? list.role
+                              : `${list.primary_concentration}, ${list.primary_qualification}`}
+                          </p>
+                          {list.secondary_concentration ? (
+                            <p className="text-[13.5px]">{`${list.secondary_qualification}, ${list.secondary_concentration}`}</p>
+                          ) : null}
+                        </div>
+                      </div>
+                      <p>{list.duration}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </section>
       {/* SAMPLE MOCKUP IMAGES OF MY PAST WORKS */}
       <section></section>
       {/* CLOSING PARAGRAPH WITH SPOTIFY PLAYLIST */}
