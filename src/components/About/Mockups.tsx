@@ -6,7 +6,7 @@ import AboutOutro2 from '../../../public/images/general/about/aboutOutro2.jpg'
 function Mockups() {
   return (
     <section className="mt-[8vh]">
-      <div className="flex items-start gap-3 pl-[20vw]">
+      <div className="flex items-start flex-col xs:flex-row gap-3 md:pl-[20vw]">
         <div className="flex-1 object-cover mt-16">
           <Image
             src={AboutOutro1}

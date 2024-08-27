@@ -43,7 +43,7 @@ function Services() {
   ];
 
   return (
-    <section className="mb-[15vh]">
+    <section className="mb-[15vh] pt-[6vh]" id='services'>
       {/* SERVICE HEADER WITH SURROUNDING IMAGES */}
       <div className="mb-[10vh]">
         <div className="flex justify-evenly items-end">

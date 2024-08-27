@@ -1,11 +1,12 @@
-import React from 'react'
-import { items } from '@/utils/resume';
-import Paragraph from '../Paragraph';
-import MainButton from '../MainButton';
+import React from "react";
+import { items } from "@/utils/resume";
+import Paragraph from "../Paragraph";
+import MainButton from "../MainButton";
 
 function Resume() {
   return (
-    <section className="mt-[6vh] border-b-[1px] border-b-lightText20 dark:border-b-darkText20 md:border-none">
+    <section className="mt-[6vh]">
+      <div className="border-b-[1px] border-b-lightText20 dark:border-b-darkText20 md:border-none">
         {items.map((item, l) => {
           return (
             <div
@@ -55,13 +56,14 @@ function Resume() {
             </div>
           );
         })}
-        <div className="flex justify-end mt-8">
-          <div>
-            <MainButton text="View Full Resume" />
-          </div>
+      </div>
+      <div className="flex justify-end mt-8">
+        <div>
+          <MainButton text="View Full Resume" />
         </div>
-      </section>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default Resume
+export default Resume;

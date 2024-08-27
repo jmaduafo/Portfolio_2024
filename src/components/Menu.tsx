@@ -23,13 +23,13 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
       title: "works",
     },
     {
-      route: "/contact",
-      title: "contact",
+      route: "/#services",
+      title: "services",
     },
     {
-      route: null,
-      title: "resume",
-    },
+      route: "/contact",
+      title: "contact",
+    }
   ];
   return (
     <section
@@ -39,7 +39,7 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
     >
       <div>
         <div className="flex justify-center">
-          <XMarkIcon onClick={() => setMenuOpen(false)} className="w-[6vw] text-lightText dark:text-darkText cursor-pointer" strokeWidth={.8} />
+          <XMarkIcon onClick={() => setMenuOpen(false)} className="w-[12vw] sm:w-[10vw] md:w-[8vw] lg:w-[6vw] text-lightText dark:text-darkText cursor-pointer" strokeWidth={.8} />
         </div>
         <nav className="mt-10">
           <ul>
