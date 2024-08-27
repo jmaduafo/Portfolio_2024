@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Paragraph from '../Paragraph'
 import AboutIntro1 from '../../../public/images/general/about/aboutIntro1.jpg'
 import AboutIntro2 from '../../../public/images/general/about/aboutIntro2.jpg'
+import AboutMain6 from '../../../public/images/general/about/aboutMain6.jpg'
 
 function MoreDetail() {
   return (
@@ -11,7 +12,7 @@ function MoreDetail() {
         <div className="flex flex-col md:flex-row items-end gap-6 md:pl-[8vw]">
           <div className="flex-1 object-cover">
             <Image
-              src={AboutIntro1}
+              src={AboutMain6}
               alt=""
               className="w-full h-full"
               placeholder="blur"
@@ -20,7 +21,7 @@ function MoreDetail() {
           <div className="flex-[1.5]">
             <div className="w-full object-cover">
               <Image
-                src={AboutIntro2}
+                src={AboutIntro1}
                 alt=""
                 className="w-full h-full"
                 placeholder="blur"

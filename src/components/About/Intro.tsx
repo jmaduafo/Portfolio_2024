@@ -3,6 +3,8 @@ import { spectralBridgeRegular } from '@/fonts/font'
 import Image from 'next/image'
 import Paragraph from '../Paragraph'
 import AboutMain from '../../../public/images/general/about/aboutMain.jpg'
+import AboutMain2 from '../../../public/images/general/about/aboutMain2.jpg'
+import AboutMain3 from '../../../public/images/general/about/aboutMain3.jpg'
 
 function Intro() {
   return (
@@ -16,7 +18,7 @@ function Intro() {
               <Image
                 src={AboutMain}
                 alt=""
-                className="w-full h-full"
+                className="w-full h-full contrast-125"
                 placeholder="blur"
               />
             </div>
