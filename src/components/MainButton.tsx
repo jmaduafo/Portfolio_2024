@@ -9,16 +9,17 @@ type Button = {
   fontSize?: string;
   email?: string;
   link?: string;
+  classNameWidth?: string;
 };
 
-function MainButton({ text, fontSize, link, email }: Button) {
+function MainButton({ text, fontSize, link, email, classNameWidth }: Button) {
   const [isHovered, setIsHovered] = useState(false);
   return (  
     link ? <Link href={link}>
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="cursor-pointer duration-500 flex justify-center items-center rounded-full border-[1px] text-[15px] border-lightText dark:border-darkText hover:text-lightBg hover:bg-lightText dark:hover:text-darkBg dark:hover:bg-darkText bg-transparent outline-none w-[12em] h-[2.5em]"
+        className={`cursor-pointer duration-500 flex justify-center items-center rounded-full border-[1px] text-[15px] border-lightText dark:border-darkText hover:text-lightBg hover:bg-lightText dark:hover:text-darkBg dark:hover:bg-darkText bg-transparent ${classNameWidth ? classNameWidth : 'w-[12em]'} h-[2.5em]`}
       >
         <div className="overflow-hidden">
           {isHovered ? (
@@ -47,7 +48,7 @@ function MainButton({ text, fontSize, link, email }: Button) {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="cursor-pointer duration-500 flex justify-center items-center rounded-full border-[1px] text-[15px] border-lightText dark:border-darkText hover:text-lightBg hover:bg-lightText dark:hover:text-darkBg dark:hover:bg-darkText bg-transparent outline-none w-[12em] h-[2.5em]"
+        className={`cursor-pointer duration-500 flex justify-center items-center rounded-full border-[1px] border-lightText dark:border-darkText hover:text-lightBg hover:bg-lightText dark:hover:text-darkBg dark:hover:bg-darkText bg-transparent outline-none ${classNameWidth ? classNameWidth : 'w-[12em]'} h-[2.5em]`}
       >
         <div className="overflow-hidden">
           {isHovered ? (

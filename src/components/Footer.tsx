@@ -49,7 +49,7 @@ function Footer() {
             to hit me up!
           </h5>
           <div className="mt-2">
-            <MainButton text="Email Me" fontSize="text-[16px]" email="jmaduafokwa@hotmail.com"/>
+            <MainButton text="Email Me" fontSize="text-[16px]" classNameWidth="w-full sm:w-[45%] lg:w-[12em]" email="jmaduafokwa@hotmail.com"/>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ function Footer() {
           <p className="text-[14px] text-lightText dark:text-darkText">Freelance, Full-time</p>
         </div>
       </div>
-      <div className="mt-3">
+      <div className="mt-3 flex justify-center md:justify-start">
         <p className="text-[12px]">All Rights Reserved &copy; 2024</p>
       </div>
     </footer>
