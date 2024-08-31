@@ -12,11 +12,11 @@ function AboutMe() {
           <h3
             className={`${spectralBridgeRegular.className} indent-[10%] text-[5.5vw] leading-[1]`}
           >
-            I'm <span className="italic">Jasmine Maduafokwa</span>, a full stack developer with an emphasis
+            I'm <span className="italic">Jasmine Maduafokwa</span>, a full stack developer with a focus
              on <span className="italic">frontend</span> technologies
-            combined with a robust knowledge of user{" "}
-            <span className="italic">interface</span> design and other design
-            means to create digital, <span className="italic">engaging</span> experiences.
+            combined with a passion for {" "}
+            <span className="italic">user interface</span> design and other design
+            mediums that allow me to create digital, <span className="italic">engaging experiences</span>.
           </h3>
         </div>
       </div>

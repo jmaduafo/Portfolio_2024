@@ -53,15 +53,15 @@ function MoreDetail() {
             />
           </div>
           <div className="mt-6">
-            <Paragraph text="For a bit more background, I was born in Houston, Texas yet grew up in Nigeria before moving to America for a better education. I spent most of my life trying to figure out what my path should be, and it wasn't until college that I discovered that coding was something that worked for me." />
+            <Paragraph text="For a bit more background, I was born in Houston, Texas and grew up in Nigeria before moving to America for a better education. I spent most of my life trying to figure out what my path should be, and it wasn't until college that I discovered that coding was something that worked for me." />
           </div>
         </div>
         <div className="flex-1 mt-6 md:mt-0">
           <div>
-            <Paragraph text="Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum." />
+            <Paragraph text="With my already-prevalent love for design and as a problem-solver, I knew that I had to combine the two, and I landed on web development as a possible career path." />
           </div>
           <div className="mt-6">
-            <Paragraph text="Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum." />
+            <Paragraph text="After a lot of self-study and discipline, I not only got pretty good at it but also enjoyed the entire process of it, especially as someone with a love for creation. That love of creation has opened my interests to brand design and even logo design, so I never stop learning new ways to create." />
           </div>
         </div>
       </div>
