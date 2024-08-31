@@ -1,14 +1,101 @@
 "use client";
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useRef, Fragment } from "react";
 import { Projects } from "@/types/type";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Paragraph from "../Paragraph";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function MainPage({ project }: { project: Projects }) {
+  const introImageDiv = useRef(null)
+  const introImage = useRef(null)
+  const middleImageDiv1 = useRef(null)
+  const middleImageDiv2 = useRef(null)
+  const middleImage1 = useRef(null)
+  const middleImage2 = useRef(null)
+  const middleImage3 = useRef(null)
+  const outroImageDiv1 = useRef(null)
+  const outroImageDiv2 = useRef(null)
+  const outroImage1 = useRef(null)
+  const outroImage2 = useRef(null)
+  const outroImage3 = useRef(null)
 
+  useGSAP(() => {
+    gsap.to(introImage.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: introImageDiv.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+
+    gsap.to(middleImage1.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: middleImageDiv1.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+    gsap.to(middleImage2.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: middleImageDiv1.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+    gsap.to(middleImage3.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: middleImageDiv2.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+    gsap.to(outroImage1.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: outroImageDiv1.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+    gsap.to(outroImage2.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: outroImageDiv2.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+    gsap.to(outroImage3.current, {
+      scale: 1.06,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: outroImageDiv2.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+  })
   return (
     <>
       {/* CAROUSEL WITH TOP IMAGE */}
@@ -35,13 +122,14 @@ function MainPage({ project }: { project: Projects }) {
             })}
           </div>
         </div>
-        <div className="w-full object-cover">
-          {project && project?.introImage && (
+        <div className="w-full object-cover overflow-hidden" ref={introImageDiv}>
+          {project && project?.introImage && project?.title && (
             <Image
-              src={project.introImage}
-              alt={`${project.title} opening`}
+              src={project?.introImage}
+              alt={`${project?.title} opening`}
               className="w-full h-full"
               placeholder="blur"
+              ref={introImage}
             />
           )}
         </div>
@@ -133,8 +221,8 @@ function MainPage({ project }: { project: Projects }) {
       <section>
         {project?.imagesMiddle && (
           <div className="flex flex-col md:flex-row items-center gap-3">
-            <div className="flex-1">
-              <div className="mb-3">
+            <div className="flex-1" ref={middleImageDiv1}>
+              <div className="mb-3 overflow-hidden">
                 <Image
                   src={project?.imagesMiddle[0]}
                   alt=""
@@ -154,9 +242,10 @@ function MainPage({ project }: { project: Projects }) {
                       ? "empty"
                       : "blur"
                   }
+                  ref={middleImage1}
                 />
               </div>
-              <div>
+              <div className="overflow-hidden">
                 <Image
                   src={project?.imagesMiddle[1]}
                   alt=""
@@ -176,10 +265,11 @@ function MainPage({ project }: { project: Projects }) {
                       ? "empty"
                       : "blur"
                   }
+                  ref={middleImage2}
                 />
               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 overflow-hidden" ref={middleImageDiv2}>
               <Image
                 src={project?.imagesMiddle[2]}
                 alt=""
@@ -199,6 +289,7 @@ function MainPage({ project }: { project: Projects }) {
                     ? "empty"
                     : "blur"
                 }
+                ref={middleImage3}
               />
             </div>
           </div>
@@ -224,7 +315,7 @@ function MainPage({ project }: { project: Projects }) {
       <section>
         {project?.imagesOutro && (
           <div className="">
-            <div className="mb-3 w-full object-cover">
+            <div className="mb-3 w-full object-cover overflow-hidden" ref={outroImageDiv1}>
               <Image
                 src={project?.imagesOutro[0]}
                 alt=""
@@ -247,10 +338,11 @@ function MainPage({ project }: { project: Projects }) {
                     ? "empty"
                     : "blur"
                 }
+                ref={outroImage1}
               />
             </div>
-            <div className="flex flex-col md:flex-row gap-3">
-              <div className="flex-1 object-cover">
+            <div className="flex flex-col md:flex-row gap-3" ref={outroImageDiv2}>
+              <div className="flex-1 object-cover overflow-hidden">
                 <Image
                   src={project?.imagesOutro[1]}
                   alt=""
@@ -271,9 +363,10 @@ function MainPage({ project }: { project: Projects }) {
                       ? "empty"
                       : "blur"
                   }
+                  ref={outroImage2}
                 />
               </div>
-              <div className="flex-1 object-cover">
+              <div className="flex-1 object-cover overflow-hidden">
                 <Image
                   src={project?.imagesOutro[2]}
                   alt=""
@@ -294,6 +387,7 @@ function MainPage({ project }: { project: Projects }) {
                       ? "empty"
                       : "blur"
                   }
+                  ref={outroImage3}
                 />
               </div>
             </div>

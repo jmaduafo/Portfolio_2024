@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LenisScroll from "@/components/LenisScroll";
-import PreLoading from "@/components/Home/PreLoading";
+import Scroll from "@/components/Scroll";
 
 export const metadata: Metadata = {
   title: "Jasmine Maduafokwa Portfolio 2024",
@@ -23,11 +23,15 @@ export default function RootLayout({
         className={`${satoshiRegular.className} duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText px-[6vw]`}
       >
         <LenisScroll>
-          <Provider>
-            <Navbar />
-            <main className="">{children}</main>
-            <Footer />
-          </Provider>
+          {/* GSAP SCROLLTRIGGER */}
+          <Scroll>
+            {/* ENABLES DARK AND LIGHT MODE */}
+            <Provider>
+              <Navbar />
+              <main className="">{children}</main>
+              <Footer />
+            </Provider>
+          </Scroll>
         </LenisScroll>
       </body>
     </html>

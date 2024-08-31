@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@heroicons/react": "^2.1.5",
     "@studio-freight/react-lenis": "^0.0.47",
     "framer-motion": "^11.3.28",
