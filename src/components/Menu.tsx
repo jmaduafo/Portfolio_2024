@@ -48,39 +48,23 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
         <nav className="mt-10">
           <ul>
             {navLinks.map((link, i) => {
-              return link.route ? (
-                <div key={link.title} className="flex items-start justify-center gap-5">
+              return (
+                <div
+                  key={link.title}
+                  className="flex items-start justify-center gap-5"
+                >
                   {i % 2 === 0 ? (
                     <p
                       className={`${spectralBridgeRegular.className} text-[20px]`}
                     >{`( ${i + 1} )`}</p>
                   ) : null}
                   <li
-                    className={`${spectralBridgeRegular.className} relative px-2 text-[16vw] overflow-hidden sm:text-[13vw]  md:text-[10vw]
+                    className={`${spectralBridgeRegular.className} relative px-3 text-[16vw] overflow-hidden sm:text-[13vw]  md:text-[10vw]
                     lg:text-[8vw] xl:text-[6vw] leading-[1] uppercase text-lightText dark:text-darkText text-center
-                    hover:after:visible after:z-[-1] ${!setMenuOpen && 'hover:after:invisible'} hover:after:animate-appear after:absolute after:invisible after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:top-1/2 after:left-1/2 after:content-lightSlash after:scale-y-50 after:  `}
+                    hover:after:scale-x-100 after:z-[-1] after:duration-500 after:origin-left after:absolute after:scale-x-0 after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:top-1/2 after:left-1/2 after:content-lightSlash dark:after:content-darkSlash after:scale-y-50 after:  `}
                     onClick={() => setMenuOpen(false)}
                   >
                     <Link href={link.route}>{link.title}</Link>
-                  </li>
-                  {i % 2 !== 0 ? (
-                    <p
-                      className={`${spectralBridgeRegular.className} text-[20px]`}
-                    >{`( ${i + 1} )`}</p>
-                  ) : null}
-                </div>
-              ) : (
-                <div key={link.title} className="flex items-start justify-center gap-5">
-                  {i % 2 === 0 ? (
-                    <p
-                      className={`${spectralBridgeRegular.className} text-[20px]`}
-                    >{`( ${i + 1} )`}</p>
-                  ) : null}
-                  <li
-                    className={`${spectralBridgeRegular.className} text-[16vw] sm:text-[13vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] leading-[1] uppercase text-lightText  dark:text-darkText text-center`}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {link.title}
                   </li>
                   {i % 2 !== 0 ? (
                     <p
