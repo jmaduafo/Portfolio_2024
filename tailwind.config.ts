@@ -8,7 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        darkSlash: "url('../../public/images/general/dark_slash.png')",
+        lightSlash: "url('../../public/images/general/light_slash.png')"
+      },
+      content: {
+        darkSlash: "url('../../public/images/general/dark_slash.png')",
+        lightSlash: "url('../../public/images/general/light_slash.png')"
+      },
       colors: {
         lightBg: "#F5E7D3",
         lightText: "#AC4800",
