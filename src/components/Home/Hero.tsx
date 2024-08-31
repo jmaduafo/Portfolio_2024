@@ -22,7 +22,7 @@ function Hero() {
         <div className="flex-1 flex justify-end">
           <StarSpin classNameSize="w-[12vw]" />
         </div>
-        <div className="flex-1 flex flex-col md:flex-row gap-8">
+        <div className="flex-[2] lg:flex-[1.5] flex flex-col md:flex-row gap-8">
           <div className="translate-x-[10vw] md:translate-x-0 md:pl-0 max-w-[40vw] md:flex-1 object-cover">
             <Image
               src={HeroImage}
