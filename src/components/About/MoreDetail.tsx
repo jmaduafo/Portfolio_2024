@@ -3,7 +3,6 @@ import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
 import AboutIntro1 from "../../../public/images/general/about/aboutIntro1.jpg";
-import AboutIntro2 from "../../../public/images/general/about/aboutIntro2.jpg";
 import AboutMain6 from "../../../public/images/general/about/aboutMain6.jpg";
 
 function MoreDetail() {

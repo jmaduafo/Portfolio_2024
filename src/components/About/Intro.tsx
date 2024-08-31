@@ -8,8 +8,8 @@ function Intro() {
   return (
     <section>
         <div className="flex justify-center mt-[8vh]">
-          <div className="w-[75%] sm:w-[70%] lg:w-[65%] flex justify-center items-center flex-col">
-            <h1 className={`${spectralBridgeRegular.className} dark:mix-blend-exclusion z-[10] text-[10vw] sm:text-[8vw] lg:text-[6.5vw] mb-[-6vh] text-center leading-[.9]`}>
+          <div className="w-[85%] sm:w-[70%] lg:w-[65%] flex justify-center items-center flex-col">
+            <h1 className={`${spectralBridgeRegular.className} dark:mix-blend-exclusion z-[10] text-[10vw] sm:text-[8vw] lg:text-[6.5vw] mb-[-2vh] xs:mb-[-3vh] md:mb-[-4.5vh] lg:mb-[-6vh] text-center leading-[.9]`}>
                 Turning innovative ideas into products
             {/* Your path begins with self-discovery */}
             </h1>

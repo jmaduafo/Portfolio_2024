@@ -7,7 +7,7 @@ export const items : Resume[] = [
       {
         institution: "Rice University",
         duration: "2023",
-        primary_qualification: "Glasscock School of Continuing Studies",
+        primary_qualification: "Glasscock School of Continuing Studies Certificate",
         primary_concentration: "Full Stack Development",
         secondary_qualification: null,
         secondary_concentration: null,

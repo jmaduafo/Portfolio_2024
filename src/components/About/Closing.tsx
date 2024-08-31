@@ -7,9 +7,11 @@ function Closing() {
       <h3
         className={`${spectralBridgeRegular.className} indent-[10%] text-[5.5vw] leading-[1]`}
       >
-        Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam
-        sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-        mauris sit amet nibh. Donec sodales sagittis magna.
+        When I'm not busy coding, I enjoy going on{" "}
+        <span className="italic">solo dates</span>, from restaurants to the
+        movies, watching <span className="italic">anime</span> as a longtime
+        enthusiast, and listening to <span className="italic">music</span>.
+        Here's some music that I listen to that helps me get into the zone.
       </h3>
       <div className="flex mt-10">
         <div className="flex-1 hidden md:block"></div>
