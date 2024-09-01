@@ -9,7 +9,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 function About() {
-  const image1Div = useRef(null);
   const image1 = useRef(null);
   const image2Div = useRef(null);
   const image2 = useRef(null);
@@ -25,15 +24,21 @@ function About() {
         scrub: true,
       },
     });
-    gsap.to(image2.current, {
-      scale: 1.06,
+    
+    var tl = gsap.timeline({
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: image2.current,
+        trigger: image2Div.current,
         start: "top bottom",
-        end: "bottom top",
+        end: "+=3000px",
         scrub: true,
       },
+    });
+
+    tl.from(image2Div.current, {
+      yPercent: 10
+    }).to(image2Div.current, {
+      yPercent: -5,
     });
   });
 
@@ -66,7 +71,7 @@ function About() {
           />
         </div>
         <div className="md:flex-1 flex justify-center items-center">
-          <div className="w-full h-full md:w-[80%] md:h-[80%] object-cover object-left-top overflow-hidden">
+          <div className="w-full h-full md:w-[80%] md:h-[80%] object-cover object-left-top overflow-hidden" ref={image2Div}>
             <Image
               src={Image2}
               alt="sjsh"

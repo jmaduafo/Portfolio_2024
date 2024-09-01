@@ -7,7 +7,7 @@ function Works() {
   return (
     <section className="py-[10vh]" id='works'>
       <div>
-        <div>
+        <div className="sticky top-[8vh]">
           <Header2 text="Selected" />
           <div className="flex justify-center">
             <Header2 text="Projects" />

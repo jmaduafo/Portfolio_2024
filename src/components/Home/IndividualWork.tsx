@@ -44,14 +44,14 @@ function IndividualWork({ work }: Work) {
             onMouseMove={windowMouse}
             className={`${
               isHovered ? "cursor-none" : "cursor-default"
-            } relative w-full object-cover`}
+            } relative w-full object-cover overflow-hidden group`}
           >
             <WorkHover x={x} y={y} isHovered={isHovered} />
             {work?.mainImage && (
               <Image
                 src={work?.mainImage}
                 alt={`${work?.title} project`}
-                className="w-full"
+                className="w-full group-hover:scale-105 duration-500"
                 placeholder="blur"
               />
             )}

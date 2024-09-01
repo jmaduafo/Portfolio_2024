@@ -51,7 +51,7 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
               return (
                 <div
                   key={link.title}
-                  className="flex items-start justify-center gap-5"
+                  className="flex items-start justify-center hover:gap-7 duration-300 gap-5"
                 >
                   {i % 2 === 0 ? (
                     <p
@@ -61,7 +61,7 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
                   <li
                     className={`${spectralBridgeRegular.className} relative px-3 text-[16vw] overflow-hidden sm:text-[13vw]  md:text-[10vw]
                     lg:text-[8vw] xl:text-[6vw] leading-[1] uppercase text-lightText dark:text-darkText text-center
-                    hover:after:scale-x-100 after:z-[-1] after:duration-500 after:origin-left after:absolute after:scale-x-0 after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:top-1/2 after:left-1/2 after:content-lightSlash dark:after:content-darkSlash after:scale-y-50 after:  `}
+                    hover:after:scale-x-100 after:z-[-1] after:duration-700 after:origin-left after:absolute after:scale-x-0 after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:top-1/2 after:left-1/2 after:content-lightSlash dark:after:content-darkSlash after:scale-y-50 after:  `}
                     onClick={() => setMenuOpen(false)}
                   >
                     <Link href={link.route}>{link.title}</Link>
