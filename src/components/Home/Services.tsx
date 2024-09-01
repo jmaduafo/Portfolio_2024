@@ -66,7 +66,7 @@ function Services() {
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: serviceDiv.current,
-        start: "top 160%",
+        start: "top 50%",
         end: "bottom -80%",
         scrub: true
       }
@@ -123,7 +123,7 @@ function Services() {
             return (
               <div
                 key={img.alt}
-                className="w-[15vw] sm:w-[13vw] md:w-[10vw] object-cover object-center"
+                className="w-[11vw] xs:w-[12vw] sm:w-[13vw] md:w-[10vw] object-cover object-center"
               >
                 <Image
                   src={img.image}
@@ -139,12 +139,12 @@ function Services() {
         <div className="flex justify-center mb-[5vh]">
           <Header2 text="services" />
         </div>
-        <div className="flex justify-around items-start">
+        <div className="flex justify-between sm:justify-around items-start">
           {bottomImages.map((img) => {
             return (
               <div
                 key={img.alt}
-                className="w-[15vw] sm:w-[13vw] md:w-[10vw] object-cover object-center"
+                className="w-[11vw] xs:w-[12vw] sm:w-[13vw] md:w-[10vw] object-cover object-center"
               >
                 <Image
                   src={img.image}

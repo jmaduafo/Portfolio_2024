@@ -25,7 +25,7 @@ function MainPage({ project }: { project: Projects }) {
 
   useGSAP(() => {
     gsap.to(introImage.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: introImageDiv.current,
@@ -36,37 +36,37 @@ function MainPage({ project }: { project: Projects }) {
     })
 
     gsap.to(middleImage1.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: middleImageDiv1.current,
+        trigger: middleImage1.current,
         start: "top bottom",
         end: "bottom top",
         scrub: true
       }
     })
     gsap.to(middleImage2.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: middleImageDiv1.current,
+        trigger: middleImage2.current,
         start: "top bottom",
         end: "bottom top",
         scrub: true
       }
     })
     gsap.to(middleImage3.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: middleImageDiv2.current,
+        trigger: middleImage3.current,
         start: "top bottom",
         end: "bottom top",
         scrub: true
       }
     })
     gsap.to(outroImage1.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: outroImageDiv1.current,
@@ -76,7 +76,7 @@ function MainPage({ project }: { project: Projects }) {
       }
     })
     gsap.to(outroImage2.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: outroImageDiv2.current,
@@ -86,7 +86,7 @@ function MainPage({ project }: { project: Projects }) {
       }
     })
     gsap.to(outroImage3.current, {
-      scale: 1.06,
+      y: "10%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: outroImageDiv2.current,
@@ -127,7 +127,7 @@ function MainPage({ project }: { project: Projects }) {
             <Image
               src={project?.introImage}
               alt={`${project?.title} opening`}
-              className="w-full h-full"
+              className="w-full h-full scale-110"
               placeholder="blur"
               ref={introImage}
             />
@@ -242,6 +242,7 @@ function MainPage({ project }: { project: Projects }) {
                       ? "empty"
                       : "blur"
                   }
+                  className="w-full h-full scale-110"
                   ref={middleImage1}
                 />
               </div>
@@ -265,11 +266,12 @@ function MainPage({ project }: { project: Projects }) {
                       ? "empty"
                       : "blur"
                   }
+                  className="w-full h-full scale-110"
                   ref={middleImage2}
                 />
               </div>
             </div>
-            <div className="flex-1 overflow-hidden" ref={middleImageDiv2}>
+            <div className="flex-1 w-full overflow-hidden" ref={middleImageDiv2}>
               <Image
                 src={project?.imagesMiddle[2]}
                 alt=""
@@ -289,6 +291,7 @@ function MainPage({ project }: { project: Projects }) {
                     ? "empty"
                     : "blur"
                 }
+                className="w-full h-full scale-110"
                 ref={middleImage3}
               />
             </div>
@@ -319,7 +322,7 @@ function MainPage({ project }: { project: Projects }) {
               <Image
                 src={project?.imagesOutro[0]}
                 alt=""
-                className="w-full h-full"
+                className="w-full scale-110"
                 // ONLY UNOPTIMIZE IF IMAGE IS A GIF
                 unoptimized={
                   project.imagesOutro[0].src
@@ -346,7 +349,7 @@ function MainPage({ project }: { project: Projects }) {
                 <Image
                   src={project?.imagesOutro[1]}
                   alt=""
-                  className="w-full h-full"
+                  className="w-full h-full scale-110"
                   unoptimized={
                     project.imagesOutro[1].src
                       .split("/")
@@ -370,7 +373,7 @@ function MainPage({ project }: { project: Projects }) {
                 <Image
                   src={project?.imagesOutro[2]}
                   alt=""
-                  className="w-full h-full"
+                  className="w-full h-full scale-110"
                   unoptimized={
                     project.imagesOutro[2].src
                       .split("/")
