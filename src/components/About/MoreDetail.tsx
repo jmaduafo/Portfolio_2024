@@ -1,29 +1,60 @@
-import React from "react";
+"use client"
+
+import React, { useRef } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
 import AboutIntro1 from "../../../public/images/general/about/aboutIntro1.jpg";
 import AboutMain6 from "../../../public/images/general/about/aboutMain6.jpg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function MoreDetail() {
+  const image1 = useRef(null)
+  const image2 = useRef(null)
+
+  useGSAP(() => {
+    gsap.to(image1.current, {
+      y: "10%",
+      scrollTrigger: {
+        trigger: image1.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+
+    gsap.to(image2.current, {
+      y: "10%",
+      scrollTrigger: {
+        trigger: image2.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    })
+  })
+
   return (
     <section className="mt-[5vh]">
       <div className="flex flex-col md:flex-row items-end gap-6 md:pl-[8vw]">
-        <div className="flex-1 object-cover">
+        <div className="flex-1 object-cover overflow-hidden">
           <Image
             src={AboutMain6}
             alt=""
-            className="w-full h-full"
+            className="w-full h-full scale-110"
             placeholder="blur"
+            ref={image1}
           />
         </div>
         <div className="flex-[1.5]">
-          <div className="w-full object-cover">
+          <div className="w-full object-cover overflow-hidden">
             <Image
               src={AboutIntro1}
               alt=""
-              className="w-full h-full"
+              className="w-full h-full scale-110"
               placeholder="blur"
+              ref={image2}
             />
           </div>
           <div className="mt-[4vh]">
