@@ -51,6 +51,7 @@ const config: Config = {
           '100%': { opacity: '1' },
         },
         carousel: {
+          // to: { transform: 'translate(calc(-50% - 23vw))' },
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-110%)' },
         },

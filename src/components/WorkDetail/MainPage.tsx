@@ -8,20 +8,21 @@ import Link from "next/link";
 import Paragraph from "../Paragraph";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 
 function MainPage({ project }: { project: Projects }) {
-  const introImageDiv = useRef(null)
-  const introImage = useRef(null)
-  const middleImageDiv1 = useRef(null)
-  const middleImageDiv2 = useRef(null)
-  const middleImage1 = useRef(null)
-  const middleImage2 = useRef(null)
-  const middleImage3 = useRef(null)
-  const outroImageDiv1 = useRef(null)
-  const outroImageDiv2 = useRef(null)
-  const outroImage1 = useRef(null)
-  const outroImage2 = useRef(null)
-  const outroImage3 = useRef(null)
+  const introImageDiv = useRef(null);
+  const introImage = useRef(null);
+  const middleImageDiv1 = useRef(null);
+  const middleImageDiv2 = useRef(null);
+  const middleImage1 = useRef(null);
+  const middleImage2 = useRef(null);
+  const middleImage3 = useRef(null);
+  const outroImageDiv1 = useRef(null);
+  const outroImageDiv2 = useRef(null);
+  const outroImage1 = useRef(null);
+  const outroImage2 = useRef(null);
+  const outroImage3 = useRef(null);
 
   useGSAP(() => {
     gsap.to(introImage.current, {
@@ -31,9 +32,9 @@ function MainPage({ project }: { project: Projects }) {
         trigger: introImageDiv.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
 
     gsap.to(middleImage1.current, {
       y: "10%",
@@ -42,9 +43,9 @@ function MainPage({ project }: { project: Projects }) {
         trigger: middleImage1.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.to(middleImage2.current, {
       y: "10%",
       ease: "power1.inOut",
@@ -52,9 +53,9 @@ function MainPage({ project }: { project: Projects }) {
         trigger: middleImage2.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.to(middleImage3.current, {
       y: "10%",
       ease: "power1.inOut",
@@ -62,9 +63,9 @@ function MainPage({ project }: { project: Projects }) {
         trigger: middleImage3.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.to(outroImage1.current, {
       y: "10%",
       ease: "power1.inOut",
@@ -72,9 +73,9 @@ function MainPage({ project }: { project: Projects }) {
         trigger: outroImageDiv1.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.to(outroImage2.current, {
       y: "10%",
       ease: "power1.inOut",
@@ -82,9 +83,9 @@ function MainPage({ project }: { project: Projects }) {
         trigger: outroImageDiv2.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.to(outroImage3.current, {
       y: "10%",
       ease: "power1.inOut",
@@ -92,10 +93,84 @@ function MainPage({ project }: { project: Projects }) {
         trigger: outroImageDiv2.current,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
-    })
-  })
+        scrub: true,
+      },
+    });
+  });
+
+  const headerVariant = {
+    initial: {
+      y: "100%",
+      rotateZ: 5,
+    },
+    animate: {
+      y: "0%",
+      rotateZ: 0,
+      transition: {
+        duration: 0.8,
+        delay: 0.4,
+        ease: [0.25, 1, 0.5, 1],
+      },
+    },
+  };
+
+  const introImageVariant = {
+    initial: {
+      opacity: 0,
+      scale: 0.9,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0, 0.55, 0.45, 1],
+      },
+    },
+  };
+
+  const textVariant = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        delay: 0.5,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
+  const textDelayVariant = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        delay: 0.7,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
+  const imageVariant = {
+    initial: {
+      width: "0%",
+    },
+    animate: {
+      width: "100%",
+      transition: {
+        duration: 0.8,
+        delay: 0.4,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
   return (
     <>
       {/* CAROUSEL WITH TOP IMAGE */}
@@ -112,31 +187,46 @@ function MainPage({ project }: { project: Projects }) {
               project?.title,
             ].map((proj, i) => {
               return (
-                <h1
+                <motion.h1
                   key={`${proj}_${i}`}
-                  className={`${spectralBridgeRegular.className} leading-[1] mb-[-.15em] text-[23vw] uppercase whitespace-nowrap`}
+                  variants={headerVariant}
+                  initial="initial"
+                  animate="animate"
+                  className={`${spectralBridgeRegular.className} leading-[1] mb-[-.25em] text-[23vw] uppercase whitespace-nowrap`}
                 >
                   {proj}
-                </h1>
+                </motion.h1>
               );
             })}
           </div>
         </div>
-        <div className="w-full object-cover overflow-hidden" ref={introImageDiv}>
+        <motion.div
+          variants={introImageVariant}
+          initial="initial"
+          animate="animate"
+          className="w-full object-cover overflow-hidden mt-[4vh]"
+          ref={introImageDiv}
+        >
           {project && project?.introImage && project?.title && (
             <Image
               src={project?.introImage}
               alt={`${project?.title} opening`}
-              className="w-full h-full scale-110"
+              className="w-full h-full scale-110 origin-center"
               placeholder="blur"
               ref={introImage}
             />
           )}
-        </div>
+        </motion.div>
       </section>
       {/* INFO ABOUT WEBSITE, GITHUB, TOOLS, YEAR, DURATION, ROLES, AND DESC */}
       <section className="my-[9vh] flex flex-col md:flex-row gap-8">
-        <div className="flex-1">
+        <motion.div
+          variants={textVariant}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="flex-1"
+        >
           {/* VISIT WEBSITE AND GITHUB */}
           <div className="flex items-center gap-[8em]">
             <div className="group flex items-center gap-2">
@@ -205,17 +295,23 @@ function MainPage({ project }: { project: Projects }) {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* INTRO PARAGRAPH SECTION */}
-        <div className="flex-1 lg:flex-[1.5] flex flex-col gap-y-6">
+        <motion.div
+          variants={textDelayVariant}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="flex-1 lg:flex-[1.5] flex flex-col gap-y-6 overflow-hidden"
+        >
           {project?.description1?.map((desc) => {
             return (
-              <Fragment key={desc}>
+              <div key={desc}>
                 <Paragraph text={desc} />
-              </Fragment>
+              </div>
             );
           })}
-        </div>
+        </motion.div>
       </section>
       {/* SET OF IMAGES AFTER THE INTRO IMAGE */}
       <section>
@@ -271,7 +367,10 @@ function MainPage({ project }: { project: Projects }) {
                 />
               </div>
             </div>
-            <div className="flex-1 w-full overflow-hidden" ref={middleImageDiv2}>
+            <div
+              className="flex-1 w-full overflow-hidden"
+              ref={middleImageDiv2}
+            >
               <Image
                 src={project?.imagesMiddle[2]}
                 alt=""
@@ -304,12 +403,18 @@ function MainPage({ project }: { project: Projects }) {
         <div className="flex flex-col gap-y-6 w-full sm:w-[80%] lg:w-[60%] mx-auto">
           {project?.description2?.map((desc) => {
             return (
-              <Fragment key={desc}>
+              <motion.div
+                key={desc}
+                variants={textVariant}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+              >
                 <Paragraph
                   text={desc}
                   className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%]"
                 />
-              </Fragment>
+              </motion.div>
             );
           })}
         </div>
@@ -318,7 +423,10 @@ function MainPage({ project }: { project: Projects }) {
       <section>
         {project?.imagesOutro && (
           <div className="">
-            <div className="mb-3 w-full object-cover overflow-hidden" ref={outroImageDiv1}>
+            <div
+              className="mb-3 w-full object-cover overflow-hidden"
+              ref={outroImageDiv1}
+            >
               <Image
                 src={project?.imagesOutro[0]}
                 alt=""
@@ -344,7 +452,10 @@ function MainPage({ project }: { project: Projects }) {
                 ref={outroImage1}
               />
             </div>
-            <div className="flex flex-col md:flex-row gap-3" ref={outroImageDiv2}>
+            <div
+              className="flex flex-col md:flex-row gap-3"
+              ref={outroImageDiv2}
+            >
               <div className="flex-1 object-cover overflow-hidden">
                 <Image
                   src={project?.imagesOutro[1]}

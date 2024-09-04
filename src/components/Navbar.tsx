@@ -1,18 +1,36 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import DarkLightSwitch from "./DarkLightSwitch";
 import Link from "next/link";
 import { rigata } from "@/fonts/font";
 import Menu from "./Menu";
+import { animate, motion } from "framer-motion";
 
 function Navbar() {
-  const [ menuOpen, setMenuOpen ] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const nav = {
+    initial: {
+      y: "-100%",
+    },
+    animate: {
+      y: "0%",
+      transition: {
+        duration: .5,
+        ease: [0.64, 0, 0.78, 0],
+      },
+    },
+  };
 
   return (
-    // bg-lightBg dark:bg-darkBg
     <>
-      <header className="z-[99] duration-300 sticky top-0 bg-transparent mix-blend-multiply dark:mix-blend-difference">
+      <motion.header
+        variants={nav}
+        initial="initial"
+        animate="animate"
+        className="z-[99] duration-300 sticky top-0 bg-transparent mix-blend-multiply dark:mix-blend-difference"
+      >
         <div className="flex justify-between items-center">
           {/* JASMINE'S INITIAL LOGO */}
           <Link href={"/"}>
@@ -23,10 +41,12 @@ function Navbar() {
           {/* DARK MODE/LIGHT MODE TOGGLE */}
           <DarkLightSwitch />
           {/* MENU BUTTON */}
-          <button onClick={() => setMenuOpen(true)}className="">Menu</button>
+          <button onClick={() => setMenuOpen(true)} className="">
+            Menu
+          </button>
         </div>
-      </header>
-      <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen}/>
+      </motion.header>
+      <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
     </>
   );
 }
