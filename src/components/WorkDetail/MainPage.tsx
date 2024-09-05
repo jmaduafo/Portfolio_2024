@@ -9,8 +9,9 @@ import Paragraph from "../Paragraph";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
+import PrevNext from "./PrevNext";
 
-function MainPage({ project }: { project: Projects }) {
+function MainPage({ project, index }: { project: Projects, index: number }) {
   const introImageDiv = useRef(null);
   const introImage = useRef(null);
   const middleImageDiv1 = useRef(null);
@@ -508,6 +509,7 @@ function MainPage({ project }: { project: Projects }) {
           </div>
         )}
       </section>
+      <PrevNext index={index}/>
     </>
   );
 }

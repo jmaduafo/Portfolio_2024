@@ -17,7 +17,7 @@ function WorkDetail({ params }: { params: { title: string } }) {
 
   return (
     <div>
-      <MainPage project={allProjects[index]} />
+      <MainPage project={allProjects[index]} index={index}/>
     </div>
   );
 }
