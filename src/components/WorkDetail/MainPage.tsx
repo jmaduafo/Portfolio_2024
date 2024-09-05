@@ -220,7 +220,7 @@ function MainPage({ project, index }: { project: Projects, index: number }) {
         </motion.div>
       </section>
       {/* INFO ABOUT WEBSITE, GITHUB, TOOLS, YEAR, DURATION, ROLES, AND DESC */}
-      <section className="my-[9vh] flex flex-col md:flex-row gap-8">
+      <section className="my-[9vh] flex flex-col sm:flex-row gap-8">
         <motion.div
           variants={textVariant}
           initial="initial"
@@ -229,9 +229,9 @@ function MainPage({ project, index }: { project: Projects, index: number }) {
           className="flex-1"
         >
           {/* VISIT WEBSITE AND GITHUB */}
-          <div className="flex items-center gap-[8em]">
+          <div className="flex items-center justify-normal sm:justify-between md:justify-normal gap-[8em] sm:gap-0 md:gap-[8em]">
             <div className="group flex items-center gap-2">
-              <p className="">
+              <p className="text-[14px] sm:text-[15px] md:text-[16px]">
                 <a href={project?.website} target="_blank">
                   Visit Website
                 </a>
@@ -241,7 +241,7 @@ function MainPage({ project, index }: { project: Projects, index: number }) {
               </div>
             </div>
             <div className="group flex items-center gap-2">
-              <p className="">
+              <p className="text-[14px] sm:text-[15px] md:text-[16px]">
                 <a
                   href={`https://github.com/${project.github}`}
                   target="_blank"
