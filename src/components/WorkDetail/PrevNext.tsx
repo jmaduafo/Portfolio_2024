@@ -18,8 +18,8 @@ function PrevNext({ index }: { index: number }) {
         {/* PREVIOUS PROJECT */}
         <Link href={`/works/${titleConverter(allProjects[prevIndex].title)}`}>
           <div className="relative cursor-pointer flex items-center gap-8 hover:gap-10 duration-500 group">
-            <Prev className="w-[6vw] leading-[1] mix-blend-color-dodge dark:mix-blend-exclusion" />
-            <h5 className="text-[4vw] uppercase mix-blend-color-dodge dark:mix-blend-exclusion">
+            <Prev className="w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
+            <h5 className="text-[4vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
               {allProjects[prevIndex].title}
             </h5>
             {allProjects[prevIndex].introImage ? (
@@ -36,10 +36,10 @@ function PrevNext({ index }: { index: number }) {
         {/* NEXT PROJECT */}
         <Link href={`/works/${titleConverter(allProjects[nextIndex].title)}`}>
           <div className="relative cursor-pointer flex items-center gap-8 hover:gap-10 duration-500 group">
-            <h5 className="text-[4vw] uppercase mix-blend-color-dodge dark:mix-blend-exclusion">
+            <h5 className="text-[4vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
               {allProjects[nextIndex].title}
             </h5>
-            <Next className="w-[6vw] leading-[1] mix-blend-color-dodge dark:mix-blend-exclusion" />
+            <Next className="w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
             {allProjects[nextIndex].introImage ? (
               <div className="z-[-1] duration-300 invisible group-hover:visible absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[15vw] object-cover">
                 <Image

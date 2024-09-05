@@ -392,6 +392,8 @@ function MainPage({ project, index }: { project: Projects, index: number }) {
                     : "blur"
                 }
                 className="w-full h-full scale-110"
+                width={720}
+                height={1320}
                 ref={middleImage3}
               />
             </div>
