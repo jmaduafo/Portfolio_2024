@@ -13,7 +13,6 @@ import { useGSAP } from "@gsap/react";
 
 function Hero() {
   const star = useRef(null);
-  const starContainer = useRef(null);
 
   useGSAP(() => {
     gsap.to(star.current, {
