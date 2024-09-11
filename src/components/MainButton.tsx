@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { satoshiLight } from "@/fonts/font";
+import { satoshiLight, satoshiLightItalic } from "@/fonts/font";
 import Link from "next/link";
 
 type Button = {
@@ -29,7 +29,7 @@ function MainButton({ text, fontSize, link, email, classNameWidth }: Button) {
                   return (
                     <p
                       key={`${word}_${i}`}
-                      className={`${satoshiLight.className} ${fontSize} whitespace-nowrap`}
+                      className={`${satoshiLightItalic.className} ${fontSize} whitespace-nowrap`}
                     >
                       {word}
                     </p>

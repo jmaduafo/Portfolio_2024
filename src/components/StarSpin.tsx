@@ -5,7 +5,7 @@ import Light from "../../public/images/general/light_star.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-function StarSpin({ classNameSize }: { classNameSize: string }) {
+function StarSpin({ classNameSize, ref }: { classNameSize: string, ref?: React.MutableRefObject<null> }) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -18,7 +18,7 @@ function StarSpin({ classNameSize }: { classNameSize: string }) {
   }
 
   return (
-    <div className={`${classNameSize} object-cover`}>
+    <div className={`${classNameSize} object-cover`} ref={ref}>
       <Image
         src={theme === "light" ? Light : Dark}
         alt={theme === "light" ? "light themed star" : "dark themed star"}
