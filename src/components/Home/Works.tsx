@@ -6,25 +6,22 @@ import IndividualWork from "./IndividualWork";
 import { motion, useInView } from "framer-motion";
 
 function Works() {
-  const header1Ref = useRef(null);
-  const header1 = useInView(header1Ref, { once: true });
-  const header2Ref = useRef(null);
-  const header2 = useInView(header2Ref, { once: true });
+  const headerRef = useRef(null);
+  const header = useInView(headerRef, { once: true });
 
   return (
     <section className="py-[10vh]" id="works">
       <div>
         <div className="sticky top-[8vh]">
-          <div className="">
+          <div className="overflow-hidden">
             <motion.div
               // variants={headerVariant1}
               className=""
-              ref={header1Ref}
-              initial={{ y: "80%", opacity: 0 }}
+              ref={headerRef}
+              initial={{ y: "80%" }}
               animate={
-                header1 && {
+                header && {
                   y: 0,
-                  opacity: 1,
                   transition: {
                     duration: 1.2,
                     delay: 0.1,
@@ -36,14 +33,12 @@ function Works() {
               <Header2 text="Selected" />
             </motion.div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center overflow-hidden">
             <motion.div
-              ref={header2Ref}
-              initial={{ y: "100%", opacity: 0 }}
+              initial={{ y: "100%" }}
               animate={
-                header2 && {
+                header && {
                   y: 0,
-                  opacity: 1,
                   transition: {
                     duration: 1.2,
                     delay: 0.15,
@@ -56,13 +51,15 @@ function Works() {
             </motion.div>
           </div>
         </div>
-        {allProjects?.map((work) => {
-          return (
-            <div key={work.title}>
-              <IndividualWork work={work} />
-            </div>
-          );
-        })}
+        <div className="mt-[-4vh]">
+          {allProjects?.map((work) => {
+            return (
+              <div key={work.title}>
+                <IndividualWork work={work} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

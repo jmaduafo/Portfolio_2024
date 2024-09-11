@@ -2,17 +2,22 @@
 import React, { useRef } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image1 from "../../../public/images/general/home/about_image.jpg";
-import Image2 from "../../../public/images/general/home/about-screenshot.png";
+import Image2 from "../../../public/images/general/home/about_image3.jpg";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 function About() {
   const image1 = useRef(null);
   const image2Div = useRef(null);
   const image2 = useRef(null);
+
+  const topRef = useRef(null);
+  const top = useInView(topRef, { once: true });
+  const bottomRef = useRef(null);
+  const bottom = useInView(bottomRef, { once: true });
 
   useGSAP(() => {
     gsap.to(image1.current, {
@@ -46,7 +51,7 @@ function About() {
   const textVariant = {
     initial: {
       y: "120%",
-      rotateZ: 5
+      rotateZ: 5,
     },
     animate: {
       y: 0,
@@ -55,37 +60,131 @@ function About() {
         duration: 1,
         ease: [0.87, 0, 0.13, 1],
         // delay: .2
-      }
-    }
-  }
+      },
+    },
+  };
+
+  // fresh span
+  const topline1 = "I promote fresh and creative";
+  // ideas span
+  const topline2 = "ideas and bring them to life.";
+  // deliver span
+  const bottomline1 = "With my skills, I deliver quality";
+  // finish span
+  const bottomline2 = "products from start to finish.";
+
+  const EASING = [0.83, 0, 0.17, 1]
+  const DELAY = 0.01
+
+  console.log(bottomline2.slice(0, 3))
 
   return (
     <section className="py-[15vh]">
       <div>
         <div className="overflow-hidden">
-          <motion.h3
-            variants={textVariant}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1]`}
+          <h3
+            ref={topRef}
+            className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1] overflow-hidden`}
           >
-            I promote <span className="italic">fresh</span> and creative{" "}
-            <span className="italic">ideas</span> and bring them to life.
-          </motion.h3>
+            {topline1.split("").map((letter, i) => {
+              return (
+                <motion.span
+                  initial={{ y: "100%", rotateZ: 5 }}
+                  animate={ top && {
+                    y: 0,
+                    rotateZ: 0,
+                    transition: {
+                      duration: .6,
+                      delay: i * DELAY,
+                      ease: EASING
+                    }
+                  }}
+                  key={`${letter}_${i}`}
+                  className="inline-block"
+                >
+                  {letter === " " ? <span className="mr-[1vw]"></span>: letter}
+                </motion.span>
+              );
+            })}
+          </h3>
+          <h3
+            ref={topRef}
+            className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1] overflow-hidden`}
+          >
+            {topline2.split("").map((letter, i) => {
+              return (
+                <motion.span
+                  initial={{ y: "100%", rotateZ: 5 }}
+                  animate={ top && {
+                    y: 0,
+                    rotateZ: 0,
+                    transition: {
+                      duration: .6,
+                      delay: i * DELAY,
+                      ease: EASING
+                    }
+                  }}
+                  key={`${letter}_${i}`}
+                  className="inline-block"
+                >
+                  {letter === " " ? <span className="mr-[1vw]"></span>: letter}
+                </motion.span>
+              );
+            })}
+          </h3>
         </div>
-        <div className="overflow-hidden">
-          <motion.h3
-            variants={textVariant}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1]`}
+        <div className="">
+           <h3
+            ref={topRef}
+            className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1] overflow-hidden`}
           >
-            With my skills, I <span className="italic">deliver </span>
-            quality products from start to{" "}
-            <span className="italic">finish</span> .
-          </motion.h3>
+            {bottomline1.split("").map((letter, i) => {
+              return (
+                <motion.span
+                  initial={{ y: "100%", rotateZ: 5 }}
+                  animate={ top && {
+                    y: 0,
+                    rotateZ: 0,
+                    transition: {
+                      duration: .6,
+                      delay: i * DELAY,
+                      ease: EASING
+                    }
+                  }}
+                  key={`${letter}_${i}`}
+                  className="inline-block"
+                >
+                  {letter === " " ? <span className="mr-[1vw]"></span>: letter}
+                </motion.span>
+              );
+            })}
+          </h3>
+           <h3
+            ref={topRef}
+            className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1] overflow-hidden`}
+          >
+            {bottomline2.split("").map((letter, i) => {
+              return (
+                <motion.span
+                  initial={{ y: "100%", rotateZ: 5 }}
+                  animate={ top && {
+                    y: 0,
+                    rotateZ: 0,
+                    transition: {
+                      duration: .6,
+                      delay: i * DELAY,
+                      ease: EASING
+                    }
+                  }}
+                  key={`${letter}_${i}`}
+                  className="inline-block"
+                >
+                  {/* bottomline2.slice(i, i + 6) === "finish" ? <span className="italic">{bottomline2.slice(i, i + 6)}</span> :  */}
+                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
+                </motion.span>
+              );
+            })}
+          </h3>
         </div>
       </div>
       <div className="mt-10 flex flex-col-reverse md:flex-row gap-y-4 md:gap-y-0 md:max-h-screen">
@@ -99,7 +198,7 @@ function About() {
         </div>
         <div className="md:flex-1 flex justify-center items-center">
           <div
-            className="w-full h-full md:w-[80%] md:h-[80%] object-cover object-left-top overflow-hidden"
+            className="w-full h-full md:w-[70%] md:h-[80%] object-cover object-left-top overflow-hidden"
             ref={image2Div}
           >
             <Image

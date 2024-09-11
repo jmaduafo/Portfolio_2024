@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { Fragment, useRef } from "react";
 import Top1 from "../../../public/images/services/top1.png";
 import Top2 from "../../../public/images/services/top2.png";
@@ -11,14 +11,15 @@ import ServicesList from "./ServicesList";
 import { allServices } from "@/utils/services";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
 
 function Services() {
-  const serviceDiv = useRef(null)
-  const topImage1 = useRef(null)
-  const topImage2 = useRef(null)
-  const bottomImage1 = useRef(null)
-  const bottomImage2 = useRef(null)
-  const bottomImage3 = useRef(null)
+  const serviceDiv = useRef(null);
+  const topImage1 = useRef(null);
+  const topImage2 = useRef(null);
+  const bottomImage1 = useRef(null);
+  const bottomImage2 = useRef(null);
+  const bottomImage3 = useRef(null);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -27,9 +28,9 @@ function Services() {
         trigger: serviceDiv.current,
         start: "top bottom",
         end: "+=2000",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
 
     gsap.from(topImage1.current, {
       y: 95,
@@ -38,9 +39,9 @@ function Services() {
         trigger: serviceDiv.current,
         start: "top bottom",
         end: "bottom -80%",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.from(topImage2.current, {
       y: 75,
       ease: "power1.inOut",
@@ -48,9 +49,9 @@ function Services() {
         trigger: serviceDiv.current,
         start: "top bottom",
         end: "bottom -30%",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.from(bottomImage1.current, {
       y: -85,
       ease: "power1.inOut",
@@ -58,9 +59,9 @@ function Services() {
         trigger: serviceDiv.current,
         start: "top 120%",
         end: "bottom -100%",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.from(bottomImage2.current, {
       y: -70,
       ease: "power1.inOut",
@@ -68,9 +69,9 @@ function Services() {
         trigger: serviceDiv.current,
         start: "top 50%",
         end: "bottom -80%",
-        scrub: true
-      }
-    })
+        scrub: true,
+      },
+    });
     gsap.from(bottomImage3.current, {
       y: -80,
       ease: "power1.inOut",
@@ -78,10 +79,10 @@ function Services() {
         trigger: serviceDiv.current,
         start: "top 135%",
         end: "bottom -105%",
-        scrub: true
-      }
-    })
-  })
+        scrub: true,
+      },
+    });
+  });
 
   const topImages = [
     {
@@ -115,7 +116,7 @@ function Services() {
   ];
 
   return (
-    <section className="mb-[15vh] pt-[6vh]" id='services'>
+    <section className="mb-[15vh] pt-[6vh]" id="services">
       {/* SERVICE HEADER WITH SURROUNDING IMAGES */}
       <div className="mb-[10vh]" ref={serviceDiv}>
         <div className="flex justify-evenly items-end">
@@ -160,15 +161,37 @@ function Services() {
       </div>
       {/* LISTED SERVICES*/}
       <div className="flex justify-end">
-        <div className="border-t-[1px] border-t-lightText20 dark:border-t-darkText20 w-full md:w-[70%]">
-          {allServices.map((item) => {
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              ease: [0.83, 0, 0.17, 1],
+              delay: .3,
+            },
+          }}
+          className="border-t-[1px] border-t-lightText20 dark:border-t-darkText20 w-full md:w-[70%]"
+        >
+          {allServices.map((item, i) => {
             return (
-              <Fragment key={item.title}>
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.8,
+                    ease: [0.83, 0, 0.17, 1],
+                    delay: i * 0.1,
+                  },
+                }}
+              >
                 <ServicesList services={item} />
-              </Fragment>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
