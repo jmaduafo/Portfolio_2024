@@ -18,7 +18,7 @@ function WorkDetail({ params }: { readonly params: { readonly title: string } })
   let index = allProjects.findIndex((item) => item.title === title.join(" "));
 
   return (
-    <div>
+    <div className="px-[6vw]">
       <Navbar/>
       <MainPage project={allProjects[index]} index={index}/>
       <Footer/>
