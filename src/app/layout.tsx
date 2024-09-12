@@ -27,9 +27,7 @@ export default function RootLayout({
           <Scroll>
             {/* ENABLES DARK AND LIGHT MODE */}
             <Provider>
-              <Navbar />
               <main className="">{children}</main>
-              <Footer />
             </Provider>
           </Scroll>
         </LenisScroll>

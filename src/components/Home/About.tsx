@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
-import Image1 from "../../../public/images/general/home/about_image.jpg";
+import Image1 from "../../../public/images/general/home/about_image4.jpg";
 import Image2 from "../../../public/images/general/home/about_image3.jpg";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
@@ -194,6 +194,7 @@ function About() {
             alt="sjsh"
             className="w-full h-full scale-110"
             ref={image1}
+            placeholder="blur"
           />
         </div>
         <div className="md:flex-1 flex justify-center items-center">
@@ -206,15 +207,16 @@ function About() {
               alt="sjsh"
               className="w-full h-full"
               ref={image2}
+              placeholder="blur"
             />
           </div>
         </div>
       </div>
-      <div className="sm:flex mt-8">
+      <motion.div className="sm:flex mt-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         <div className="md:flex-[1] lg:flex-[1.5] hidden md:block"></div>
         <div className="md:flex-[1.5] lg:flex-[1] flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
-            <Paragraph text="Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. " />
+            <Paragraph text="As a designer and developer, I like to add compelling elements to my websites, such as scrolling animations and interaction to increase user engagement. I prioritize aesthetics and functionality, implementing the best SEO practices. " />
           </div>
           <div className="flex-1">
             <Paragraph text="Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum." />
@@ -223,7 +225,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

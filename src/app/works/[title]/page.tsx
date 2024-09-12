@@ -1,8 +1,10 @@
 import React from "react";
 import { allProjects } from "@/utils/works";
 import MainPage from "@/components/WorkDetail/MainPage";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-function WorkDetail({ params }: { params: { title: string } }) {
+function WorkDetail({ params }: { readonly params: { readonly title: string } }) {
   const title: string[] = [];
 
   // Input => params: { title: 'oracle%20music' }; expected output => 'Oracle Music'
@@ -17,7 +19,9 @@ function WorkDetail({ params }: { params: { title: string } }) {
 
   return (
     <div>
+      <Navbar/>
       <MainPage project={allProjects[index]} index={index}/>
+      <Footer/>
     </div>
   );
 }
