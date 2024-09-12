@@ -1,26 +1,44 @@
-"use client"
+"use client";
 
-import React from 'react'
-import PreLoading from './PreLoading'
-import Hero from './Hero'
-import Services from './Services'
-import Works from './Works'
-import About from './About'
-import Footer from '../Footer'
-import Navbar from '../Navbar'
+import React, { useState, useEffect } from "react";
+import PreLoading from "./PreLoading";
+import Hero from "./Hero";
+import Services from "./Services";
+import Works from "./Works";
+import About from "./About";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 function MainPage() {
+  const [count, setCount] = useState(10);
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      setCount((prev) => {
+        if (prev === 0) {
+          clearInterval(timer);
+          return 0;
+        } else return prev - 1;
+      });
+    }, 1000);
+  }, []);
+
   return (
     <>
-    <PreLoading/>
-    {/* <Navbar/>
-    <Hero/>
-    <About/>
-    <Works/>
-    <Services/>
-    <Footer/> */}
+      {count > 0 ? (
+        <PreLoading count={count} />
+      ) : (
+        <div className="px-[6vw]">
+          <Navbar />
+          <Hero />
+          <About />
+          <Works />
+          <Services />
+          <Footer />
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;
