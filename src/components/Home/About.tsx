@@ -7,7 +7,7 @@ import Image from "next/image";
 import Paragraph from "../Paragraph";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { motion, useInView } from "framer-motion";
+import { easeInOut, motion, useInView } from "framer-motion";
 
 function About() {
   const image1 = useRef(null);
@@ -55,10 +55,22 @@ function About() {
   // finish span
   const bottomline2 = "products from start to finish.";
 
-  const EASING = [0.83, 0, 0.17, 1]
-  const DELAY = 0.01
+  const EASING = [0.83, 0, 0.17, 1];
+  const DELAY = 0.01;
 
-  console.log(bottomline2.slice(0, 3))
+  const appear = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: easeInOut,
+        delay: 0.4,
+      },
+    },
+  };
 
   return (
     <section className="py-[15vh]">
@@ -72,19 +84,21 @@ function About() {
               return (
                 <motion.span
                   initial={{ y: "100%", rotateZ: 5 }}
-                  animate={ top && {
-                    y: 0,
-                    rotateZ: 0,
-                    transition: {
-                      duration: .6,
-                      delay: i * DELAY,
-                      ease: EASING
+                  animate={
+                    top && {
+                      y: 0,
+                      rotateZ: 0,
+                      transition: {
+                        duration: 0.6,
+                        delay: i * DELAY,
+                        ease: EASING,
+                      },
                     }
-                  }}
+                  }
                   key={`${letter}_${i}`}
                   className="inline-block"
                 >
-                  {letter === " " ? <span className="mr-[1vw]"></span>: letter}
+                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
                 </motion.span>
               );
             })}
@@ -97,26 +111,28 @@ function About() {
               return (
                 <motion.span
                   initial={{ y: "100%", rotateZ: 5 }}
-                  animate={ top && {
-                    y: 0,
-                    rotateZ: 0,
-                    transition: {
-                      duration: .6,
-                      delay: i * DELAY,
-                      ease: EASING
+                  animate={
+                    top && {
+                      y: 0,
+                      rotateZ: 0,
+                      transition: {
+                        duration: 0.6,
+                        delay: i * DELAY,
+                        ease: EASING,
+                      },
                     }
-                  }}
+                  }
                   key={`${letter}_${i}`}
                   className="inline-block"
                 >
-                  {letter === " " ? <span className="mr-[1vw]"></span>: letter}
+                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
                 </motion.span>
               );
             })}
           </h3>
         </div>
         <div className="">
-           <h3
+          <h3
             ref={topRef}
             className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1] overflow-hidden`}
           >
@@ -124,24 +140,26 @@ function About() {
               return (
                 <motion.span
                   initial={{ y: "100%", rotateZ: 5 }}
-                  animate={ top && {
-                    y: 0,
-                    rotateZ: 0,
-                    transition: {
-                      duration: .6,
-                      delay: i * DELAY,
-                      ease: EASING
+                  animate={
+                    top && {
+                      y: 0,
+                      rotateZ: 0,
+                      transition: {
+                        duration: 0.6,
+                        delay: i * DELAY,
+                        ease: EASING,
+                      },
                     }
-                  }}
+                  }
                   key={`${letter}_${i}`}
                   className="inline-block"
                 >
-                  {letter === " " ? <span className="mr-[1vw]"></span>: letter}
+                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
                 </motion.span>
               );
             })}
           </h3>
-           <h3
+          <h3
             ref={topRef}
             className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1] overflow-hidden`}
           >
@@ -149,15 +167,17 @@ function About() {
               return (
                 <motion.span
                   initial={{ y: "100%", rotateZ: 5 }}
-                  animate={ top && {
-                    y: 0,
-                    rotateZ: 0,
-                    transition: {
-                      duration: .6,
-                      delay: i * DELAY,
-                      ease: EASING
+                  animate={
+                    top && {
+                      y: 0,
+                      rotateZ: 0,
+                      transition: {
+                        duration: 0.6,
+                        delay: i * DELAY,
+                        ease: EASING,
+                      },
                     }
-                  }}
+                  }
                   key={`${letter}_${i}`}
                   className="inline-block"
                 >
@@ -194,7 +214,13 @@ function About() {
           </div>
         </div>
       </div>
-      <motion.div className="sm:flex mt-8" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <motion.div
+        className="sm:flex mt-8"
+        variants={appear}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <div className="md:flex-[1] lg:flex-[1.5] hidden md:block"></div>
         <div className="md:flex-[1.5] lg:flex-[1] flex flex-col sm:flex-row gap-8">
           <div className="flex-1">

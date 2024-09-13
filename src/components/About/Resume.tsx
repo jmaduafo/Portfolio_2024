@@ -1,12 +1,50 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import { items } from "@/utils/resume";
 import Paragraph from "../Paragraph";
 import MainButton from "../MainButton";
+import { motion, useInView, easeInOut } from "framer-motion";
 
 function Resume() {
+  const titleRef = useRef(null);
+  const title = useInView(titleRef, { once: true });
+
+  const EASING = [0.83, 0, 0.17, 1];
+
+  const appear = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: easeInOut,
+        delay: 0.4,
+      },
+    },
+  };
+
+  const rise = {
+    initial: {
+      y: "100%",
+    },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: EASING,
+        delay: 0.4,
+      },
+    },
+  };
+
   return (
     <section className="mt-[6vh]">
-      <div className="border-b-[1px] border-b-lightText20 dark:border-b-darkText20 md:border-none">
+      <div
+        className="border-b-[1px] border-b-lightText20 dark:border-b-darkText20 md:border-none"
+        ref={titleRef}
+      >
         {items.map((item, l) => {
           return (
             <div
@@ -14,7 +52,15 @@ function Resume() {
               key={item.category}
             >
               <div className="flex-1 py-5">
-                <Paragraph text={item.category} />
+                <div className="overflow-hidden">
+                  <motion.div
+                    variants={rise}
+                    initial="initial"
+                    animate={title && "animate"}
+                  >
+                    <Paragraph text={item.category} />
+                  </motion.div>
+                </div>
               </div>
               <div
                 className={`flex-[3] md:border-t-[1px] md:border-t-lightText20 md:dark:border-t-darkText20 ${
@@ -24,7 +70,17 @@ function Resume() {
               >
                 {item.list.map((list, i) => {
                   return (
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{
+                        opacity: 1,
+                        transition: {
+                          duration: 0.8,
+                          ease: easeInOut,
+                          delay: i * 0.1,
+                        },
+                      }}
+                      viewport={{ once: true }}
                       key={list.institution}
                       className={`${
                         i !== item.list.length - 1 ? "mb-8" : "mb-0"
@@ -49,7 +105,7 @@ function Resume() {
                       <p className="text-[13px] md:text-[16px]">
                         {list.duration}
                       </p>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
