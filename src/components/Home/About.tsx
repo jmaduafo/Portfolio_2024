@@ -16,8 +16,6 @@ function About() {
 
   const topRef = useRef(null);
   const top = useInView(topRef, { once: true });
-  const bottomRef = useRef(null);
-  const bottom = useInView(bottomRef, { once: true });
 
   useGSAP(() => {
     gsap.to(image1.current, {
@@ -47,22 +45,6 @@ function About() {
       yPercent: -5,
     });
   });
-
-  const textVariant = {
-    initial: {
-      y: "120%",
-      rotateZ: 5,
-    },
-    animate: {
-      y: 0,
-      rotateZ: 0,
-      transition: {
-        duration: 1,
-        ease: [0.87, 0, 0.13, 1],
-        // delay: .2
-      },
-    },
-  };
 
   // fresh span
   const topline1 = "I promote fresh and creative";

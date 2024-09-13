@@ -4,14 +4,13 @@ import { Projects } from "@/types/type";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import Paragraph from "../Paragraph";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import PrevNext from "./PrevNext";
 
-function MainPage({ project, index }: { project: Projects, index: number }) {
+function MainPage({ project, index }: { readonly project: Projects, readonly index: number }) {
   const introImageDiv = useRef(null);
   const introImage = useRef(null);
   const middleImageDiv1 = useRef(null);
@@ -153,20 +152,6 @@ function MainPage({ project, index }: { project: Projects, index: number }) {
       transition: {
         duration: 0.6,
         delay: 0.7,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  };
-
-  const imageVariant = {
-    initial: {
-      width: "0%",
-    },
-    animate: {
-      width: "100%",
-      transition: {
-        duration: 0.8,
-        delay: 0.4,
         ease: [0.16, 1, 0.3, 1],
       },
     },
