@@ -58,7 +58,7 @@ function MainButton({ text, fontSize, link, email, classNameWidth }: Button) {
                   return (
                     <p
                       key={`${word}_${i}`}
-                      className={`${satoshiLight.className} ${fontSize} whitespace-nowrap`}
+                      className={`${satoshiLightItalic.className} ${fontSize} whitespace-nowrap`}
                     >
                       {word}
                     </p>
