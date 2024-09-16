@@ -9,8 +9,8 @@ function MainPage() {
   const [values, setValues] = useState({
     user_name: "",
     user_email: "",
-    user_message: ""
-  })
+    user_message: "",
+  });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
@@ -59,13 +59,17 @@ function MainPage() {
     },
   };
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
-    const { name, value } = e.target
+  function handleChange(
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) {
+    const { name, value } = e.target;
 
     setValues({
       ...values,
-      [name]: value
-    })
+      [name]: value,
+    });
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -86,7 +90,6 @@ function MainPage() {
       setTimeout(function () {
         setError("");
       }, 5000);
-
     } else if (!email.toString().match(emailRegex)) {
       setError("Invalid email format");
 
@@ -94,7 +97,7 @@ function MainPage() {
         setError("");
       }, 5000);
     } else {
-      setLoading(true)
+      setLoading(true);
 
       try {
         const response = await fetch("/api/contact", {
@@ -111,9 +114,9 @@ function MainPage() {
         }
 
         await response.json();
-        
-        setSuccess("Message successfully sent!");
-        
+
+        setSuccess("Message sent successfully!");
+
         setTimeout(function () {
           setSuccess("");
         }, 5000);
@@ -122,16 +125,16 @@ function MainPage() {
           user_name: "",
           user_email: "",
           user_message: "",
-        })
+        });
       } catch (err: any) {
         setError(err.message);
-        
+
         setTimeout(function () {
           setError("");
         }, 5000);
       }
 
-      setLoading(false)
+      setLoading(false);
     }
   }
 
@@ -165,7 +168,7 @@ function MainPage() {
             </div>
           </div>
           <div className="mt-14">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="">
               <div className="flex flex-col xs:flex-row gap-6">
                 <div className="flex-1 flex flex-col gap-y-2">
                   <motion.label
@@ -175,7 +178,7 @@ function MainPage() {
                     className="text-[14px]"
                     htmlFor="name"
                   >
-                    Name
+                    Name *
                   </motion.label>
                   <motion.input
                     variants={scale}
@@ -197,7 +200,7 @@ function MainPage() {
                     className="text-[14px]"
                     htmlFor="email"
                   >
-                    Email
+                    Email *
                   </motion.label>
                   <motion.input
                     variants={scale}
@@ -221,7 +224,7 @@ function MainPage() {
                     className="text-[14px]"
                     htmlFor="email"
                   >
-                    Message
+                    Message *
                   </motion.label>
                   <motion.textarea
                     variants={scale}
@@ -236,13 +239,11 @@ function MainPage() {
                   ></motion.textarea>
                 </div>
               </div>
-              <div>
-                {error.length ? (
-                  <p>{error}</p>
-                ) : success.length ? (
-                  <p>{success}</p>
-                ) : null}
+              {error.length || success.length ? (
+              <div className={` mt-2`}>
+                <p className={`${error.length ? "text-red-500" : success.length ? "text-green-600" : "text-transparent"} text-[15px]`}>{error.length ? error : success}</p>
               </div>
+            ) : null}
               <div className="mt-6">
                 <motion.button
                   variants={appear}
