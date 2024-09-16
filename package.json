@@ -16,6 +16,7 @@
     "gsap": "^3.12.5",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "scrolltrigger": "^1.0.1"

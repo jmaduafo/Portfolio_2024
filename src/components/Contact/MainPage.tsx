@@ -4,15 +4,13 @@ import { spectralBridgeRegular } from "@/fonts/font";
 import { motion, easeInOut } from "framer-motion";
 import MainButton from "../MainButton";
 import Paragraph from "../Paragraph";
-import { sendContactForm } from "@/nodemailer/api";
 
 function MainPage() {
   const [values, setValues] = useState({
     user_name: "",
     user_email: "",
-    user_message: "",
-  });
-
+    user_message: ""
+  })
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
@@ -61,60 +59,79 @@ function MainPage() {
     },
   };
 
+  function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
+    const { name, value } = e.target
+
+    setValues({
+      ...values,
+      [name]: value
+    })
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     const emailRegex =
       /[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})/;
 
     e.preventDefault();
 
-    if (
-      !values.user_email.length ||
-      !values.user_name.length ||
-      !values.user_message.length
-    ) {
-      setError("No fields should be left empty");
+    const formData = new FormData(e.target as HTMLFormElement);
+
+    const name = formData.get("user_name");
+    const email = formData.get("user_email");
+    const message = formData.get("user_message");
+
+    if (!name || !email || !message) {
+      setError("No entries can be left empty");
 
       setTimeout(function () {
         setError("");
       }, 5000);
-    } else if (!values.user_email.match(emailRegex)) {
-      setError("Invalid email address");
+
+    } else if (!email.toString().match(emailRegex)) {
+      setError("Invalid email format");
 
       setTimeout(function () {
         setError("");
       }, 5000);
     } else {
-      setError("");
-      setLoading(true);
+      setLoading(true)
 
       try {
-        await sendContactForm({
-          name: values.user_name,
-          email: values.user_email,
-          message: values.user_message,
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          body: formData,
         });
 
-        setLoading(false);
+        if (!response.ok) {
+          setError(`Failed to send message.`);
 
-        setValues({
-          user_email: "",
-          user_message: "",
-          user_name: "",
-        });
+          setTimeout(function () {
+            setError("");
+          }, 5000);
+        }
 
-        setSuccess("Message has been sent successfully!");
-
+        await response.json();
+        
+        setSuccess("Message successfully sent!");
+        
         setTimeout(function () {
           setSuccess("");
         }, 5000);
+
+        setValues({
+          user_name: "",
+          user_email: "",
+          user_message: "",
+        })
       } catch (err: any) {
         setError(err.message);
-        setLoading(false);
-
+        
         setTimeout(function () {
           setError("");
         }, 5000);
       }
+
+      setLoading(false)
     }
   }
 
@@ -168,9 +185,7 @@ function MainPage() {
                     id="name"
                     name="user_name"
                     type="text"
-                    onChange={(e) =>
-                      setValues({ ...values, user_name: e.target.value })
-                    }
+                    onChange={handleChange}
                     value={values.user_name}
                   />
                 </div>
@@ -192,9 +207,7 @@ function MainPage() {
                     id="email"
                     name="user_email"
                     type="email"
-                    onChange={(e) =>
-                      setValues({ ...values, user_email: e.target.value })
-                    }
+                    onChange={handleChange}
                     value={values.user_email}
                   />
                 </div>
@@ -217,11 +230,9 @@ function MainPage() {
                     className="py-2 px-2 origin-left border-b-[1.5px] border-b-lightText dark:border-b-darkText outline-none bg-transparent"
                     id="message"
                     name="user_message"
-                    onChange={(e) =>
-                      setValues({ ...values, user_message: e.target.value })
-                    }
-                    value={values.user_message}
                     rows={3}
+                    onChange={handleChange}
+                    value={values.user_message}
                   ></motion.textarea>
                 </div>
               </div>
@@ -240,7 +251,7 @@ function MainPage() {
                   type="submit"
                   className="hover:bg-lightText hover:text-lightBg dark:hover:bg-darkText dark:hover:text-darkBg duration-300 text-[16px] 2xl:text-[26px] w-full sm:w-[45%] py-2 border-[1px] border-lightText dark:border-darkText rounded-full outline-none"
                 >
-                  Submit
+                  {loading ? "O" : "Submit"}
                 </motion.button>
               </div>
             </form>
