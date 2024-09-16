@@ -19,15 +19,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${satoshiRegular.className} duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText`}
-      >
+      <body suppressHydrationWarning>
         <LenisScroll>
           {/* GSAP SCROLLTRIGGER */}
           <Scroll>
             {/* ENABLES DARK AND LIGHT MODE */}
             <Provider>
-              <main className="">{children}</main>
+              <div
+                className={`${satoshiRegular.className} duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText px-[6vw]
+              `}
+              >
+                {children}
+              </div>
             </Provider>
           </Scroll>
         </LenisScroll>

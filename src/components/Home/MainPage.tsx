@@ -28,14 +28,16 @@ function MainPage() {
       {count > 0 ? (
         <PreLoading count={count} />
       ) : (
-        <div className="px-[6vw]">
+        <>
           <Navbar />
-          <Hero />
-          <About />
-          <Works />
-          <Services />
+          <main>
+            <Hero />
+            <About />
+            <Works />
+            <Services />
+          </main>
           <Footer />
-        </div>
+        </>
       )}
     </>
   );

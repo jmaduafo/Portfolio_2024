@@ -163,9 +163,9 @@ function MainPage() {
             </motion.h1>
           </div>
           <div className="flex justify-end">
-            <div className="w-[70%] sm:w-[60%] md:w-[55%]">
+            <motion.div variants={appear} initial="initial" animate="animate" className="w-[70%] sm:w-[60%] md:w-[55%]">
               <Paragraph text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient" />
-            </div>
+            </motion.div>
           </div>
           <div className="mt-14">
             <form onSubmit={handleSubmit} className="">

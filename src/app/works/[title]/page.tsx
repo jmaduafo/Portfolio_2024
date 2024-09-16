@@ -4,7 +4,11 @@ import MainPage from "@/components/WorkDetail/MainPage";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-function WorkDetail({ params }: { readonly params: { readonly title: string } }) {
+function WorkDetail({
+  params,
+}: {
+  readonly params: { readonly title: string };
+}) {
   const title: string[] = [];
 
   // Input => params: { title: 'oracle%20music' }; expected output => 'Oracle Music'
@@ -18,11 +22,13 @@ function WorkDetail({ params }: { readonly params: { readonly title: string } })
   let index = allProjects.findIndex((item) => item.title === title.join(" "));
 
   return (
-    <div className="px-[6vw]">
-      <Navbar/>
-      <MainPage project={allProjects[index]} index={index}/>
-      <Footer/>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <MainPage project={allProjects[index]} index={index} />
+      </main>
+      <Footer />
+    </>
   );
 }
 
