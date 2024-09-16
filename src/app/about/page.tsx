@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 function About() {
   return (
-    <>
+    <div className="px-[6vw]">
       <Navbar />
       <main>
         <Intro />
@@ -21,7 +21,7 @@ function About() {
         <Closing />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

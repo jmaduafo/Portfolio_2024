@@ -28,7 +28,7 @@ function MainPage() {
       {count > 0 ? (
         <PreLoading count={count} />
       ) : (
-        <>
+        <div className="px-[6vw]">
           <Navbar />
           <main>
             <Hero />
@@ -37,7 +37,7 @@ function MainPage() {
             <Services />
           </main>
           <Footer />
-        </>
+        </div>
       )}
     </>
   );

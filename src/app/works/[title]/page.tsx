@@ -22,13 +22,13 @@ function WorkDetail({
   let index = allProjects.findIndex((item) => item.title === title.join(" "));
 
   return (
-    <>
+    <div className="px-[6vw]">
       <Navbar />
       <main>
         <MainPage project={allProjects[index]} index={index} />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
