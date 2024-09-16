@@ -45,3 +45,9 @@ export type Services = {
   technologies: string[];
   description: string;
 };
+
+export type ContactForm = {
+  name: string;
+  email: string;
+  message: string;
+}

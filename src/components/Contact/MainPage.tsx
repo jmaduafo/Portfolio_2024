@@ -4,6 +4,7 @@ import { spectralBridgeRegular } from "@/fonts/font";
 import { motion, easeInOut } from "framer-motion";
 import MainButton from "../MainButton";
 import Paragraph from "../Paragraph";
+import { sendContactForm } from "@/nodemailer/api";
 
 function MainPage() {
   const [values, setValues] = useState({
@@ -11,6 +12,10 @@ function MainPage() {
     user_email: "",
     user_message: "",
   });
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const EASING = [0.83, 0, 0.17, 1];
 
@@ -56,8 +61,61 @@ function MainPage() {
     },
   };
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
+    const emailRegex =
+      /[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})/;
+
     e.preventDefault();
+
+    if (
+      !values.user_email.length ||
+      !values.user_name.length ||
+      !values.user_message.length
+    ) {
+      setError("No fields should be left empty");
+
+      setTimeout(function () {
+        setError("");
+      }, 5000);
+    } else if (!values.user_email.match(emailRegex)) {
+      setError("Invalid email address");
+
+      setTimeout(function () {
+        setError("");
+      }, 5000);
+    } else {
+      setError("");
+      setLoading(true);
+
+      try {
+        await sendContactForm({
+          name: values.user_name,
+          email: values.user_email,
+          message: values.user_message,
+        });
+
+        setLoading(false);
+
+        setValues({
+          user_email: "",
+          user_message: "",
+          user_name: "",
+        });
+
+        setSuccess("Message has been sent successfully!");
+
+        setTimeout(function () {
+          setSuccess("");
+        }, 5000);
+      } catch (err: any) {
+        setError(err.message);
+        setLoading(false);
+
+        setTimeout(function () {
+          setError("");
+        }, 5000);
+      }
+    }
   }
 
   return (
@@ -166,6 +224,13 @@ function MainPage() {
                     rows={3}
                   ></motion.textarea>
                 </div>
+              </div>
+              <div>
+                {error.length ? (
+                  <p>{error}</p>
+                ) : success.length ? (
+                  <p>{success}</p>
+                ) : null}
               </div>
               <div className="mt-6">
                 <motion.button
