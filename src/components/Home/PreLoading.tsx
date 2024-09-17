@@ -58,7 +58,7 @@ function PreLoading({ count }: { readonly count: number }) {
             return name[i] === "i" ? (
               <div
                 key={`${nom}_${i}`}
-                className="flex flex-col items-center justify-center gap-y-[10vh]"
+                className="flex flex-col items-center justify-center gap-y-[6vh] lg:gap-y-[10vh]"
               >
                 <motion.div
                   variants={starVariant}
@@ -66,7 +66,7 @@ function PreLoading({ count }: { readonly count: number }) {
                   animate="animate"
                   exit="exit"
                 >
-                  <StarSpin classNameSize="w-[7vw]" />
+                  <StarSpin classNameSize="w-[15vw] sm:w-[12vw] lg:w-[7vw]" />
                 </motion.div>
                 <motion.p
                   initial={{ y: "100%", opacity: 1 }}

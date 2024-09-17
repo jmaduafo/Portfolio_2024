@@ -224,12 +224,14 @@ function About() {
         <div className="md:flex-[1] lg:flex-[1.5] hidden md:block"></div>
         <div className="md:flex-[1.5] lg:flex-[1] flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
-            <Paragraph text="As a designer and developer, I like to add compelling elements to my websites, such as scrolling animations and interaction to increase user engagement. I prioritize aesthetics and functionality, implementing the best SEO practices. " />
+            <Paragraph text="As a designer and creative developer, I prioritize aesthetics and functionality, implementing foundational SEO practices to build traffic. When sifting through my projects, you might find a bit of my personality in my designs. " />
+            <div className="mt-3">
+            <Paragraph text="I like to put personal touches to my works, leading them to stand out amongst other websites." />
+            </div>
           </div>
           <div className="flex-1">
-            <Paragraph text="Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum." />
-            <div className="mt-3">
-              <Paragraph text="Em quam semper libero, sit amet adipiscing sem neque sed ipsum. " />
+            <div className="">
+              <Paragraph text="This subsequentally helps to separate my clients from other competitors. I lead with empathy to create a sense of comfort for my clients, especially small businesses that are still building and might not have it all figured out yet. Quality will always come before quantity. " />
             </div>
           </div>
         </div>
