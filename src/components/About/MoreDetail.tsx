@@ -141,7 +141,7 @@ function MoreDetail() {
             <Paragraph text="With my already-prevalent love for design and as a problem-solver, I knew that I had to combine the two, and I landed on web development as a possible career path." />
           </div>
           <div className="mt-6">
-            <Paragraph text="After a lot of self-study and discipline, I not only got pretty good at it but also enjoyed the entire process of it, especially as someone with a love for creation. That love of creation has opened my interests to brand design and even logo design, so I never stop learning new ways to create." />
+            <Paragraph text="After a lot of self-study and discipline, I not only got pretty good at it but also enjoyed the entire process of it, especially as someone with a love for creation. That love of creation has opened my interests to brand design and even motion design, so I never stop learning new ways to create." />
           </div>
         </div>
       </motion.div>

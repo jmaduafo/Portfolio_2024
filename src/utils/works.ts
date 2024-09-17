@@ -2,9 +2,9 @@ import { Projects } from "@/types/type";
 
 import ElysianMiddle1 from '../../public/images/elysian/imagesMiddle1.png'
 import ElysianMiddle2 from '../../public/images/elysian/imagesMiddle2.png'
-import ElysianMiddle3 from '../../public/images/elysian/imagesMiddle3.jpg'
-import ElysianOutro1 from '../../public/images/elysian/imagesOutro1.png'
-import ElysianOutro2 from '../../public/images/elysian/imagesOutro2.jpg'
+import ElysianMiddle3 from '../../public/images/elysian/imagesMiddle4.jpg'
+import ElysianOutro1 from '../../public/images/elysian/imagesOutro1.jpg'
+import ElysianOutro2 from '../../public/images/elysian/imagesOutro4.jpg'
 import ElysianOutro3 from '../../public/images/elysian/imagesOutro3.png'
 import ElysianIntro from '../../public/images/elysian/introImage.png'
 
@@ -65,7 +65,7 @@ const projects = [
     position: "md:justify-end",
     marginBottom: "mb-[20vh]",
     // padding: "translateX-[8vw]",
-    mainImage: ElysianMiddle3,
+    mainImage: ElysianOutro2,
     introImage: ElysianIntro,
     imagesMiddle: [
       ElysianMiddle1,
