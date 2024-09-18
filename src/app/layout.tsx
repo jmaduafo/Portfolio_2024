@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${satoshiRegular.className} duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText
+        className={`${satoshiRegular.className} scrollbar scrollLight dark:scrollDark duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText
               `}
         suppressHydrationWarning
       >

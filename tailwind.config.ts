@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const plugin = require("tailwindcss/plugin");
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,11 +12,11 @@ const config: Config = {
     extend: {
       backgroundImage: {
         darkSlash: "url('../../public/images/general/dark_slash.png')",
-        lightSlash: "url('../../public/images/general/light_slash.png')"
+        lightSlash: "url('../../public/images/general/light_slash.png')",
       },
       content: {
         darkSlash: "url('../../public/images/general/dark_slash.png')",
-        lightSlash: "url('../../public/images/general/light_slash.png')"
+        lightSlash: "url('../../public/images/general/light_slash.png')",
       },
       colors: {
         lightBg: "#F5E7D3",
@@ -47,25 +49,62 @@ const config: Config = {
       },
       keyframes: {
         smooth: {
-          '0%': { opacity:  '0' },
-          '100%': { opacity: '1' },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         carousel: {
           // to: { transform: 'translate(calc(-50% - 23vw))' },
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-110%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-110%)" },
         },
       },
       animation: {
-        'spin-slow': 'spin 8s linear infinite',
-        'appear': 'smooth 0.6s ease',
-        'carousel': 'carousel 7s linear infinite backwards',
-        'carousel-slow': 'carousel 20s linear infinite backwards',
+        "spin-slow": "spin 8s linear infinite",
+        appear: "smooth 0.6s ease",
+        carousel: "carousel 7s linear infinite backwards",
+        "carousel-slow": "carousel 20s linear infinite backwards",
       },
-
     },
   },
-  plugins: [],
-  darkMode: 'selector',
+  plugins: [
+    plugin(({ addBase, theme }: { addBase: any; theme: any }) => {
+      addBase({
+        ".scrollbar::-webkit-scrollbar": {
+          width: "3px",
+        },
+        ".scrollbar::-webkit-scrollbar-track": {
+          backgroundColor: "transparent",
+        },
+        ".scrollbar.scrollLight::-webkit-scrollbar-thumb": {
+          backgroundColor: "rgba(172, 72, 0, 0.8)",
+        },
+        ".scrollbar.scrollDark::-webkit-scrollbar-thumb": {
+          backgroundColor: "rgba(245, 231, 211, 0.8)",
+        },
+      });
+    }),
+  ],
+  darkMode: "selector",
 };
+
+// plugin(({ addBase, theme }: {addBase: any, theme: any}) => {
+//   addBase({
+//       '.scrollbar': {
+//           overflowY: 'auto',
+//           scrollbarColor: `${theme('colors.blue.600')} ${theme('colors.blue.200')}`,
+//           scrollbarWidth: 'thin',
+//       },
+//       '.scrollbar::-webkit-scrollbar': {
+//           height: '2px',
+//           width: '2px',
+//       },
+//       '.scrollbar::-webkit-scrollbar-thumb': {
+//           backgroundColor: theme('colors.blue.600'),
+//       },
+//       '.scrollbar::-webkit-scrollbar-track-piece': {
+//           backgroundColor: theme('colors.blue.200'),
+//       },
+//   });
+// }),
+
 export default config;

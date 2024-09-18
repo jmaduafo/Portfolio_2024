@@ -114,9 +114,14 @@ function Intro() {
               variants={reveal}
               initial="initial"
               animate="animate"
-              className="origin-top overflow-hidden object-cover object-top z-[0]"
+              className="overflow-hidden object-cover object-top z-[0]"
             >
-              <motion.div variants={scale} initial="initial" animate="animate">
+              <motion.div
+                className=""
+                variants={scale}
+                initial="initial"
+                animate="animate"
+              >
                 <Image
                   src={AboutMain}
                   alt=""
