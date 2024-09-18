@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { spectralBridgeRegular } from "@/fonts/font";
 import Header3 from "../Header3";
 import { easeInOut, motion } from "framer-motion";
 
@@ -28,15 +27,6 @@ function Closing() {
 
   return (
     <section className="my-[4vh] md:my-[8vh]">
-      {/* <h3
-        className={`${spectralBridgeRegular.className} indent-[10%] text-[5.5vw] leading-[1]`}
-      >
-        When I'm not busy coding, I enjoy going on{" "}
-        <span className="italic">solo dates</span>, from restaurants to the
-        movies, watching <span className="italic">anime</span> as a longtime
-        enthusiast, and listening to <span className="italic">music</span>.
-        Here's some music that I listen to that helps me get into the zone.
-      </h3> */}
       <Header3 phrase={line1} className="indent-[10%]" />
       <Header3 phrase={line2} />
       <Header3 phrase={line3} />

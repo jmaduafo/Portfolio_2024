@@ -1,20 +1,20 @@
 import { Projects } from "@/types/type";
 
-import ElysianMiddle1 from '../../public/images/elysian/imagesMiddle1.png'
-import ElysianMiddle2 from '../../public/images/elysian/imagesMiddle2.png'
-import ElysianMiddle3 from '../../public/images/elysian/imagesMiddle4.jpg'
+import ElysianMiddle1 from '../../public/images/elysian/imagesMiddle1.jpg'
+import ElysianMiddle2 from '../../public/images/elysian/imagesMiddle2.jpg'
+import ElysianMiddle3 from '../../public/images/elysian/imagesMiddle3.jpg'
 import ElysianOutro1 from '../../public/images/elysian/imagesOutro1.jpg'
-import ElysianOutro2 from '../../public/images/elysian/imagesOutro4.jpg'
-import ElysianOutro3 from '../../public/images/elysian/imagesOutro3.png'
-import ElysianIntro from '../../public/images/elysian/introImage.png'
+import ElysianOutro2 from '../../public/images/elysian/imagesOutro2.jpg'
+import ElysianOutro3 from '../../public/images/elysian/imagesOutro3.jpg'
+import ElysianIntro from '../../public/images/elysian/introImage.jpg'
 
 import SylvanMiddle1 from '../../public/images/sylvan/imagesMiddle1.jpg'
-import SylvanMiddle2 from '../../public/images/sylvan/imagesMiddle2.png'
+import SylvanMiddle2 from '../../public/images/sylvan/imagesMiddle2.jpg'
 import SylvanMiddle3 from '../../public/images/sylvan/imagesMiddle3.jpg'
 import SylvanOutro1 from '../../public/images/sylvan/imagesOutro1.jpg'
 import SylvanOutro2 from '../../public/images/sylvan/imagesOutro2.jpg'
 import SylvanOutro3 from '../../public/images/sylvan/imagesOutro3.jpg'
-import SylvanIntro from '../../public/images/sylvan/introImage.png'
+import SylvanIntro from '../../public/images/sylvan/introImage.jpg'
 import SylvanMain from '../../public/images/sylvan/mainImage.jpg'
 
 import OracleMiddle1 from '../../public/images/oracle/imagesMiddle1.png'
