@@ -164,7 +164,7 @@ function MainPage() {
           </div>
           <div className="flex justify-end">
             <motion.div variants={appear} initial="initial" animate="animate" className="w-[70%] sm:w-[60%] md:w-[55%]">
-              <Paragraph text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient" />
+              <Paragraph text="Ready to bring your vision to life? Simply fill out the form, and let’s start turning your ideas into reality. Or if you're reaching out to offer for a new opportunity, feel free to message me—let’s connect today!" />
             </motion.div>
           </div>
           <div className="mt-14">

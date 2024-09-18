@@ -224,10 +224,10 @@ function About() {
         <div className="xs:flex-[1] hidden xs:block"></div>
         <div className="xs:flex-[2.5] md:flex-[1.2] flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
-            <Paragraph text="As a designer and creative developer, I prioritize aesthetics and functionality, implementing foundational SEO practices to build traffic. When sifting through my projects, you might find a bit of my personality in my designs. " />
-            <div className="mt-3">
+            <Paragraph text="As a designer and creative developer, I prioritize aesthetics and functionality, implementing foundational SEO practices to build traffic. When sifting through my projects, you might find a bit of my personality in my designs. I like to put personal touches to my works, leading them to stand out amongst other websites. " />
+            {/* <div className="mt-3">
             <Paragraph text="I like to put personal touches to my works, leading them to stand out amongst other websites." />
-            </div>
+            </div> */}
           </div>
           <div className="flex-1">
             <div className="">
