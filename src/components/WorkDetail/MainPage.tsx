@@ -293,7 +293,7 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
           {project?.description1?.map((desc) => {
             return (
               <div key={desc}>
-                <Paragraph text={desc} />
+                <Paragraph text={desc} className="text-[18px]"/>
               </div>
             );
           })}
@@ -400,7 +400,7 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
               >
                 <Paragraph
                   text={desc}
-                  className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%]"
+                  className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] text-[18px]"
                 />
               </motion.div>
             );
