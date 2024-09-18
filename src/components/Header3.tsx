@@ -18,7 +18,7 @@ function Header3({ phrase, className }: Header) {
   return (
     <h3
       ref={topRef}
-      className={`${spectralBridgeRegular.className} ${className} text-[5.5vw] leading-[1] overflow-hidden`}
+      className={`${spectralBridgeRegular.className} ${className} text-[5.3vw] leading-[1] overflow-hidden`}
     >
       {phrase.split("").map((letter, i) => {
         return (

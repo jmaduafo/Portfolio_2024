@@ -1,5 +1,4 @@
 import React from "react";
-import { spectralBridgeRegular } from "@/fonts/font";
 import Header3 from "../Header3";
 
 function AboutMe() {
