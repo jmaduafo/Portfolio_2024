@@ -2,7 +2,7 @@ import { Services } from "@/types/type"
 
 const services = [
     {
-        title: "Web Development",
+        title: "Frontend Development",
         technologies: [
             "HTML",
             "CSS",
@@ -13,6 +13,16 @@ const services = [
             "tailwind",
             "GSAP",
             "Framer Motion",
+            "Lenis Scroll",
+        ],
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem."
+    },
+    {
+        title: "Backend Development",
+        technologies: [
+            "JavaScript",
+            "TypeScript",
+            "next.js",
             "node.js",
             "firebase",
             "supabase",

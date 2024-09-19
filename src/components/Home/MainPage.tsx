@@ -8,6 +8,8 @@ import Works from "./Works";
 import About from "./About";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import ProcessTransition from "./ProcessTransition";
+import Process from "./Process";
 
 function MainPage() {
   const [count, setCount] = useState(10);
@@ -35,6 +37,8 @@ function MainPage() {
             <About />
             <Works />
             <Services />
+            {/* <ProcessTransition /> */}
+            <Process/>
           </main>
           <Footer />
         </div>

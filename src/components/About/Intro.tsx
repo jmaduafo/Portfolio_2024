@@ -27,20 +27,7 @@ function Intro() {
       },
     },
   };
-  const rise2 = {
-    initial: {
-      y: "100%",
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: EASING,
-        delay: 0.4,
-      },
-    },
-  };
-
+  
   const reveal = {
     initial: {
       height: "0%",

@@ -162,7 +162,7 @@ function Services() {
       {/* LISTED SERVICES*/}
       <div className="flex justify-end">
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0}}
           whileInView={{
             opacity: 1,
             transition: {
@@ -171,21 +171,24 @@ function Services() {
               delay: .3,
             },
           }}
+          viewport={{ once: true }}
           className="border-t-[1px] border-t-lightText20 dark:border-t-darkText20 w-full md:w-[70%]"
         >
           {allServices.map((item, i) => {
             return (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, x: "-5%" }}
                 whileInView={{
                   opacity: 1,
+                  x: "0%",
                   transition: {
                     duration: 0.8,
                     ease: [0.83, 0, 0.17, 1],
                     delay: i * 0.1,
                   },
                 }}
+                viewport={{ once: true }}
               >
                 <ServicesList services={item} />
               </motion.div>
