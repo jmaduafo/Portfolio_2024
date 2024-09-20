@@ -16,18 +16,19 @@ function ProcessTransition() {
 
   const carousel = useRef(null);
 
-  useGSAP(() => {
-    gsap.from(carousel.current, {
-      y: "-8%",
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: carousel.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.from(carousel.current, {
+  //     y: "-8%",
+  //     ease: "power1.inOut",
+  //     scrollTrigger: {
+  //       trigger: carousel.current,
+  //       start: "top bottom",
+  //       end: "bottom top",
+  //       scrub: true,
+  //       markers: true
+  //     },
+  //   });
+  // });
 
   return (
     <section className="mt-[6vh]">
