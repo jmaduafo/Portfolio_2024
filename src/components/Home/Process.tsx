@@ -11,30 +11,70 @@ function Process() {
 
   function borderCondition(index: number) {
     if (index === 0) {
-      return `border-b-[1px] border-b-lightText20 dark:border-b-darkText20 lg:border-r-[1px] lg:border-r-lightText20 lg:dark:border-r-darkText20`;
+      return `border-b-[1px] border-b-lightText20 dark:border-b-darkText20 xl:border-r-[1px] xl:border-r-lightText20 xl:dark:border-r-darkText20`;
     } else if (index === 1) {
-      return "border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[1px] sm:border-r-lightText20 sm:dark:border-r-darkText20 lg:border-r-[0px]";
+      return "border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[1px] sm:border-r-lightText20 sm:dark:border-r-darkText20 xl:border-r-[0px]";
     } else if (index === 2) {
-      return "border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[0px] lg:border-b-[0px] lg:border-r-[1px] lg:border-r-lightText20 lg:dark:border-r-darkText20";
+      return "border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[0px] xl:border-b-[0px] xl:border-r-[1px] xl:border-r-lightText20 xl:dark:border-r-darkText20";
     } else if (index === 3) {
-      return "border-b-none dark:border-b-none sm:border-r-none sm:dark:border-r-none lg:border-r-none lg:dark:border-r-none";
+      return "border-b-none dark:border-b-none sm:border-r-none sm:dark:border-r-none xl:border-r-none xl:dark:border-r-none";
     }
   }
 
   function changeIndex(i: number) {
     if (index === i) {
-        setIndex(undefined)
+      setIndex(undefined);
     } else {
-        setIndex(i)
+      setIndex(i);
     }
   }
 
+  const appear = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        ease: easeInOut,
+        duration: 0.6,
+        delay: 0.5,
+      },
+    },
+  };
+
+  const curve = {
+    initial: {
+      borderTopLeftRadius: "0%",
+    },
+    animate: {
+      borderTopLeftRadius: "100%",
+      transition: {
+        ease: [0.83, 0, 0.17, 1],
+        duration: 1,
+        delay: 0.7,
+      },
+    },
+  };
+
   return (
     <section className="my-[20vh]">
-      <div className="w-full md:w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="p-8 flex items-end rounded-tl-full bg-lightText text-lightBg dark:bg-darkText dark:text-darkBg h-[30vh] sm:h-auto lg:h-[55vh]">
-          <h4 className="text-[40px]">PROCESS</h4>
-        </div>
+      <motion.div
+        variants={appear}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="w-full md:w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
+      >
+        <motion.div
+          variants={curve}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="p-8 flex items-end rounded-tl-full bg-lightText text-lightBg dark:bg-darkText dark:text-darkBg h-[30vh] sm:h-auto lg:h-[55vh]"
+        >
+          <h4 className="text-[40px] 2xl:text-[60px]">PROCESS</h4>
+        </motion.div>
         {processes.map((item, i) => {
           return (
             <div
@@ -50,7 +90,7 @@ function Process() {
             >
               <div>
                 <h5
-                  className={`${spectralBridgeRegular.className} text-[30px] leading-[1] mb-[5vh] lg:mb-0`}
+                  className={`${spectralBridgeRegular.className} text-[30px] 2xl:text-[48px] leading-[1] mb-[5vh] lg:mb-0`}
                 >
                   0{i + 1}.<span className="ml-4">{item.title}</span>
                 </h5>
@@ -67,7 +107,7 @@ function Process() {
                 }}
                 className="mt-auto"
               >
-                <p className="text-[14px] sm:text-[15px]">{item.description}</p>
+                <p className="text-[14px] sm:text-[15px] 2xl:text-[24px]">{item.description}</p>
               </motion.div>
             </div>
           );
@@ -80,7 +120,7 @@ function Process() {
             className="w-full h-full rounded-br-full"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -20,8 +20,8 @@ function ServicesList({ services }: List) {
         onClick={() => setIsOpen((prev) => !prev)}
         className="cursor-pointer px-1 py-5 flex justify-between items-center w-full"
       >
-        <div className="flex items-start gap-2">
-          <p className={`${spectralBridgeRegular.className} text-[13px]`}>
+        <div className="flex items-start gap-[1vw]">
+          <p className={`${spectralBridgeRegular.className} text-[13px] 2xl:text-[28px]`}>
             {services.id}.
           </p>
           <Header5 text={services.title} />
@@ -58,7 +58,7 @@ function ServicesList({ services }: List) {
                 return (
                   <p
                     key={tech}
-                    className="whitespace-nowrap rounded-full border-[1px] border-lightText60 dark:border-darkText60 py-[1px] px-2 text-[12.5px] capitalize"
+                    className="whitespace-nowrap rounded-full border-[1px] border-lightText60 dark:border-darkText60 py-[1px] px-2 2xl:px-5 text-[13.5px] 2xl:text-[20px] capitalize"
                   >
                     {tech}
                   </p>

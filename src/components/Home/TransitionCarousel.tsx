@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
 
-function TransitionCarousel({ classNameRotate, array, ref }: { classNameRotate: string, array: string[], ref?: React.MutableRefObject<null>}) {
+function TransitionCarousel({ classNameRotate, array}: { classNameRotate: string, array: string[]}) {
 
   const allTerms: string[] = [];
 
@@ -17,7 +17,7 @@ function TransitionCarousel({ classNameRotate, array, ref }: { classNameRotate: 
 
   return (
     <div className={`${classNameRotate} overflow-hidden px-6`}>
-        <div className="flex items-center flex-nowrap gap-x-[6vw] w-fit animate-carousel-slower" ref={ref}>
+        <div className="flex items-center flex-nowrap gap-x-[6vw] w-fit animate-carousel-slower">
           {allTerms.map((term, i) => {
             return (
               <Fragment key={`${term}_${i}`}>

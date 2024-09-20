@@ -17,7 +17,7 @@ function DarkLightSwitch() {
     }
 
   return (
-    <div className="p-1 flex items-center gap-1 border-[1px] border-lightText dark:border-darkText rounded-full">
+    <div className="scale-95 xs:scale-100 2xl:scale-125 p-1 flex items-center gap-1 border-[1px] border-lightText dark:border-darkText rounded-full">
       <div onClick={() => setTheme('light')} className="cursor-pointer rounded-full p-1 bg-lightText dark:bg-transparent">
         <SunIcon className="text-lightBg dark:text-darkText w-5"/>
       </div>

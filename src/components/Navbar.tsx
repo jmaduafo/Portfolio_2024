@@ -34,14 +34,14 @@ function Navbar() {
         <div className="flex justify-between items-center">
           {/* JASMINE'S INITIAL LOGO */}
           <Link href={"/"}>
-            <p className={`${rigata.className} text-[3em] tracking-tighter`}>
+            <p className={`${rigata.className} text-[3em] 2xl:text-[5em] tracking-tighter`}>
               JM
             </p>
           </Link>
           {/* DARK MODE/LIGHT MODE TOGGLE */}
           <DarkLightSwitch />
           {/* MENU BUTTON */}
-          <button onClick={() => setMenuOpen(true)} className="">
+          <button onClick={() => setMenuOpen(true)} className="2xl:text-[26px]">
             Menu
           </button>
         </div>
