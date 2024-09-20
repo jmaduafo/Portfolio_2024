@@ -65,7 +65,7 @@ const projects = [
     position: "md:justify-end",
     marginBottom: "mb-[20vh]",
     // padding: "translateX-[8vw]",
-    mainImage: ElysianOutro2,
+    mainImage: ElysianMiddle3,
     introImage: ElysianIntro,
     imagesMiddle: [
       ElysianMiddle1,

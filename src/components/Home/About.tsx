@@ -8,6 +8,7 @@ import Paragraph from "../Paragraph";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { easeInOut, motion, useInView } from "framer-motion";
+import Image3 from "../../../public/images/general/home/about_image6.jpg"
 
 function About() {
   const image1 = useRef(null);
@@ -192,9 +193,9 @@ function About() {
       <div className="mt-10 flex flex-col-reverse md:flex-row gap-y-4 md:gap-y-0 md:max-h-screen">
         <div className="md:flex-1 object-cover object-center overflow-hidden">
           <Image
-            src={Image1}
+            src={Image3}
             alt="sjsh"
-            className="w-full h-full scale-110"
+            className="w-full h-full"
             ref={image1}
             placeholder="blur"
           />

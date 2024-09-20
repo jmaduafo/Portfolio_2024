@@ -37,7 +37,7 @@ function MainPage() {
             <About />
             <Works />
             <Services />
-            {/* <ProcessTransition /> */}
+            <ProcessTransition />
             <Process/>
           </main>
           <Footer />

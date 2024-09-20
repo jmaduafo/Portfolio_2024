@@ -55,14 +55,20 @@ const config: Config = {
         carousel: {
           // to: { transform: 'translate(calc(-50% - 23vw))' },
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-110%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        carouselSlow: {
+          // to: { transform: 'translate(calc(-50% - 23vw))' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
-        appear: "smooth 0.6s ease",
-        carousel: "carousel 7s linear infinite backwards",
+        "appear": "smooth 0.6s ease",
+        "carousel": "carousel 7s linear infinite backwards",
         "carousel-slow": "carousel 20s linear infinite backwards",
+        "carousel-slower": "carouselSlow 220s linear infinite backwards",
       },
     },
   },
