@@ -90,7 +90,7 @@ function MainPage() {
       setTimeout(function () {
         setError("");
       }, 5000);
-    } else if (!email.toString().match(emailRegex)) {
+    } else if (!RegExp(emailRegex).exec(email.toString())) {
       setError("Invalid email format");
 
       setTimeout(function () {
