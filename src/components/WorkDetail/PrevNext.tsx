@@ -14,57 +14,73 @@ function PrevNext({ index }: { index: number }) {
 
   const variant = {
     initial: {
-        opacity: 0
+      opacity: 0,
     },
     animate: {
-        opacity: 1,
-        transition: {
-            duration: .7,
-            ease: [0.25, 1, 0.5, 1],
-            delay: 0.3
-        }
-    }
-  }
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 1, 0.5, 1],
+        delay: 0.3,
+      },
+    },
+  };
 
   return (
     <section className="mt-[6vh] mb-[4vh]">
-      <motion.div variants={variant} initial="initial" whileInView="animate" viewport={{ once: true }} className="flex flex-col sm:flex-row justify-between sm:items-center">
+      <motion.div
+        variants={variant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="flex flex-col sm:flex-row"
+      >
         {/* PREVIOUS PROJECT */}
-        <Link href={`/works/${titleConverter(allProjects[prevIndex].title)}`}>
-          <div className="relative cursor-pointer flex justify-between sm:justify-normal items-center gap-8 hover:gap-10 duration-500 group">
-            <Prev className="w-[8vw] sm:w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
-            <h5 className="text-[9vw] sm:text-[4vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
-              {allProjects[prevIndex].title}
-            </h5>
-            {allProjects[prevIndex].introImage ? (
-              <div className="z-[-1] duration-300 invisible group-hover:visible absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[30vw] sm:w-[15vw] object-cover">
-                <Image
-                  src={allProjects[prevIndex].introImage}
-                  alt=""
-                  className="w-full h-full"
-                />
-              </div>
-            ) : null}
-          </div>
-        </Link>
+        <div className="flex-1 py-[3vw] sm:py-0 sm:px-[3vw] h-[40vh] border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[1px] sm:border-b-[0px] sm:border-r-lightText20 sm:dark:border-r-darkText20">
+          <Link href={`/works/${titleConverter(allProjects[prevIndex].title)}`}>
+            <div className="relative flex flex-col justify-center items-end h-full duration-500 groupduration-500 group">
+              <h5 className="text-right text-[9vw] sm:text-[5vw] leading-[1] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
+                {allProjects[prevIndex].title}
+              </h5>
+              <Prev className="group-hover:translate-x-[-10px] duration-300 mt-6 w-[8vw] sm:w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
+
+              {allProjects[prevIndex].introImage ? (
+                <div className="w-full h-full overflow-hidden  z-[-1] duration-300 opacity-0 group-hover:opacity-100 absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 object-cover object-center">
+                  <Image
+                    src={allProjects[prevIndex].introImage}
+                    alt=""
+                    className="w-full sm:h-full"
+                  />
+                </div>
+              ) : null}
+            </div>
+          </Link>
+        </div>
         {/* NEXT PROJECT */}
-        <Link className="mt-4 sm:mt-0" href={`/works/${titleConverter(allProjects[nextIndex].title)}`}>
-          <div className="relative cursor-pointer flex justify-between sm:justify-normal items-center gap-8 hover:gap-10 duration-500 group">
-            <h5 className="text-[9vw] sm:text-[4vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
-              {allProjects[nextIndex].title}
-            </h5>
-            <Next className="w-[8vw] sm:w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
-            {allProjects[nextIndex].introImage ? (
-              <div className="z-[-1] duration-300 invisible group-hover:visible absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[30vw] sm:w-[15vw] object-cover">
-                <Image
-                  src={allProjects[nextIndex].introImage}
-                  alt=""
-                  className="w-full h-full"
-                />
+        <div className="flex-1 h-[40vh] py-[3vw] sm:py-0 sm:px-[3vw] ">
+          <Link
+            className="mt-4 sm:mt-0"
+            href={`/works/${titleConverter(allProjects[nextIndex].title)}`}
+          >
+            <div className="relative flex flex-col justify-center h-full duration-500 group">
+              <div className="">
+                <h5 className="leading-[1] text-[9vw] sm:text-[5vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
+                  {allProjects[nextIndex].title}
+                </h5>
+                <Next className="group-hover:translate-x-[10px] duration-300 mt-6 w-[8vw] sm:w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
               </div>
-            ) : null}
-          </div>
-        </Link>
+              {allProjects[nextIndex].introImage ? (
+                <div className="w-full h-full overflow-hidden z-[-1] duration-300 opacity-0 group-hover:opacity-100 absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 object-cover object-center">
+                  <Image
+                    src={allProjects[nextIndex].introImage}
+                    alt=""
+                    className="w-full sm:h-full"
+                  />
+                </div>
+              ) : null}
+            </div>
+          </Link>
+        </div>
       </motion.div>
     </section>
   );
