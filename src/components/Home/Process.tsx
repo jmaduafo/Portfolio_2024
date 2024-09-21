@@ -71,7 +71,7 @@ function Process() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="p-8 flex items-end rounded-tl-full bg-lightText text-lightBg dark:bg-darkText dark:text-darkBg h-[30vh] sm:h-auto lg:h-[55vh]"
+          className="p-8 flex items-end bg-lightText text-lightBg dark:bg-darkText dark:text-darkBg h-[30vh] sm:h-auto lg:h-[55vh]"
         >
           <h4 className="text-[40px] 2xl:text-[60px]">PROCESS</h4>
         </motion.div>

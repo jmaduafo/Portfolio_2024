@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { easeInOut, motion, useInView } from "framer-motion";
 import Image3 from "../../../public/images/general/home/about_image6.jpg"
+import Header3 from "../Header3";
 
 function About() {
   const image1 = useRef(null);
@@ -76,118 +77,13 @@ function About() {
   return (
     <section className="py-[15vh]">
       <div>
-        <div className="overflow-hidden">
-          <h3
-            ref={topRef}
-            className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1] overflow-hidden`}
-          >
-            {topline1.split("").map((letter, i) => {
-              return (
-                <motion.span
-                  initial={{ y: "100%", rotateZ: 5 }}
-                  animate={
-                    top && {
-                      y: 0,
-                      rotateZ: 0,
-                      transition: {
-                        duration: 0.6,
-                        delay: i * DELAY,
-                        ease: EASING,
-                      },
-                    }
-                  }
-                  key={`${letter}_${i}`}
-                  className="inline-block"
-                >
-                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
-                </motion.span>
-              );
-            })}
-          </h3>
-          <h3
-            ref={topRef}
-            className={`${spectralBridgeRegular.className} text-[5.5vw] pr-[15vw] leading-[1] overflow-hidden`}
-          >
-            {topline2.split("").map((letter, i) => {
-              return (
-                <motion.span
-                  initial={{ y: "100%", rotateZ: 5 }}
-                  animate={
-                    top && {
-                      y: 0,
-                      rotateZ: 0,
-                      transition: {
-                        duration: 0.6,
-                        delay: i * DELAY,
-                        ease: EASING,
-                      },
-                    }
-                  }
-                  key={`${letter}_${i}`}
-                  className="inline-block"
-                >
-                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
-                </motion.span>
-              );
-            })}
-          </h3>
+        <div className="">
+          <Header3 phrase={topline1} className="pr-[15vw]"/>
+          <Header3 phrase={topline2} className="pr-[15vw]"/>
         </div>
         <div className="">
-          <h3
-            ref={topRef}
-            className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1] overflow-hidden`}
-          >
-            {bottomline1.split("").map((letter, i) => {
-              return (
-                <motion.span
-                  initial={{ y: "100%", rotateZ: 5 }}
-                  animate={
-                    top && {
-                      y: 0,
-                      rotateZ: 0,
-                      transition: {
-                        duration: 0.6,
-                        delay: i * DELAY,
-                        ease: EASING,
-                      },
-                    }
-                  }
-                  key={`${letter}_${i}`}
-                  className="inline-block"
-                >
-                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
-                </motion.span>
-              );
-            })}
-          </h3>
-          <h3
-            ref={topRef}
-            className={`${spectralBridgeRegular.className} text-[5.5vw] pl-[15vw] leading-[1] overflow-hidden`}
-          >
-            {bottomline2.split("").map((letter, i) => {
-              return (
-                <motion.span
-                  initial={{ y: "100%", rotateZ: 5 }}
-                  animate={
-                    top && {
-                      y: 0,
-                      rotateZ: 0,
-                      transition: {
-                        duration: 0.6,
-                        delay: i * DELAY,
-                        ease: EASING,
-                      },
-                    }
-                  }
-                  key={`${letter}_${i}`}
-                  className="inline-block"
-                >
-                  {/* bottomline2.slice(i, i + 6) === "finish" ? <span className="italic">{bottomline2.slice(i, i + 6)}</span> :  */}
-                  {letter === " " ? <span className="mr-[1vw]"></span> : letter}
-                </motion.span>
-              );
-            })}
-          </h3>
+        <Header3 phrase={topline1} className="pl-[15vw]"/>
+        <Header3 phrase={topline2} className="pl-[15vw]"/>
         </div>
       </div>
       <div className="mt-10 flex flex-col-reverse md:flex-row gap-y-4 md:gap-y-0 md:max-h-screen">
