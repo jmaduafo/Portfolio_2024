@@ -36,10 +36,14 @@ function PrevNext({ index }: { index: number }) {
         className="flex flex-col sm:flex-row"
       >
         {/* PREVIOUS PROJECT */}
-        <div className="flex-1 py-[3vw] sm:py-0 sm:px-[3vw] h-[40vh] border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[1px] sm:border-b-[0px] sm:border-r-lightText20 sm:dark:border-r-darkText20">
+        <div className="flex-1 py-[3vw] sm:py-0 sm:px-[3vw] h-[40vh] border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-b-[0px]">
           <Link href={`/works/${titleConverter(allProjects[prevIndex].title)}`}>
-            <div className="relative flex flex-col justify-center items-end h-full duration-500 groupduration-500 group">
-              <h5 className="text-right text-[9vw] sm:text-[5vw] leading-[1] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
+            <div className="relative flex flex-col justify-center items-end h-full duration-500 group">
+              <h5 className="group-hover:hidden block text-right text-[9vw] sm:text-[5vw] leading-[1] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
+                {/* {allProjects[prevIndex].title} */}
+                Prev
+              </h5>
+              <h5 className="group-hover:block hidden text-right text-[9vw] sm:text-[5vw] leading-[1] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
                 {allProjects[prevIndex].title}
               </h5>
               <Prev className="group-hover:translate-x-[-10px] duration-300 mt-6 w-[8vw] sm:w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
@@ -64,7 +68,11 @@ function PrevNext({ index }: { index: number }) {
           >
             <div className="relative flex flex-col justify-center h-full duration-500 group">
               <div className="">
-                <h5 className="leading-[1] text-[9vw] sm:text-[5vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
+                <h5 className="group-hover:hidden block leading-[1] text-[9vw] sm:text-[5vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
+                  {/* {allProjects[nextIndex].title} */}
+                  Next
+                </h5>
+                <h5 className="group-hover:block hidden leading-[1] text-[9vw] sm:text-[5vw] tracking-tight uppercase mix-blend-multiply dark:mix-blend-exclusion">
                   {allProjects[nextIndex].title}
                 </h5>
                 <Next className="group-hover:translate-x-[10px] duration-300 mt-6 w-[8vw] sm:w-[6vw] leading-[1] mix-blend-multiply dark:mix-blend-exclusion" />
