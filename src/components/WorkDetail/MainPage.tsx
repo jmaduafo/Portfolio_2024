@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import PrevNext from "./PrevNext";
+import Heading from "../Heading";
 
 function MainPage({ project, index }: { readonly project: Projects, readonly index: number }) {
   const introImageDiv = useRef(null);
@@ -501,12 +502,6 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
   );
 }
 
-function Heading({ text }: { text: string }) {
-  return (
-    <p className="mb-1 uppercase text-[14px] text-lightText60 dark:text-darkText60">
-      {text}
-    </p>
-  );
-}
+
 
 export default MainPage;

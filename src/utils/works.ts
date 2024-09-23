@@ -77,6 +77,8 @@ const projects = [
       ElysianOutro2,
       ElysianOutro3,
     ],
+    // imagesOutroLandscape: []
+    // imagesOutroPortrait: []
   },
   {
     title: "Sylvan",
