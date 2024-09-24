@@ -65,7 +65,7 @@ const config: Config = {
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
-        "appear": "smooth 0.6s ease",
+        "appear": "smooth 0.6s cubic-bezier(0.83, 0, 0.17, 1)",
         "carousel": "carousel 7s linear infinite backwards",
         "carousel-slow": "carousel 20s linear infinite backwards",
         "carousel-slower": "carouselSlow 220s linear infinite backwards",

@@ -82,8 +82,8 @@ function About() {
           <Header3 phrase={topline2} className="pr-[15vw]"/>
         </div>
         <div className="">
-        <Header3 phrase={topline1} className="pl-[15vw]"/>
-        <Header3 phrase={topline2} className="pl-[15vw]"/>
+        <Header3 phrase={bottomline1} className="pl-[15vw]"/>
+        <Header3 phrase={bottomline2} className="pl-[15vw]"/>
         </div>
       </div>
       <div className="mt-10 flex flex-col-reverse md:flex-row gap-y-4 md:gap-y-0 md:max-h-screen">

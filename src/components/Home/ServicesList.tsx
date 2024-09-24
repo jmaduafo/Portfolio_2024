@@ -4,7 +4,7 @@ import Header5 from "../Header5";
 import { Services } from "@/types/type";
 import Paragraph from "../Paragraph";
 import { spectralBridgeRegular } from "@/fonts/font";
-import { MinusIcon, ArrowDownRightIcon } from "@heroicons/react/24/outline";
+import { MinusIcon, ArrowDownRightIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { easeInOut, motion } from "framer-motion";
 
 type List = {
@@ -33,7 +33,7 @@ function ServicesList({ services }: List) {
               strokeWidth={1}
             />
           ) : (
-            <ArrowDownRightIcon
+            <PlusIcon
               className="w-6 sm:w-9 md:w-12 xl:w-[3vw] duration-500 animate-appear"
               strokeWidth={1}
             />
@@ -45,7 +45,7 @@ function ServicesList({ services }: List) {
         animate={{
           height: isOpen ? "auto" : 0,
           transition: {
-            duration: 0.6,
+            duration: 0.5,
             ease: [0.83, 0, 0.17, 1],
           },
         }}
