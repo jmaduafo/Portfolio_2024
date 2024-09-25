@@ -30,26 +30,22 @@ const ServicesList = forwardRef<HTMLDivElement, List>(({ services }, ref) => {
   return (
     <div
       ref={ref}
-      className={`px-3 py-6 ${
+      className={`px-3 py-8 ${
         services.id !== allServices.length &&
         "border-b-[1px] border-b-lightText20 dark:border-b-darkText20"
       } flex flex-col h-[45vh]`}
     >
       <div className="flex items-center gap-8">
-        <StarSpin classNameSize="w-[36px]" />
+        <StarSpin classNameSize="w-[36px] 2xl:w-[50px]" />
         <h6
-          className={`${spectralBridgeRegular.className} text-[36px] leading-[1]`}
+          className={`${spectralBridgeRegular.className} text-[36px] 2xl:text-[50px] leading-[1]`}
         >
           {services.title}
         </h6>
       </div>
-      <div className="mt-auto">
-        {/* <div>
-
-          </div> */}
-        <div className="w-[75%]">
-          {/* <Paragraph text={services.description} /> */}
-          <p className="text-[16px]">{services.description}</p>
+      <div className="mt-auto xs:pl-[10vw] md:pl-0">
+        <div className="w-full sm:w-[85%] md:w-full xl:w-[80%]">
+          <p className="text-[16px] 2xl:text-[26px]">{services.description}</p>
         </div>
       </div>
     </div>

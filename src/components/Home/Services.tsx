@@ -228,17 +228,7 @@ function Services() {
       {/* LISTED SERVICES*/}
       <div className="flex justify-end">
         <motion.div
-          // initial={{ opacity: 0}}
-          // whileInView={{
-          //   opacity: 1,
-          //   transition: {
-          //     duration: 0.8,
-          //     ease: [0.83, 0, 0.17, 1],
-          //     delay: .3,
-          //   },
-          // }}
-          // viewport={{ once: true }}
-          className="relative flex gap-4 border-t-[1px] border-b-[1px] border-t-lightText20 dark:border-t-darkText20 border-b-lightText20 dark:border-b-darkText20"
+          className="relative flex flex-col-reverse md:flex-row gap-4 border-t-[1px] border-b-[1px] border-t-lightText20 dark:border-t-darkText20 border-b-lightText20 dark:border-b-darkText20"
         >
           <div className="flex-1 ">
             {allServices.map((item, i) => {
@@ -249,7 +239,7 @@ function Services() {
               );
             })}
           </div>
-          <div className="sticky top-0 flex-1 h-screen object-cover overflow-hidden">
+          <div className="relative md:sticky top-0 flex-1 h-auto md:h-screen object-cover overflow-hidden">
             <Image
               src={ServiceImage}
               alt=""
@@ -262,7 +252,7 @@ function Services() {
                 return (
                   <motion.div
                     ref={serviceImage[i]}
-                    className={`${i === 0 ? "visible" : "invisible"} absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[40%] h-[20%] object-cover`}
+                    className={`${i === 0 ? "visible" : "invisible"} absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[40%] md:w-[50%] lg:w-[40%] 2xl:w-[50%] h-[20%] 2xl:h-[30%] object-cover`}
                     key={img.id}
                   >
                     <Image src={img.image} alt="" className="w-full h-full" />

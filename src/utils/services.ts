@@ -19,45 +19,44 @@ const services = [
             "Framer Motion",
             "Lenis Scroll",
         ],
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        description: "With frontend, I'm able to combine both my design capabilities with my problem-solving skills, and as I code, I am extensively exercising both simulataneously. I lean more into React frameworks, mainly Next.js, which allows me to increase web performance, optimize images and media much easier, and improve SEO rankings, and TypeScript for catching bugs and discrepanicies early, ensuring that my code is error-free and correct throughout.",
         image: Image2
     },
     {
         title: "Backend Development",
         technologies: [
+            "node.js",
             "JavaScript",
             "TypeScript",
             "next.js",
-            "node.js",
-            "firebase",
             "supabase",
+            "firebase",
             "express",
             "mongoDB"
         ],
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        description: "Along with frontend, I am also knowledgable in implementing backend services to my projects to truly create a full-force application. I lean towards BaaS (backend-as-a-service) due to its overall efficiency in creating databases that help me deliver real-world applications with less headache so that I can quicken the development process.",
         image: Image1
         
-    },
-    {
-        title: "Mobile Development",
-        technologies: [
-            "react native",
-            "expo",
-            "JavaScript",
-            "TypeScript",
-            "node.js",
-        ],
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
-        image: Image3
     },
     {
         title: "UI Design",
         technologies: [
             "Figma",
-            "InDesign",
-            "Artboard"
+            "Color Theory",
+            "Wireframe",
         ],
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        description: "I always start my projects with Figma because it's important to know the direction before coding can ensue. I typically find inspiration from Pinterest and Awwwards, and I design my wireframes and mockups based on the moodboard that I formulate as well as on my intuition. Being a detail-oriented person, I meticulously select the right typography, color scheme, and design layout that best conveys the theme of the application that I wish to build.",
+        image: Image3
+    },
+    {
+        title: "Brand Design",
+        technologies: [
+            "Figma",
+            "Artboard",
+            "Brand guidelines",
+            "Brand"
+        ],
+        description: "Though I don't specialize in brand design, I have gained an avid interest in it, stemmed from my love of creating things. I like to find more ways to build on my skillset, even if that's outside of coding. I believe that it's important to be able to market a product in such a way that customers would be intrigued and encouraged to invest in that product, ensuring that the text, images, and mockups for the brand flow together.",
         image: Image4
     },
 ]
