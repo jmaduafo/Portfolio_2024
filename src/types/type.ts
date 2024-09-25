@@ -44,6 +44,7 @@ export type Services = {
   title: string;
   technologies: string[];
   description: string;
+  image?: StaticImageData;
 };
 
 export type ContactForm = {

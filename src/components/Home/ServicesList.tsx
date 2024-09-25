@@ -1,78 +1,59 @@
 "use client";
-import React, { useState } from "react";
-import Header5 from "../Header5";
+import React, { forwardRef, useRef } from "react";
 import { Services } from "@/types/type";
 import Paragraph from "../Paragraph";
 import { spectralBridgeRegular } from "@/fonts/font";
-import { MinusIcon, ArrowDownRightIcon, PlusIcon } from "@heroicons/react/24/outline";
-import { easeInOut, motion } from "framer-motion";
+import { allServices } from "@/utils/services";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import StarSpin from "../StarSpin";
 
 type List = {
   services: Services;
 };
 
-function ServicesList({ services }: List) {
-  const [isOpen, setIsOpen] = useState(false);
+const ServicesList = forwardRef<HTMLDivElement, List>(({ services }, ref) => {
+  const image = useRef(null);
+
+  useGSAP(() => {
+    gsap.to(image.current, {
+      y: "25%",
+      scrollTrigger: {
+        trigger: image.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  });
 
   return (
-    <div className="border-b-[1px] border-b-lightText20 dark:border-b-darkText20">
-      <div
-        onClick={() => setIsOpen((prev) => !prev)}
-        className="cursor-pointer px-1 py-5 flex justify-between items-center w-full"
-      >
-        <div className="flex items-start gap-[1vw]">
-          <p className={`${spectralBridgeRegular.className} text-[13px] 2xl:text-[28px]`}>
-            {services.id}.
-          </p>
-          <Header5 text={services.title} />
-        </div>
-        <div className="">
-          {isOpen ? (
-            <MinusIcon
-              className="w-6 sm:w-9 md:w-12 xl:w-[3vw] duration-500 animate-appear"
-              strokeWidth={1}
-            />
-          ) : (
-            <PlusIcon
-              className="w-6 sm:w-9 md:w-12 xl:w-[3vw] duration-500 animate-appear"
-              strokeWidth={1}
-            />
-          )}
+    <div
+      ref={ref}
+      className={`px-3 py-6 ${
+        services.id !== allServices.length &&
+        "border-b-[1px] border-b-lightText20 dark:border-b-darkText20"
+      } flex flex-col h-[45vh]`}
+    >
+      <div className="flex items-center gap-8">
+        <StarSpin classNameSize="w-[36px]" />
+        <h6
+          className={`${spectralBridgeRegular.className} text-[36px] leading-[1]`}
+        >
+          {services.title}
+        </h6>
+      </div>
+      <div className="mt-auto">
+        {/* <div>
+
+          </div> */}
+        <div className="w-[75%]">
+          {/* <Paragraph text={services.description} /> */}
+          <p className="text-[16px]">{services.description}</p>
         </div>
       </div>
-      <motion.div
-        initial={{ height: isOpen ? 0 : "auto" }}
-        animate={{
-          height: isOpen ? "auto" : 0,
-          transition: {
-            duration: 0.5,
-            ease: [0.83, 0, 0.17, 1],
-          },
-        }}
-        className="overflow-hidden"
-      >
-        <motion.div className={`overflow-hidden duration-500 pt-4 pb-5 px-3`}>
-          <div className="w-[95%] sm:w-[90%] md:w-[80%]">
-            <div className="flex flex-wrap gap-y-2 gap-x-3">
-              {services.technologies.map((tech) => {
-                return (
-                  <p
-                    key={tech}
-                    className="whitespace-nowrap rounded-full border-[1px] border-lightText60 dark:border-darkText60 py-[1px] px-2 2xl:px-5 text-[13.5px] 2xl:text-[20px] capitalize"
-                  >
-                    {tech}
-                  </p>
-                );
-              })}
-            </div>
-            <div className="mt-6">
-              <Paragraph text={services.description} />
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
     </div>
   );
-}
+});
 
 export default ServicesList;

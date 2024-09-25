@@ -11,6 +11,7 @@ import Navbar from "../Navbar";
 import ProcessTransition from "./ProcessTransition";
 import Process from "./Process";
 import FooterTransition from "./FooterTransition";
+import ProcessParagraph from "./ProcessParagraph";
 
 function MainPage() {
   const [count, setCount] = useState(10);
@@ -38,6 +39,7 @@ function MainPage() {
             <About />
             <Works />
             <Services />
+            <ProcessParagraph/>
             <ProcessTransition />
             <Process/>
             <FooterTransition/>

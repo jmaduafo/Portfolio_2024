@@ -1,12 +1,18 @@
 "use client";
-import React, { Fragment, useRef } from "react";
+import React, { useRef } from "react";
 import Top1 from "../../../public/images/services/top1.png";
 import Top2 from "../../../public/images/services/top2.png";
 import Bottom1 from "../../../public/images/services/bottom1.png";
 import Bottom2 from "../../../public/images/services/bottom2.jpg";
 import Bottom3 from "../../../public/images/services/bottom3.jpg";
+import Service1 from "../../../public/images/services/list/serviceDisplay1.jpg";
+import Service2 from "../../../public/images/services/list/serviceDisplay2.jpg";
+import Service3 from "../../../public/images/services/list/serviceDisplay3.jpg";
+import Service4 from "../../../public/images/services/list/serviceDisplay5.jpg";
+// import Service5 from "../../../public/images/services/list/serviceDisplay5.jpg";
 import Header2 from "../Header2";
 import Image from "next/image";
+import ServiceImage from "../../../public/images/services/list/john-gonzales-bcPmxdBGyyw-unsplash.jpg";
 import ServicesList from "./ServicesList";
 import { allServices } from "@/utils/services";
 import gsap from "gsap";
@@ -21,17 +27,36 @@ function Services() {
   const bottomImage2 = useRef(null);
   const bottomImage3 = useRef(null);
 
+  const serviceRef1 = useRef(null)
+  const serviceRef2 = useRef(null)
+  const serviceRef3 = useRef(null)
+  const serviceRef4 = useRef(null)
+
+  const serviceImage1 = useRef(null)
+  const serviceImage2 = useRef(null)
+  const serviceImage3 = useRef(null)
+  const serviceImage4 = useRef(null)
+
+  const serviceRef = [serviceRef1, serviceRef2, serviceRef3, serviceRef4]
+  const serviceImage = [serviceImage1, serviceImage2, serviceImage3, serviceImage4]
+
+
+
+  const image = useRef(null);
+
   useGSAP(() => {
-    const tl = gsap.timeline({
-      ease: "power1.inOut",
+    gsap.to(image.current, {
+      y: "25%",
       scrollTrigger: {
-        trigger: serviceDiv.current,
+        trigger: image.current,
         start: "top bottom",
-        end: "+=2000",
+        end: "bottom top",
         scrub: true,
       },
     });
+  });
 
+  useGSAP(() => {
     gsap.from(topImage1.current, {
       y: 95,
       ease: "power1.inOut",
@@ -82,6 +107,19 @@ function Services() {
         scrub: true,
       },
     });
+
+    serviceImage.forEach((ref, i) => {
+      gsap.to(ref.current, {
+        zIndex: `${i}`,
+        visibility: "visible",
+        duration: .0001,
+        scrollTrigger: {
+          trigger: i < 2 ? serviceRef[i].current : serviceRef[2].current,
+          start: `top ${i * 10}%`,
+          scrub: true
+        }
+      })
+    })
   });
 
   const topImages = [
@@ -115,8 +153,36 @@ function Services() {
     },
   ];
 
+  const serviceImages = [
+    {
+      id: "service1",
+      image: Service1,
+      zIndex: "z-[1]"
+    },
+    {
+      id: "service2",
+      image: Service2,
+      zIndex: "z-[2]"
+    },
+    {
+      id: "service3",
+      image: Service3,
+      zIndex: "z-[3]"
+    },
+    {
+      id: "service4",
+      image: Service4,
+      zIndex: "z-[4]"
+    },
+    // {
+    //   id: "service5",
+    //   image: Service5,
+    //   zIndex: "z-[5]"
+    // },
+  ];
+
   return (
-    <section className="mb-[15vh] pt-[6vh]" id="services">
+    <section className="mb-[8vh] pt-[6vh]" id="services">
       {/* SERVICE HEADER WITH SURROUNDING IMAGES */}
       <div className="mb-[10vh]" ref={serviceDiv}>
         <div className="flex justify-evenly items-end">
@@ -162,38 +228,49 @@ function Services() {
       {/* LISTED SERVICES*/}
       <div className="flex justify-end">
         <motion.div
-          initial={{ opacity: 0}}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.8,
-              ease: [0.83, 0, 0.17, 1],
-              delay: .3,
-            },
-          }}
-          viewport={{ once: true }}
-          className="border-t-[1px] border-t-lightText20 dark:border-t-darkText20 w-full md:w-[70%]"
+          // initial={{ opacity: 0}}
+          // whileInView={{
+          //   opacity: 1,
+          //   transition: {
+          //     duration: 0.8,
+          //     ease: [0.83, 0, 0.17, 1],
+          //     delay: .3,
+          //   },
+          // }}
+          // viewport={{ once: true }}
+          className="relative flex gap-4 border-t-[1px] border-b-[1px] border-t-lightText20 dark:border-t-darkText20 border-b-lightText20 dark:border-b-darkText20"
         >
-          {allServices.map((item, i) => {
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, x: "-5%" }}
-                whileInView={{
-                  opacity: 1,
-                  x: "0%",
-                  transition: {
-                    duration: 0.8,
-                    ease: [0.83, 0, 0.17, 1],
-                    delay: i * 0.1,
-                  },
-                }}
-                viewport={{ once: true }}
-              >
-                <ServicesList services={item} />
-              </motion.div>
-            );
-          })}
+          <div className="flex-1 ">
+            {allServices.map((item, i) => {
+              return (
+                <motion.div key={item.title}>
+                  <ServicesList services={item} ref={serviceRef[i]}/>
+                </motion.div>
+              );
+            })}
+          </div>
+          <div className="sticky top-0 flex-1 h-screen object-cover overflow-hidden">
+            <Image
+              src={ServiceImage}
+              alt=""
+              className="w-full h-full scale-150"
+              placeholder="blur"
+              ref={image}
+            />
+            <div>
+              {serviceImages.map((img, i) => {
+                return (
+                  <motion.div
+                    ref={serviceImage[i]}
+                    className="invisible absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[40%] h-[20%] object-cover"
+                    key={img.id}
+                  >
+                    <Image src={img.image} alt="" className="w-full h-full" />
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
