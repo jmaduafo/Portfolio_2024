@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Projects } from "@/types/type";
 import Image from "next/image";
 import { satoshiLight, spectralBridgeRegular } from "@/fonts/font";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Banner from "../Banner";
 
 type Work = {
   readonly work: Projects;
@@ -66,12 +67,9 @@ function IndividualWork({ work }: Work) {
         <div className="flex gap-x-3 gap-y-2 items-center flex-wrap mt-[-5px]">
           {work?.roles?.map((role) => {
             return (
-              <p
-                className="py-[1px] whitespace-nowrap px-2 border-[1px] rounded-full border-lightText60 dark:border-darkText60 text-[13px] capitalize"
-                key={role}
-              >
-                {role}
-              </p>
+              <div key={role} className="capitalize">
+                <Banner text={role}/>
+              </div>
             );
           })}
         </div>

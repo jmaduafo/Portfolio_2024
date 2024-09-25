@@ -9,7 +9,7 @@ function AboutMe() {
   const line5 = "user interface design and other"
   const line6 = "design mediums that allow me"
   const line7 = "to create digital, engaging"
-  const line8 = "experiences"
+  const line8 = "experiences."
 
   return (
     <section className="mt-[8vh] pt-[6vh] border-t-[1px] border-t-lightText20 dark:border-t-darkText20">

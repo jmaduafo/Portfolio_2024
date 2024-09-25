@@ -252,7 +252,8 @@ function Services() {
                 return (
                   <motion.div
                     ref={serviceImage[i]}
-                    className={`${i === 0 ? "visible" : "invisible"} absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[40%] md:w-[50%] lg:w-[40%] 2xl:w-[50%] h-[20%] 2xl:h-[30%] object-cover`}
+                    className={`${i === 0 ? "visible" : "invisible"} absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 
+                    left-1/2 w-[40%] md:w-[50%] lg:w-[40%] 2xl:w-[50%] h-[20%] 2xl:h-[30%] object-cover`}
                     key={img.id}
                   >
                     <Image src={img.image} alt="" className="w-full h-full" />

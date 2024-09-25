@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { motion } from "framer-motion";
 import PrevNext from "./PrevNext";
 import Heading from "../Heading";
+import Banner from "../Banner";
 
 function MainPage({ project, index }: { readonly project: Projects, readonly index: number }) {
   const introImageDiv = useRef(null);
@@ -246,12 +247,9 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2 w-full lg:w-[70%]">
               {project?.technologies?.map((proj) => {
                 return (
-                  <p
-                    key={proj}
-                    className="text-[13px] whitespace-nowrap border-[1px] px-2 py-[1px] border-lightText60 dark:border-darkText60 rounded-full"
-                  >
-                    {proj}
-                  </p>
+                  <Fragment key={proj}>
+                    <Banner text={proj}/>
+                  </Fragment>
                 );
               })}
             </div>

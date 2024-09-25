@@ -9,7 +9,7 @@ function ProcessParagraph() {
   const bottomline3 = "and increases traffic.";
   return (
     <section className="my-[15vh]">
-      <div className="w-[90%] ml-auto">
+      <div className="w-[90%] mx-auto md:ml-auto md:mr-0">
         <div className="flex items-start gap-[8vw]">
           <p>My mission</p>
           <div>

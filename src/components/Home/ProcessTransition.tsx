@@ -9,13 +9,16 @@ import Image2 from "@../../../public/images/general/home/process_image2.jpg";
 function ProcessTransition() {
   return (
     <section className="mt-[6vh]">
-      <div className="flex justify-between items-start gap-x-[18vw]">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-x-[18vw]">
         <div className="flex-1">
           <div className="">
             <Image src={Image1} alt="" className="w-full" placeholder="blur" />
           </div>
-          <div className="mt-6">
-            <Paragraph text="I ensure to provide honesty and transparency for my clients from start to finish. With regular updates and check ups, I provide assurance for my clients so that they’re not left in the dark and so that communication is maintained throughout the design and/or development process. We don’t proceed to the next step until the client is satisfied about the outcome of what they’re investing in. " />
+          <div className="mt-10 mb-[6vh] flex md:mt-6 md:mb-0">
+            <div className="flex-1 block md:hidden"></div>
+            <div className="flex-[2]">
+              <Paragraph text="I ensure to provide honesty and transparency for my clients from start to finish. With regular updates and check ups, I provide assurance for my clients so that they’re not left in the dark and so that communication is maintained throughout the design and/or development process. We don’t proceed to the next step until the client is satisfied about the outcome of what they’re investing in. " />
+            </div>
           </div>
         </div>
         <div className="flex-[1.5]">
@@ -47,7 +50,9 @@ function Listings({ service, price }: { service: string; price: number }) {
       {/* <Paragraph text={service} />
       <Paragraph text={`$ ${Intl.NumberFormat("en-US").format(price)}`} /> */}
       <p className="text-[17px]">{service}</p>
-      <p className="text-[17px]">$ {Intl.NumberFormat("en-US").format(price)}</p>
+      <p className="text-[17px]">
+        $ {Intl.NumberFormat("en-US").format(price)}
+      </p>
     </div>
   );
 }
