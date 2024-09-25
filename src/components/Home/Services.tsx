@@ -114,8 +114,8 @@ function Services() {
         visibility: "visible",
         duration: .0001,
         scrollTrigger: {
-          trigger: i < 2 ? serviceRef[i].current : serviceRef[2].current,
-          start: `top ${i * 10}%`,
+          trigger: i === 0 ? serviceRef[i].current : serviceRef[i - 1].current,
+          start: `top top`,
           scrub: true
         }
       })
@@ -262,7 +262,7 @@ function Services() {
                 return (
                   <motion.div
                     ref={serviceImage[i]}
-                    className="invisible absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[40%] h-[20%] object-cover"
+                    className={`${i === 0 ? "visible" : "invisible"} absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-[40%] h-[20%] object-cover`}
                     key={img.id}
                   >
                     <Image src={img.image} alt="" className="w-full h-full" />
