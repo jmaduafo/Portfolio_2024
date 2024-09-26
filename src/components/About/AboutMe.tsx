@@ -18,15 +18,6 @@ function AboutMe() {
           About me
         </p>
         <div className="flex-1">
-          {/* <h3
-            className={`${spectralBridgeRegular.className} indent-[10%] text-[5.5vw] leading-[1]`}
-          >
-            I'm <span className="italic">Jasmine Maduafokwa</span>, a full stack developer with a focus
-             on <span className="italic">frontend</span> technologies
-            combined with a passion for {" "}
-            <span className="italic">user interface</span> design and other design
-            mediums that allow me to create digital, <span className="italic">engaging experiences</span>.
-          </h3> */}
           <Header3 phrase={line1} className="indent-[10%]"/>
           <Header3 phrase={line2}/>
           <Header3 phrase={line3}/>

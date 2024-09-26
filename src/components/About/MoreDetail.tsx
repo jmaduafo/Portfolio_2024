@@ -97,7 +97,7 @@ function MoreDetail() {
                 variants={rise}
                 initial="initial"
                 animate={text && "animate"}
-                className={`${spectralBridgeRegular.className} text-[10vw] md:text-[7vw] leading-[1] uppercase`}
+                className={`tracking-tighter text-[10vw] md:text-[7vw] leading-[1] uppercase`}
               >
                 Persistence
               </motion.h2>
@@ -107,7 +107,7 @@ function MoreDetail() {
                 variants={rise}
                 initial="initial"
                 animate={text && "animate"}
-                className={`${spectralBridgeRegular.className} text-[10vw] md:text-[7vw] leading-[1] uppercase`}
+                className={`tracking-tighter text-[10vw] md:text-[7vw] leading-[1] uppercase`}
               >
                 & Motivation
               </motion.h2>

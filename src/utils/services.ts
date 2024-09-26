@@ -34,7 +34,7 @@ const services = [
             "express",
             "mongoDB"
         ],
-        description: "Along with frontend, I am also knowledgable in implementing backend services to my projects to truly create a full-force application. I lean towards BaaS (backend-as-a-service) due to its overall efficiency in creating databases that help me deliver real-world applications with less headache so that I can quicken the development process.",
+        description: "Along with frontend, I am also knowledgable in implementing backend services to my projects to truly create a full-force application. I lean towards BaaS (backend-as-a-service) due to its overall efficiency in creating and maintaining databases that help me deliver real-world applications with less headache so that I can quicken the development process.",
         image: Image1
         
     },
@@ -45,11 +45,11 @@ const services = [
             "Color Theory",
             "Wireframe",
         ],
-        description: "I always start my projects with Figma because it's important to know the direction before coding can ensue. I typically find inspiration from Pinterest and Awwwards, and I design my wireframes and mockups based on the moodboard that I formulate as well as on my intuition. Being a detail-oriented person, I meticulously select the right typography, color scheme, and design layout that best conveys the theme of the application that I wish to build.",
+        description: "I always start my projects with Figma because it's important to know the direction before coding can ensue. I typically find inspiration from Pinterest and Awwwards, and I design my wireframes and mockups based on the moodboard that I formulate as well as on my intuition. Being a detail-oriented person, I meticulously select the appropriate typography, color scheme, and design layout that best conveys the theme of the application that I wish to build.",
         image: Image3
     },
     {
-        title: "Brand Design",
+        title: "Brand Identity",
         technologies: [
             "Figma",
             "Artboard",

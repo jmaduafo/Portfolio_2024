@@ -57,9 +57,6 @@ function About() {
   // finish span
   const bottomline2 = "products from start to finish.";
 
-  const EASING = [0.83, 0, 0.17, 1];
-  const DELAY = 0.01;
-
   const appear = {
     initial: {
       opacity: 0,
@@ -91,7 +88,7 @@ function About() {
           <Image
             src={Image3}
             alt="sjsh"
-            className="w-full h-full"
+            className="w-full h-full scale-110"
             ref={image1}
             placeholder="blur"
           />
@@ -122,9 +119,6 @@ function About() {
         <div className="xs:flex-[2.5] md:flex-[1.2] flex flex-col sm:flex-row gap-8">
           <div className="flex-1">
             <Paragraph text="As a designer and creative developer, I prioritize aesthetics and functionality, implementing foundational SEO practices to build traffic. When sifting through my projects, you might find a bit of my personality in my designs. I like to put personal touches to my works, leading them to stand out amongst other websites. " />
-            {/* <div className="mt-3">
-            <Paragraph text="I like to put personal touches to my works, leading them to stand out amongst other websites." />
-            </div> */}
           </div>
           <div className="flex-1">
             <div className="">
