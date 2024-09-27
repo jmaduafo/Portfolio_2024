@@ -9,26 +9,6 @@ import { easeInOut, motion } from "framer-motion";
 function Process() {
   const [index, setIndex] = useState<number | undefined>();
 
-  // function borderCondition(index: number) {
-  //   if (index === 0) {
-  //     return `border-b-[1px] border-b-lightText20 dark:border-b-darkText20 xl:border-r-[1px] xl:border-r-lightText20 xl:dark:border-r-darkText20`;
-  //   } else if (index === 1) {
-  //     return "border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[1px] sm:border-r-lightText20 sm:dark:border-r-darkText20 xl:border-r-[0px]";
-  //   } else if (index === 2) {
-  //     return "border-b-[1px] border-b-lightText20 dark:border-b-darkText20 sm:border-r-[0px] xl:border-b-[0px] xl:border-r-[1px] xl:border-r-lightText20 xl:dark:border-r-darkText20";
-  //   } else if (index === 3) {
-  //     return "border-b-none dark:border-b-none sm:border-r-none sm:dark:border-r-none xl:border-r-none xl:dark:border-r-none";
-  //   }
-  // }
-
-  function changeIndex(i: number) {
-    if (index === i) {
-      setIndex(undefined);
-    } else {
-      setIndex(i);
-    }
-  }
-
   const curve = {
     initial: {
       borderTopLeftRadius: "0%",

@@ -6,13 +6,16 @@ import Heading from "../Heading";
 import Paragraph from "../Paragraph";
 import Image1 from "@../../../public/images/general/home/process_image1.jpg";
 import Image2 from "@../../../public/images/general/home/process_image2.jpg";
-import { motion, useInView } from "framer-motion";
+import { easeInOut, motion, useInView } from "framer-motion";
 
 function ProcessTransition() {
   const EASING = [0.83, 0, 0.17, 1];
 
   const imageRef = useRef(null);
   const image = useInView(imageRef, { once: true });
+
+  const listRef = useRef(null);
+  const list = useInView(listRef, { once: true });
 
   const drop = {
     initial: {
@@ -23,7 +26,21 @@ function ProcessTransition() {
       transition: {
         duration: 1.2,
         ease: EASING,
-        delay: 1
+        delay: 1,
+      },
+    },
+  };
+
+  const appear = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: easeInOut,
+        delay: 0.2,
       },
     },
   };
@@ -32,14 +49,10 @@ function ProcessTransition() {
     <section className="mt-[6vh]">
       <div
         className="flex flex-col md:flex-row justify-between items-start gap-x-[18vw]"
-        // ref={imageRef}
       >
-        <div className="flex-1">
+        <div className="flex-1" ref={imageRef}>
           <div className="object-cover object-top overflow-hidden">
             <motion.div
-              variants={drop}
-              initial="initial"
-              animate={image && "animate"}
               className="w-full"
             >
               <Image
@@ -58,35 +71,52 @@ function ProcessTransition() {
           </div>
         </div>
         <div className="flex-[1.5]">
-          <motion.div className="w-full object-cover object-top overflow-hidden">
-            <motion.div
-              variants={drop}
-              initial="initial"
-              whileInView={"animate"}
-              viewport={{ once: true }}
-              className=""
-            >
+          <motion.div
+            className="object-cover object-top overflow-hidden z-[0]"
+          >
+            <div className="">
               <Image
                 src={Image2}
                 alt="suede brown chair with macbook perched on top"
                 className="w-full"
                 placeholder="blur"
               />
-            </motion.div>
+            </div>
           </motion.div>
-          <div className="mt-6">
+          <motion.div
+            variants={appear}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="mt-6"
+          >
             <div className="flex justify-between py-1 border-b-[1px] border-b-lightText20 dark:border-b-darkText20">
               <Heading text="offer to clients" />
               <Heading text="starting" />
             </div>
-            {offers.map((offer) => {
+            {offers.map((offer, i) => {
               return (
-                <Fragment key={offer.service}>
+                <motion.div
+                  ref={listRef}
+                  initial={{ opacity: 0, y: "-5%" }}
+                  animate={
+                    list && {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        duration: 0.6,
+                        ease: easeInOut,
+                        delay: i * 0.08,
+                      },
+                    }
+                  }
+                  key={offer.service}
+                >
                   <Listings service={offer.service} price={offer.price} />
-                </Fragment>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

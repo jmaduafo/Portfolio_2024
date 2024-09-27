@@ -27,20 +27,23 @@ function Services() {
   const bottomImage2 = useRef(null);
   const bottomImage3 = useRef(null);
 
-  const serviceRef1 = useRef(null)
-  const serviceRef2 = useRef(null)
-  const serviceRef3 = useRef(null)
-  const serviceRef4 = useRef(null)
+  const serviceRef1 = useRef(null);
+  const serviceRef2 = useRef(null);
+  const serviceRef3 = useRef(null);
+  const serviceRef4 = useRef(null);
 
-  const serviceImage1 = useRef(null)
-  const serviceImage2 = useRef(null)
-  const serviceImage3 = useRef(null)
-  const serviceImage4 = useRef(null)
+  const serviceImage1 = useRef(null);
+  const serviceImage2 = useRef(null);
+  const serviceImage3 = useRef(null);
+  const serviceImage4 = useRef(null);
 
-  const serviceRef = [serviceRef1, serviceRef2, serviceRef3, serviceRef4]
-  const serviceImage = [serviceImage1, serviceImage2, serviceImage3, serviceImage4]
-
-
+  const serviceRef = [serviceRef1, serviceRef2, serviceRef3, serviceRef4];
+  const serviceImage = [
+    serviceImage1,
+    serviceImage2,
+    serviceImage3,
+    serviceImage4,
+  ];
 
   const image = useRef(null);
 
@@ -112,14 +115,14 @@ function Services() {
       gsap.to(ref.current, {
         zIndex: `${i}`,
         visibility: "visible",
-        duration: .0001,
+        duration: 0.0001,
         scrollTrigger: {
           trigger: i === 0 ? serviceRef[i].current : serviceRef[i - 1].current,
           start: `top top`,
-          scrub: true
-        }
-      })
-    })
+          scrub: true,
+        },
+      });
+    });
   });
 
   const topImages = [
@@ -157,22 +160,26 @@ function Services() {
     {
       id: "service1",
       image: Service1,
-      zIndex: "z-[1]"
+      zIndex: "z-[1]",
+      alt: "macbook laptop perched on a step under the sunlight",
     },
     {
       id: "service2",
       image: Service2,
-      zIndex: "z-[2]"
+      zIndex: "z-[2]",
+      alt: "laptop sitting between two art decors",
     },
     {
       id: "service3",
       image: Service3,
-      zIndex: "z-[3]"
+      zIndex: "z-[3]",
+      alt: "iphone displaying an app against a solid background",
     },
     {
       id: "service4",
       image: Service4,
-      zIndex: "z-[4]"
+      zIndex: "z-[4]",
+      alt: "a deep magenta perfume bottle with its package",
     },
     // {
     //   id: "service5",
@@ -227,14 +234,12 @@ function Services() {
       </div>
       {/* LISTED SERVICES*/}
       <div className="flex justify-end">
-        <motion.div
-          className="relative flex flex-col-reverse md:flex-row gap-4 border-t-[1px] border-b-[1px] border-t-lightText20 dark:border-t-darkText20 border-b-lightText20 dark:border-b-darkText20"
-        >
+        <motion.div className="relative flex flex-col-reverse md:flex-row gap-4 border-t-[1px] border-b-[1px] border-t-lightText20 dark:border-t-darkText20 border-b-lightText20 dark:border-b-darkText20">
           <div className="flex-1 ">
             {allServices.map((item, i) => {
               return (
                 <motion.div key={item.title}>
-                  <ServicesList services={item} ref={serviceRef[i]}/>
+                  <ServicesList services={item} ref={serviceRef[i]} />
                 </motion.div>
               );
             })}
@@ -252,11 +257,17 @@ function Services() {
                 return (
                   <motion.div
                     ref={serviceImage[i]}
-                    className={`${i === 0 ? "visible" : "invisible"} absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 
+                    className={`${
+                      i === 0 ? "visible" : "invisible"
+                    } absolute transform translate-x-[-50%] translate-y-[-50%] top-1/2 
                     left-1/2 w-[40%] md:w-[50%] lg:w-[40%] 2xl:w-[50%] h-[20%] 2xl:h-[30%] object-cover`}
                     key={img.id}
                   >
-                    <Image src={img.image} alt="" className="w-full h-full" />
+                    <Image
+                      src={img.image}
+                      alt={img.alt}
+                      className="w-full h-full"
+                    />
                   </motion.div>
                 );
               })}
