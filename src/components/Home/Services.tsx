@@ -7,7 +7,7 @@ import Bottom2 from "../../../public/images/services/bottom2.jpg";
 import Bottom3 from "../../../public/images/services/bottom3.jpg";
 import Service1 from "../../../public/images/services/list/serviceDisplay1.jpg";
 import Service2 from "../../../public/images/services/list/serviceDisplay2.jpg";
-import Service3 from "../../../public/images/services/list/serviceDisplay3.jpg";
+import Service3 from "../../../public/images/services/list/serviceDisplay4.png";
 import Service4 from "../../../public/images/services/list/serviceDisplay5.jpg";
 // import Service5 from "../../../public/images/services/list/serviceDisplay5.jpg";
 import Header2 from "../Header2";

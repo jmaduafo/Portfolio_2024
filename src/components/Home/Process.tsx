@@ -53,7 +53,7 @@ function Process() {
           viewport={{ once: true }}
           className="px-8 py-4 rounded-xl rounded-tl-[100%] flex items-end bg-lightText text-lightBg dark:bg-darkText dark:text-darkBg h-[30vh] sm:h-auto lg:h-[55vh]"
         >
-          <h5 className="text-[40px]">PROCESS</h5>
+          <h5 className="text-[40px] 2xl:text-[60px]">PROCESS</h5>
         </motion.div>
         {processes.map((item, i) => {
           return item.title !== null ? (
@@ -108,9 +108,9 @@ function ProcessList({ setIndex, i, click, index, item }: List) {
         index === i
           ? "bg-lightText text-lightBg dark:bg-darkText dark:text-darkBg"
           : "bg-transparent text-lightText dark:text-darkText"
-      } hover:bg-lightText dark:hover:bg-darkText hover:text-lightBg dark:hover:text-darkBg duration-300 rounded-xl lg:h-[55vh] p-6 flex flex-col border-[1.5px] border-lightText dark:border-darkText`}
+      } hover:bg-lightText dark:hover:bg-darkText hover:text-lightBg dark:hover:text-darkBg duration-300 rounded-xl lg:h-[55vh] p-6 2xl:p-10 flex flex-col border-[1.5px] border-lightText dark:border-darkText`}
     >
-      <h6 className="text-[26px] mb-[6vh] lg:mb-0">{item.title}</h6>
+      <h6 className="text-[26px] 2xl:text-[48px] mb-[6vh] lg:mb-0">{item.title}</h6>
       <div className={`${i === index ? "opacity-1" : "opacity-0"} duration-300 mt-auto`}>
         <p className="text-[15px] sm:text-[16px] 2xl:text-[24px]">
           {item.description}
