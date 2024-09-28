@@ -87,7 +87,7 @@ function About() {
         <div className="md:flex-1 object-cover object-center overflow-hidden">
           <Image
             src={Image3}
-            alt="sjsh"
+            alt="two boxes displayed elegantly with a pink stone background"
             className="w-full h-full scale-110"
             ref={image1}
             placeholder="blur"
@@ -100,7 +100,7 @@ function About() {
           >
             <Image
               src={Image2}
-              alt="sjsh"
+              alt="two iphones displaying recipe app with a stone wall and green door as a vignette"
               className="w-full h-full"
               ref={image2}
               placeholder="blur"

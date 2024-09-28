@@ -7,6 +7,14 @@ import ElysianOutro1 from '../../public/images/elysian/imagesOutro1.jpg'
 import ElysianOutro2 from '../../public/images/elysian/imagesOutro2.jpg'
 import ElysianOutro3 from '../../public/images/elysian/imagesOutro3.jpg'
 import ElysianIntro from '../../public/images/elysian/introImage.jpg'
+import ElysianLandscape1 from '../../public/images/elysian/imageLandscape1.png'
+import ElysianLandscape2 from '../../public/images/elysian/imagesLandscape2.jpg'
+import ElysianLandscape3 from '../../public/images/elysian/imagesLandscape3.jpg'
+import ElysianLandscape4 from '../../public/images/elysian/imagesLandscape4.jpg'
+import ElysianLandscape5 from '../../public/images/elysian/imagesLandscape5.png'
+import ElysianLandscape6 from '../../public/images/elysian/imagesLandscape6.png'
+import ElysianLandscape7 from '../../public/images/elysian/imagesLandscape7.jpg'
+
 
 import SylvanMiddle1 from '../../public/images/sylvan/imagesMiddle1.jpg'
 import SylvanMiddle2 from '../../public/images/sylvan/imagesMiddle2.jpg'
@@ -72,13 +80,46 @@ const projects = [
       ElysianMiddle2,
       ElysianMiddle3,
     ],
-    imagesOutro: [
-      ElysianOutro1,
-      ElysianOutro2,
-      ElysianOutro3,
+    imagesLandscape: [
+      {
+        image: ElysianLandscape1,
+        alt: "logo with three white rounded stripes"
+      },
+      {
+        image: ElysianLandscape2,
+        alt: "logo with a couple under the lights beside it"
+      },
+      {
+        image: ElysianLandscape3,
+        alt: "website designs displayed at an angle"
+      },
+      {
+        image: ElysianLandscape4,
+        alt: "elysian profile page"
+      },
+      {
+        image: ElysianLandscape5,
+        alt: "elysian sign up page"
+      },
+      {
+        image: ElysianLandscape6,
+        alt: "elysian create a date page on a desktop computer"
+      },
+      {
+        image: ElysianLandscape7,
+        alt: "elysian mobile view for profile and dashboard"
+      },
     ],
-    // imagesOutroLandscape: []
-    // imagesOutroPortrait: []
+    imagesPortrait: [
+      {
+        image: ElysianOutro2,
+        alt: "logo and title of brand with couple behind"
+      },
+      {
+        image: ElysianOutro3,
+        alt: "elysian hero section of landing page"
+      },
+    ],
   },
   {
     title: "Sylvan",
@@ -127,6 +168,26 @@ const projects = [
     SylvanOutro1,
     SylvanOutro2,
     SylvanOutro3,
+    ],
+    imagesPortrait: [
+      {
+        image: SylvanOutro2,
+        alt: "ipad mockup of sylvan's product detail page"
+      },
+      {
+        image: SylvanOutro3,
+        alt: "displays of sylvan homepage and detail page in laptop and mobile view"
+      },
+    ],
+    imagesLandscape: [
+      {
+        image: SylvanOutro2,
+        alt: "ipad mockup of sylvan's product detail page"
+      },
+      {
+        image: SylvanOutro3,
+        alt: "displays of sylvan homepage and detail page in laptop and mobile view"
+      },
     ],
   },
   {

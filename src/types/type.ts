@@ -21,7 +21,14 @@ export type Projects = {
   introImage?: StaticImageData;
   imagesMiddle?: StaticImageData[];
   imagesOutro?: StaticImageData[];
+  imagesLandscape?: ImageArray[];
+  imagesPortrait?: ImageArray[];
 };
+
+type ImageArray = {
+  image: StaticImageData;
+  alt: string
+}
 
 export type Resume = {
   category: string;

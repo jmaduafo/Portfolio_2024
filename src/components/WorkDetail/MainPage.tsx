@@ -12,7 +12,13 @@ import PrevNext from "./PrevNext";
 import Heading from "../Heading";
 import Banner from "../Banner";
 
-function MainPage({ project, index }: { readonly project: Projects, readonly index: number }) {
+function MainPage({
+  project,
+  index,
+}: {
+  readonly project: Projects;
+  readonly index: number;
+}) {
   const introImageDiv = useRef(null);
   const introImage = useRef(null);
   const middleImageDiv1 = useRef(null);
@@ -248,7 +254,7 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
               {project?.technologies?.map((proj) => {
                 return (
                   <Fragment key={proj}>
-                    <Banner text={proj}/>
+                    <Banner text={proj} />
                   </Fragment>
                 );
               })}
@@ -292,7 +298,7 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
           {project?.description1?.map((desc) => {
             return (
               <div key={desc}>
-                <Paragraph text={desc} className="text-[18px]"/>
+                <Paragraph text={desc} className="text-[18px]" />
               </div>
             );
           })}
@@ -407,7 +413,7 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
         </div>
       </section>
       {/* LAST SET OF IMAGES */}
-      <section>
+      {/* <section>
         {project?.imagesOutro && (
           <div className="">
             <div
@@ -494,12 +500,61 @@ function MainPage({ project, index }: { readonly project: Projects, readonly ind
             </div>
           </div>
         )}
+      </section> */}
+      <section>
+        <div className="grid grid-cols-2 gap-3">
+          {project?.imagesPortrait
+            ? project.imagesPortrait.map((img, i) => {
+                return (
+                  <div key={img.alt} className="w-full object-cover bg-white">
+                    <Image
+                      src={img.image}
+                      alt={img.alt}
+                      className="w-full h-full"
+                      placeholder={
+                        img.image.src.split("/").pop()?.split(".").pop() ===
+                        "gif"
+                          ? "empty"
+                          : "blur"
+                      }
+                      unoptimized={
+                        img.image.src.split("/").pop()?.split(".").pop() ===
+                          "gif" ?? false
+                      }
+                    />
+                  </div>
+                );
+              })
+            : null}
+        </div>
       </section>
-      <PrevNext index={index}/>
+      <section>
+        {project?.imagesLandscape
+          ? project.imagesLandscape.map((img, i) => {
+              return (
+                <div key={img.alt} className="w-full object-cover mt-3">
+                  <Image
+                    src={img.image}
+                    alt={img.alt}
+                    className="w-full"
+                    placeholder={
+                      img.image.src.split("/").pop()?.split(".").pop() === "gif"
+                        ? "empty"
+                        : "blur"
+                    }
+                    unoptimized={
+                      img.image.src.split("/").pop()?.split(".").pop() ===
+                        "gif" ?? false
+                    }
+                  />
+                </div>
+              );
+            })
+          : null}
+      </section>
+      <PrevNext index={index} />
     </>
   );
 }
-
-
 
 export default MainPage;
