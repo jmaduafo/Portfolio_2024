@@ -305,7 +305,7 @@ function MainPage({
         </motion.div>
       </section>
       {/* SET OF IMAGES AFTER THE INTRO IMAGE */}
-      <section>
+      {/* <section>
         {project?.imagesMiddle && (
           <div className="flex flex-col md:flex-row items-center gap-3">
             <div className="flex-1" ref={middleImageDiv1}>
@@ -389,10 +389,10 @@ function MainPage({
             </div>
           </div>
         )}
-      </section>
+      </section> */}
       {/* SECOND PARAGRAPH */}
-      <section className="my-[8vh]">
         {/* PARAGRAPH SECTION */}
+      {/* <section className="my-[8vh]">
         <div className="flex flex-col gap-y-6 w-full sm:w-[80%] lg:w-[60%] mx-auto">
           {project?.description2?.map((desc) => {
             return (
@@ -411,97 +411,32 @@ function MainPage({
             );
           })}
         </div>
-      </section>
-      {/* LAST SET OF IMAGES */}
-      {/* <section>
-        {project?.imagesOutro && (
-          <div className="">
-            <div
-              className="mb-3 w-full object-cover overflow-hidden"
-              ref={outroImageDiv1}
-            >
-              <Image
-                src={project?.imagesOutro[0]}
-                alt=""
-                className="w-full scale-110"
-                // ONLY UNOPTIMIZE IF IMAGE IS A GIF
-                unoptimized={
-                  project.imagesOutro[0].src
-                    .split("/")
-                    .pop()
-                    ?.split(".")
-                    .pop() === "gif" ?? false
-                }
-                // ONLY ADD A BLUR PLACEHOLDER IF IMAGE IS NOT A GIF
-                placeholder={
-                  project.imagesOutro[0].src
-                    .split("/")
-                    .pop()
-                    ?.split(".")
-                    .pop() === "gif"
-                    ? "empty"
-                    : "blur"
-                }
-                ref={outroImage1}
-              />
-            </div>
-            <div
-              className="flex flex-col md:flex-row gap-3"
-              ref={outroImageDiv2}
-            >
-              <div className="flex-1 object-cover overflow-hidden">
-                <Image
-                  src={project?.imagesOutro[1]}
-                  alt=""
-                  className="w-full h-full scale-110"
-                  unoptimized={
-                    project.imagesOutro[1].src
-                      .split("/")
-                      .pop()
-                      ?.split(".")
-                      .pop() === "gif" ?? false
-                  }
-                  placeholder={
-                    project.imagesOutro[1].src
-                      .split("/")
-                      .pop()
-                      ?.split(".")
-                      .pop() === "gif"
-                      ? "empty"
-                      : "blur"
-                  }
-                  ref={outroImage2}
-                />
-              </div>
-              <div className="flex-1 object-cover overflow-hidden">
-                <Image
-                  src={project?.imagesOutro[2]}
-                  alt=""
-                  className="w-full h-full scale-110"
-                  unoptimized={
-                    project.imagesOutro[2].src
-                      .split("/")
-                      .pop()
-                      ?.split(".")
-                      .pop() === "gif" ?? false
-                  }
-                  placeholder={
-                    project.imagesOutro[2].src
-                      .split("/")
-                      .pop()
-                      ?.split(".")
-                      .pop() === "gif"
-                      ? "empty"
-                      : "blur"
-                  }
-                  ref={outroImage3}
-                />
-              </div>
-            </div>
-          </div>
-        )}
       </section> */}
       <section>
+        {project?.imagesLandscape
+          ? project.imagesLandscape.map((img, i) => {
+              return (
+                <div key={img.alt} className="w-full object-cover mt-3">
+                  <Image
+                    src={img.image}
+                    alt={img.alt}
+                    className="w-full"
+                    placeholder={
+                      img.image.src.split("/").pop()?.split(".").pop() === "gif"
+                        ? "empty"
+                        : "blur"
+                    }
+                    unoptimized={
+                      img.image.src.split("/").pop()?.split(".").pop() ===
+                        "gif" ?? false
+                    }
+                  />
+                </div>
+              );
+            })
+          : null}
+      </section>
+      <section className="mt-3">
         <div className="grid grid-cols-2 gap-3">
           {project?.imagesPortrait
             ? project.imagesPortrait.map((img, i) => {
@@ -527,30 +462,6 @@ function MainPage({
               })
             : null}
         </div>
-      </section>
-      <section>
-        {project?.imagesLandscape
-          ? project.imagesLandscape.map((img, i) => {
-              return (
-                <div key={img.alt} className="w-full object-cover mt-3">
-                  <Image
-                    src={img.image}
-                    alt={img.alt}
-                    className="w-full"
-                    placeholder={
-                      img.image.src.split("/").pop()?.split(".").pop() === "gif"
-                        ? "empty"
-                        : "blur"
-                    }
-                    unoptimized={
-                      img.image.src.split("/").pop()?.split(".").pop() ===
-                        "gif" ?? false
-                    }
-                  />
-                </div>
-              );
-            })
-          : null}
       </section>
       <PrevNext index={index} />
     </>

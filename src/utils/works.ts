@@ -24,6 +24,13 @@ import SylvanOutro2 from '../../public/images/sylvan/imagesOutro2.jpg'
 import SylvanOutro3 from '../../public/images/sylvan/imagesOutro3.jpg'
 import SylvanIntro from '../../public/images/sylvan/introImage.jpg'
 import SylvanMain from '../../public/images/sylvan/mainImage.jpg'
+import SylvanLandscape1 from '../../public/images/sylvan/imagesLandscape1.jpg'
+import SylvanLandscape2 from '../../public/images/sylvan/imagesLandscape2.jpg'
+import SylvanLandscape3 from '../../public/images/sylvan/imagesLandscape3.jpg'
+import SylvanLandscape4 from '../../public/images/sylvan/imagesLandscape4.jpg'
+import SylvanLandscape5 from '../../public/images/sylvan/imagesLandscape5.jpg'
+import SylvanLandscape6 from '../../public/images/sylvan/imagesLandscape6.png'
+import SylvanLandscape7 from '../../public/images/sylvan/imagesLandscape7.jpg'
 
 import OracleMiddle1 from '../../public/images/oracle/imagesMiddle1.png'
 import OracleMiddle2 from '../../public/images/oracle/imagesMiddle2.png'
@@ -164,29 +171,52 @@ const projects = [
       SylvanMiddle2,
       SylvanMiddle3,
     ],
-    imagesOutro: [
-    SylvanOutro1,
-    SylvanOutro2,
-    SylvanOutro3,
-    ],
     imagesPortrait: [
+      {
+        image: SylvanMiddle1,
+        alt: "mobile phone perched on the edge of elegant couch"
+      },
+      {
+        image: SylvanMiddle3,
+        alt: "displays of sylvan homepage and detail page in laptop and mobile view"
+      },
       {
         image: SylvanOutro2,
         alt: "ipad mockup of sylvan's product detail page"
       },
       {
-        image: SylvanOutro3,
-        alt: "displays of sylvan homepage and detail page in laptop and mobile view"
+        image: SylvanMiddle2,
+        alt: "displays of sylvan homepage and detail page in laptop"
       },
     ],
     imagesLandscape: [
       {
-        image: SylvanOutro2,
-        alt: "ipad mockup of sylvan's product detail page"
+        image: SylvanLandscape1,
+        alt: "graphic card with elegant furniture at the background"
       },
       {
-        image: SylvanOutro3,
-        alt: "displays of sylvan homepage and detail page in laptop and mobile view"
+        image: SylvanLandscape2,
+        alt: "lighting with sleek text"
+      },
+      {
+        image: SylvanLandscape4,
+        alt: "view of account page"
+      },
+      {
+        image: SylvanLandscape3,
+        alt: "laptop view of sylvan hero section on home"
+      },
+      {
+        image: SylvanLandscape5,
+        alt: "view of error page"
+      },
+      {
+        image: SylvanLandscape6,
+        alt: "mobile view of login and shop page"
+      },
+      {
+        image: SylvanLandscape7,
+        alt: "view of lookbook page"
       },
     ],
   },
