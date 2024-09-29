@@ -1,52 +1,58 @@
 import { Projects } from "@/types/type";
 
-import ElysianMiddle1 from '../../public/images/elysian/imagesMiddle1.jpg'
-import ElysianMiddle2 from '../../public/images/elysian/imagesMiddle2.jpg'
-import ElysianMiddle3 from '../../public/images/elysian/imagesMiddle3.jpg'
-import ElysianOutro1 from '../../public/images/elysian/imagesOutro1.jpg'
-import ElysianOutro2 from '../../public/images/elysian/imagesOutro2.jpg'
-import ElysianOutro3 from '../../public/images/elysian/imagesOutro3.jpg'
-import ElysianIntro from '../../public/images/elysian/introImage.jpg'
-import ElysianLandscape1 from '../../public/images/elysian/imageLandscape1.png'
-import ElysianLandscape2 from '../../public/images/elysian/imagesLandscape2.jpg'
-import ElysianLandscape3 from '../../public/images/elysian/imagesLandscape3.jpg'
-import ElysianLandscape4 from '../../public/images/elysian/imagesLandscape4.jpg'
-import ElysianLandscape5 from '../../public/images/elysian/imagesLandscape5.png'
-import ElysianLandscape6 from '../../public/images/elysian/imagesLandscape6.png'
-import ElysianLandscape7 from '../../public/images/elysian/imagesLandscape7.jpg'
+import ElysianMiddle1 from "../../public/images/elysian/imagesMiddle1.jpg";
+import ElysianMiddle2 from "../../public/images/elysian/imagesMiddle2.jpg";
+import ElysianMiddle3 from "../../public/images/elysian/imagesMiddle3.jpg";
+import ElysianOutro1 from "../../public/images/elysian/imagesOutro1.jpg";
+import ElysianOutro2 from "../../public/images/elysian/imagesOutro2.jpg";
+import ElysianOutro3 from "../../public/images/elysian/imagesOutro3.jpg";
+import ElysianIntro from "../../public/images/elysian/introImage.jpg";
+import ElysianLandscape1 from "../../public/images/elysian/imageLandscape1.png";
+import ElysianLandscape2 from "../../public/images/elysian/imagesLandscape2.jpg";
+import ElysianLandscape3 from "../../public/images/elysian/imagesLandscape3.jpg";
+import ElysianLandscape4 from "../../public/images/elysian/imagesLandscape4.jpg";
+import ElysianLandscape5 from "../../public/images/elysian/imagesLandscape5.png";
+import ElysianLandscape6 from "../../public/images/elysian/imagesLandscape6.png";
+import ElysianLandscape7 from "../../public/images/elysian/imagesLandscape7.jpg";
 
+import SylvanMiddle1 from "../../public/images/sylvan/imagesMiddle1.jpg";
+import SylvanMiddle2 from "../../public/images/sylvan/imagesMiddle2.jpg";
+import SylvanMiddle3 from "../../public/images/sylvan/imagesMiddle3.jpg";
+import SylvanOutro1 from "../../public/images/sylvan/imagesOutro1.jpg";
+import SylvanOutro2 from "../../public/images/sylvan/imagesOutro2.jpg";
+import SylvanOutro3 from "../../public/images/sylvan/imagesOutro3.jpg";
+import SylvanIntro from "../../public/images/sylvan/introImage.jpg";
+import SylvanMain from "../../public/images/sylvan/mainImage.jpg";
+import SylvanLandscape1 from "../../public/images/sylvan/imagesLandscape1.jpg";
+import SylvanLandscape2 from "../../public/images/sylvan/imagesLandscape2.jpg";
+import SylvanLandscape3 from "../../public/images/sylvan/imagesLandscape3.jpg";
+import SylvanLandscape4 from "../../public/images/sylvan/imagesLandscape4.jpg";
+import SylvanLandscape5 from "../../public/images/sylvan/imagesLandscape5.jpg";
+import SylvanLandscape6 from "../../public/images/sylvan/imagesLandscape6.png";
+import SylvanLandscape7 from "../../public/images/sylvan/imagesLandscape7.jpg";
 
-import SylvanMiddle1 from '../../public/images/sylvan/imagesMiddle1.jpg'
-import SylvanMiddle2 from '../../public/images/sylvan/imagesMiddle2.jpg'
-import SylvanMiddle3 from '../../public/images/sylvan/imagesMiddle3.jpg'
-import SylvanOutro1 from '../../public/images/sylvan/imagesOutro1.jpg'
-import SylvanOutro2 from '../../public/images/sylvan/imagesOutro2.jpg'
-import SylvanOutro3 from '../../public/images/sylvan/imagesOutro3.jpg'
-import SylvanIntro from '../../public/images/sylvan/introImage.jpg'
-import SylvanMain from '../../public/images/sylvan/mainImage.jpg'
-import SylvanLandscape1 from '../../public/images/sylvan/imagesLandscape1.jpg'
-import SylvanLandscape2 from '../../public/images/sylvan/imagesLandscape2.jpg'
-import SylvanLandscape3 from '../../public/images/sylvan/imagesLandscape3.jpg'
-import SylvanLandscape4 from '../../public/images/sylvan/imagesLandscape4.jpg'
-import SylvanLandscape5 from '../../public/images/sylvan/imagesLandscape5.jpg'
-import SylvanLandscape6 from '../../public/images/sylvan/imagesLandscape6.png'
-import SylvanLandscape7 from '../../public/images/sylvan/imagesLandscape7.jpg'
+import OracleMiddle1 from "../../public/images/oracle/imagesMiddle1.png";
+import OracleMiddle2 from "../../public/images/oracle/imagesMiddle2.png";
+import OracleMiddle3 from "../../public/images/oracle/imagesMiddle3.jpg";
+import OracleOutro1 from "../../public/images/oracle/imagesOutro1.jpg";
+import OracleOutro2 from "../../public/images/oracle/imagesOutro2.jpg";
+import OracleOutro3 from "../../public/images/oracle/imagesOutro3.jpg";
+import OracleIntro from "../../public/images/oracle/introImage.png";
 
-import OracleMiddle1 from '../../public/images/oracle/imagesMiddle1.png'
-import OracleMiddle2 from '../../public/images/oracle/imagesMiddle2.png'
-import OracleMiddle3 from '../../public/images/oracle/imagesMiddle3.jpg'
-import OracleOutro1 from '../../public/images/oracle/imagesOutro1.jpg'
-import OracleOutro2 from '../../public/images/oracle/imagesOutro2.jpg'
-import OracleOutro3 from '../../public/images/oracle/imagesOutro3.jpg'
-import OracleIntro from '../../public/images/oracle/introImage.png'
+import LofiMiddle1 from "../../public/images/lofi_train/imagesMiddle1.gif";
+import LofiMiddle2 from "../../public/images/lofi_train/imagesMiddle2.jpg";
+import LofiMiddle3 from "../../public/images/lofi_train/imagesMiddle3.jpg";
+import LofiOutro1 from "../../public/images/lofi_train/imagesOutro1.gif";
+import LofiOutro2 from "../../public/images/lofi_train/imagesOutro2.jpg";
+import LofiOutro3 from "../../public/images/lofi_train/imagesOutro3.jpg";
+import LofiIntro from "../../public/images/lofi_train/introImage.jpg";
+import LofiLandscape1 from "../../public/images/lofi_train/imagesLandscape1.jpg";
+import LofiLandscape2 from "../../public/images/lofi_train/imagesLandscape2.png";
+import LofiLandscape3 from "../../public/images/lofi_train/imagesLandscape3.jpg";
+import LofiLandscape4 from "../../public/images/lofi_train/imagesLandscape4.jpg";
+import LofiLandscape5 from "../../public/images/lofi_train/imagesLandscape5.gif";
+import LofiLandscape6 from "../../public/images/lofi_train/imagesLandscape6.gif";
 
-import LofiMiddle1 from '../../public/images/lofi_train/imagesMiddle1.gif'
-import LofiMiddle2 from '../../public/images/lofi_train/imagesMiddle2.jpg'
-import LofiMiddle3 from '../../public/images/lofi_train/imagesMiddle3.jpg'
-import LofiOutro1 from '../../public/images/lofi_train/imagesOutro1.gif'
-import LofiOutro2 from '../../public/images/lofi_train/imagesOutro2.jpg'
-import LofiOutro3 from '../../public/images/lofi_train/imagesOutro3.jpg'
-import LofiIntro from '../../public/images/lofi_train/introImage.jpg'
 
 const projects = [
   {
@@ -82,49 +88,45 @@ const projects = [
     // padding: "translateX-[8vw]",
     mainImage: ElysianMiddle3,
     introImage: ElysianIntro,
-    imagesMiddle: [
-      ElysianMiddle1,
-      ElysianMiddle2,
-      ElysianMiddle3,
-    ],
+    imagesMiddle: [ElysianMiddle1, ElysianMiddle2, ElysianMiddle3],
     imagesLandscape: [
       {
         image: ElysianLandscape1,
-        alt: "logo with three white rounded stripes"
+        alt: "logo with three white rounded stripes",
       },
       {
         image: ElysianLandscape2,
-        alt: "logo with a couple under the lights beside it"
+        alt: "logo with a couple under the lights beside it",
       },
       {
         image: ElysianLandscape3,
-        alt: "website designs displayed at an angle"
+        alt: "website designs displayed at an angle",
       },
       {
         image: ElysianLandscape4,
-        alt: "elysian profile page"
+        alt: "elysian profile page",
       },
       {
         image: ElysianLandscape5,
-        alt: "elysian sign up page"
+        alt: "elysian sign up page",
       },
       {
         image: ElysianLandscape6,
-        alt: "elysian create a date page on a desktop computer"
+        alt: "elysian create a date page on a desktop computer",
       },
       {
         image: ElysianLandscape7,
-        alt: "elysian mobile view for profile and dashboard"
+        alt: "elysian mobile view for profile and dashboard",
       },
     ],
     imagesPortrait: [
       {
         image: ElysianOutro2,
-        alt: "logo and title of brand with couple behind"
+        alt: "logo and title of brand with couple behind",
       },
       {
         image: ElysianOutro3,
-        alt: "elysian hero section of landing page"
+        alt: "elysian hero section of landing page",
       },
     ],
   },
@@ -166,57 +168,53 @@ const projects = [
     // padding: "translateX-[-8vw]",
     mainImage: SylvanMain,
     introImage: SylvanIntro,
-    imagesMiddle: [
-      SylvanMiddle1,
-      SylvanMiddle2,
-      SylvanMiddle3,
-    ],
+    imagesMiddle: [SylvanMiddle1, SylvanMiddle2, SylvanMiddle3],
     imagesPortrait: [
       {
         image: SylvanMiddle1,
-        alt: "mobile phone perched on the edge of elegant couch"
+        alt: "mobile phone perched on the edge of elegant couch",
       },
       {
         image: SylvanMiddle3,
-        alt: "displays of sylvan homepage and detail page in laptop and mobile view"
+        alt: "displays of sylvan homepage and detail page in laptop and mobile view",
       },
       {
         image: SylvanOutro2,
-        alt: "ipad mockup of sylvan's product detail page"
+        alt: "ipad mockup of sylvan's product detail page",
       },
       {
         image: SylvanMiddle2,
-        alt: "displays of sylvan homepage and detail page in laptop"
+        alt: "displays of sylvan homepage and detail page in laptop",
       },
     ],
     imagesLandscape: [
       {
         image: SylvanLandscape1,
-        alt: "graphic card with elegant furniture at the background"
+        alt: "graphic card with elegant furniture at the background",
       },
       {
         image: SylvanLandscape2,
-        alt: "lighting with sleek text"
+        alt: "lighting with sleek text",
       },
       {
         image: SylvanLandscape4,
-        alt: "view of account page"
+        alt: "view of account page",
       },
       {
         image: SylvanLandscape3,
-        alt: "laptop view of sylvan hero section on home"
+        alt: "laptop view of sylvan hero section on home",
       },
       {
         image: SylvanLandscape5,
-        alt: "view of error page"
+        alt: "view of error page",
       },
       {
         image: SylvanLandscape6,
-        alt: "mobile view of login and shop page"
+        alt: "mobile view of login and shop page",
       },
       {
         image: SylvanLandscape7,
-        alt: "view of lookbook page"
+        alt: "view of lookbook page",
       },
     ],
   },
@@ -250,16 +248,8 @@ const projects = [
     // padding: "translateX-[-8vw]",
     mainImage: OracleMiddle3,
     introImage: OracleIntro,
-    imagesMiddle: [
-      OracleMiddle1,
-      OracleMiddle2,
-      OracleMiddle3,
-    ],
-    imagesOutro: [
-    OracleOutro1,
-    OracleOutro2,
-    OracleOutro3,
-    ],
+    imagesMiddle: [OracleMiddle1, OracleMiddle2, OracleMiddle3],
+    imagesOutro: [OracleOutro1, OracleOutro2, OracleOutro3],
   },
   {
     title: "Lofi Train",
@@ -284,15 +274,54 @@ const projects = [
     ],
     mainImage: LofiOutro3,
     introImage: LofiIntro,
-    imagesMiddle: [
-      LofiMiddle1,
-      LofiMiddle2,
-      LofiMiddle3,
+    imagesMiddle: [LofiMiddle1, LofiMiddle2, LofiMiddle3],
+    imagesPortrait: [
+      { 
+        image: LofiOutro3,
+        alt: "iphone lying on a soft blanket with cotton surrounding it" 
+      },
+      { 
+        image: LofiMiddle1,
+        alt: "gif display of different backgrounds" 
+      },
+      { 
+        image: LofiMiddle2,
+        alt: "tablet view of lofi train" 
+      },
+      { 
+        image: LofiOutro2,
+        alt: "mockup of girl using lofi train on laptop" 
+      }
     ],
-    imagesOutro: [
-    LofiOutro1,
-    LofiOutro2,
-    LofiOutro3,
+    imagesLandscape: [
+      { 
+        image: LofiLandscape1,
+        alt: "poster board of lofi train logo" 
+      },
+      { 
+        image: LofiLandscape2,
+        alt: "lofi train logo with color palette" 
+      },
+      { 
+        image: LofiLandscape3,
+        alt: "lofi train logo with animated cozy background" 
+      },
+      { 
+        image: LofiLandscape4,
+        alt: "mockup of lofi train on macbook laptop" 
+      },
+      { 
+        image: LofiLandscape5,
+        alt: "gif of favorites container when selected" 
+      },
+      { 
+        image: LofiLandscape6,
+        alt: "gif of search, favorites, and settings features" 
+      },
+      { 
+        image: LofiOutro1,
+        alt: "rainy gif animation with train in background" 
+      },
     ],
   },
 ];

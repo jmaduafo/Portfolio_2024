@@ -437,11 +437,11 @@ function MainPage({
           : null}
       </section>
       <section className="mt-3">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {project?.imagesPortrait
             ? project.imagesPortrait.map((img, i) => {
                 return (
-                  <div key={img.alt} className="w-full object-cover bg-white">
+                  <div key={img.alt} className="w-full sm:max-h-[105vh] object-cover">
                     <Image
                       src={img.image}
                       alt={img.alt}
