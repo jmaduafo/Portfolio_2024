@@ -38,6 +38,14 @@ import OracleOutro1 from "../../public/images/oracle/imagesOutro1.jpg";
 import OracleOutro2 from "../../public/images/oracle/imagesOutro2.jpg";
 import OracleOutro3 from "../../public/images/oracle/imagesOutro3.jpg";
 import OracleIntro from "../../public/images/oracle/introImage.png";
+import OracleLandscape1 from "../../public/images/oracle/imagesLandscape1.png";
+import OracleLandscape2 from "../../public/images/oracle/imagesLandscape2.jpg";
+import OracleLandscape3 from "../../public/images/oracle/imagesLandscape3.png";
+import OracleLandscape4 from "../../public/images/oracle/imagesLandscape4.jpg";
+import OracleLandscape5 from "../../public/images/oracle/imagesLandscape5.png";
+import OracleLandscape6 from "../../public/images/oracle/imagesLandscape6.png";
+import OracleLandscape7 from "../../public/images/oracle/imagesLandscape7.jpg";
+import OracleLandscape8 from "../../public/images/oracle/imagesLandscape8.jpg";
 
 import LofiMiddle1 from "../../public/images/lofi_train/imagesMiddle1.gif";
 import LofiMiddle2 from "../../public/images/lofi_train/imagesMiddle2.jpg";
@@ -250,6 +258,58 @@ const projects = [
     introImage: OracleIntro,
     imagesMiddle: [OracleMiddle1, OracleMiddle2, OracleMiddle3],
     imagesOutro: [OracleOutro1, OracleOutro2, OracleOutro3],
+    imagesPortrait: [
+      { 
+        image: OracleMiddle1,
+        alt: "laptop perched on top of platform" 
+      },
+      { 
+        image: OracleMiddle3,
+        alt: "man in mask holding a red jewelry box" 
+      },
+      { 
+        image: OracleMiddle2,
+        alt: "man with pearl bracelet looking down at phone" 
+      },
+      { 
+        image: OracleOutro2,
+        alt: "ipad mockup on a marble counter" 
+      }
+    ],
+    imagesLandscape: [
+      {
+        image: OracleLandscape1,
+        alt: "oracle graphic design with playlist",
+      },
+      {
+        image: OracleLandscape2,
+        alt: "oracle graphic design with neon green background",
+      },
+      {
+        image: OracleLandscape3,
+        alt: "oracle logos in black and white",
+      },
+      {
+        image: OracleLandscape4,
+        alt: "laptop and ipad mockup view of oracle website",
+      },
+      {
+        image: OracleLandscape5,
+        alt: "laptop screen view of contact page",
+      },
+      {
+        image: OracleLandscape6,
+        alt: "mobile view of menu and loading pages",
+      },
+      {
+        image: OracleLandscape7,
+        alt: "laptop on white rock",
+      },
+      {
+        image: OracleLandscape8,
+        alt: "mobile views of single artist page and contact page",
+      },
+    ],
   },
   {
     title: "Lofi Train",
