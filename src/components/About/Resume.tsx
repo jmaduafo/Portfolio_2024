@@ -11,20 +11,6 @@ function Resume() {
 
   const EASING = [0.83, 0, 0.17, 1];
 
-  const appear = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: easeInOut,
-        delay: 0.4,
-      },
-    },
-  };
-
   const rise = {
     initial: {
       y: "100%",
@@ -113,11 +99,11 @@ function Resume() {
           );
         })}
       </div>
-      <div className="flex justify-end mt-8">
+      {/* <div className="flex justify-end mt-8">
         <div>
           <MainButton text="View Full Resume" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
