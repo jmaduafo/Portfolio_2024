@@ -150,7 +150,7 @@ function MainPage() {
               animate="animate"
               className={`${spectralBridgeRegular.className} leading-[1] uppercase text-center text-[20vw] sm:text-[12vw]`}
             >
-              Let's <span className="italic lowercase">get</span>
+              Let&apos;s <span className="italic lowercase">get</span>
             </motion.h1>
           </div>
           <div className="overflow-hidden">
