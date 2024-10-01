@@ -43,7 +43,7 @@ function Mockups() {
         <div className="flex-1 object-cover mt-16" ref={image1Div}>
           <Image
             src={AboutOutro1}
-            alt=""
+            alt="laptop on cushion with green curtain behind"
             className="w-full h-full"
             placeholder="blur"
             ref={image1}
@@ -52,7 +52,7 @@ function Mockups() {
         <div className="flex-1 object-cover" ref={image2Div}>
           <Image
             src={AboutOutro2}
-            alt=""
+            alt="mobile phone leaned on rock"
             className="w-full h-full"
             placeholder="blur"
             ref={image2}

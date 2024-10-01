@@ -20,7 +20,7 @@ function Footer() {
     },
     {
       title: "instagram",
-      href: "https://www.instagram.com",
+      href: "https://www.instagram.com/jasmine_the_creative/",
     },
     {
       title: "behance",

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
 import AboutIntro1 from "../../../public/images/general/about/aboutIntro1.jpg";
@@ -75,7 +74,7 @@ function MoreDetail() {
         <div className="flex-1 object-cover overflow-hidden">
           <Image
             src={AboutMain6}
-            alt=""
+            alt="self portrait"
             className="w-full h-full scale-110"
             placeholder="blur"
             ref={image1}
@@ -85,7 +84,7 @@ function MoreDetail() {
           <div className="w-full object-cover overflow-hidden">
             <Image
               src={AboutIntro1}
-              alt=""
+              alt="beautiful pink flower"
               className="w-full h-full scale-110"
               placeholder="blur"
               ref={image2}

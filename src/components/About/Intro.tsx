@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
-import AboutMain from "../../../public/images/general/about/aboutMain.jpg";
+import AboutMain from "../../../public/images/general/about/aboutIntro3.jpg";
 import { easeInOut, motion } from "framer-motion";
 
 function Intro() {
@@ -105,14 +105,14 @@ function Intro() {
             >
               <motion.div
                 className=""
-                variants={scale}
-                initial="initial"
-                animate="animate"
+                // variants={scale}
+                // initial="initial"
+                // animate="animate"
               >
                 <Image
                   src={AboutMain}
-                  alt=""
-                  className="w-full contrast-125"
+                  alt="a cocktail with a quote around it"
+                  className="w-full"
                   placeholder="blur"
                   ref={imageRef}
                 />
