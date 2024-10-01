@@ -4,6 +4,7 @@ import { spectralBridgeRegular } from "@/fonts/font";
 import { motion, easeInOut } from "framer-motion";
 import MainButton from "../MainButton";
 import Paragraph from "../Paragraph";
+import Loading from "../Loading";
 
 function MainPage() {
   const [values, setValues] = useState({
@@ -250,9 +251,9 @@ function MainPage() {
                   initial="initial"
                   animate="animate"
                   type="submit"
-                  className="hover:bg-lightText hover:text-lightBg dark:hover:bg-darkText dark:hover:text-darkBg duration-300 text-[16px] 2xl:text-[26px] w-full sm:w-[45%] py-2 border-[1px] border-lightText dark:border-darkText rounded-full outline-none"
+                  className="group hover:bg-lightText hover:text-lightBg dark:hover:bg-darkText dark:hover:text-darkBg duration-300 text-[16px] 2xl:text-[26px] w-full sm:w-[45%] py-2 border-[1px] border-lightText dark:border-darkText rounded-full outline-none"
                 >
-                  {loading ? "O" : "Submit"}
+                  {loading ? <Loading classNameSize="w-7 h-7"/> : "Submit"}
                 </motion.button>
               </div>
             </form>

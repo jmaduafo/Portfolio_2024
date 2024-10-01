@@ -96,7 +96,6 @@ const projects = [
     // padding: "translateX-[8vw]",
     mainImage: ElysianMiddle3,
     introImage: ElysianIntro,
-    imagesMiddle: [ElysianMiddle1, ElysianMiddle2, ElysianMiddle3],
     imagesLandscape: [
       {
         image: ElysianLandscape1,
@@ -176,7 +175,6 @@ const projects = [
     // padding: "translateX-[-8vw]",
     mainImage: SylvanMain,
     introImage: SylvanIntro,
-    imagesMiddle: [SylvanMiddle1, SylvanMiddle2, SylvanMiddle3],
     imagesPortrait: [
       {
         image: SylvanMiddle1,
@@ -256,8 +254,6 @@ const projects = [
     // padding: "translateX-[-8vw]",
     mainImage: OracleMiddle3,
     introImage: OracleIntro,
-    imagesMiddle: [OracleMiddle1, OracleMiddle2, OracleMiddle3],
-    imagesOutro: [OracleOutro1, OracleOutro2, OracleOutro3],
     imagesPortrait: [
       { 
         image: OracleMiddle1,
@@ -334,7 +330,6 @@ const projects = [
     ],
     mainImage: LofiOutro3,
     introImage: LofiIntro,
-    imagesMiddle: [LofiMiddle1, LofiMiddle2, LofiMiddle3],
     imagesPortrait: [
       { 
         image: LofiOutro3,
