@@ -180,11 +180,6 @@ function Services() {
       zIndex: "z-[4]",
       alt: "a deep magenta perfume bottle with its package",
     },
-    // {
-    //   id: "service5",
-    //   image: Service5,
-    //   zIndex: "z-[5]"
-    // },
   ];
 
   return (
