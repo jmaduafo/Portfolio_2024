@@ -9,7 +9,6 @@ import Service1 from "../../../public/images/services/list/serviceDisplay1.jpg";
 import Service2 from "../../../public/images/services/list/serviceDisplay2.jpg";
 import Service3 from "../../../public/images/services/list/serviceDisplay4.png";
 import Service4 from "../../../public/images/services/list/serviceDisplay5.jpg";
-// import Service5 from "../../../public/images/services/list/serviceDisplay5.jpg";
 import Header2 from "../Header2";
 import Image from "next/image";
 import ServiceImage from "../../../public/images/services/list/john-gonzales-bcPmxdBGyyw-unsplash.jpg";
@@ -247,7 +246,7 @@ function Services() {
           <div className="relative md:sticky top-0 flex-1 h-auto md:h-screen object-cover overflow-hidden">
             <Image
               src={ServiceImage}
-              alt=""
+              alt="two spanish buildings with blue sky"
               className="w-full h-full scale-150"
               placeholder="blur"
               ref={image}

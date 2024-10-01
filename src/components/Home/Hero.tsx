@@ -169,6 +169,7 @@ function Hero() {
               src={HeroImage}
               alt="chairs and tables in a cozy room with plants"
               className="w-full h-full"
+              placeholder="blur"
             />
           </motion.div>
           <motion.div
