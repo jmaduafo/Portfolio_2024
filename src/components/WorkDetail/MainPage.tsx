@@ -416,7 +416,7 @@ function MainPage({
         {project?.imagesLandscape
           ? project.imagesLandscape.map((img, i) => {
               return (
-                <div key={img.alt} className="w-full object-cover mt-3">
+                <div key={img.alt} className="w-full object-cover mb-8">
                   <Image
                     src={img.image}
                     alt={img.alt}
@@ -436,8 +436,8 @@ function MainPage({
             })
           : null}
       </section>
-      <section className="mt-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <section className="">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {project?.imagesPortrait
             ? project.imagesPortrait.map((img, i) => {
                 return (

@@ -24,7 +24,7 @@ function Footer() {
     },
     {
       title: "behance",
-      href: "https://www.behance.net/jasminemaduafo",
+      href: "https://www.behance.net/jasminemadu",
     },
   ];
 
