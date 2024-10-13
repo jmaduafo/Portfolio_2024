@@ -3,8 +3,8 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import Paragraph from "../Paragraph";
-import AboutIntro1 from "../../../public/images/general/about/aboutIntro1.jpg";
-import AboutMain6 from "../../../public/images/general/about/aboutMain6.jpg";
+import AboutImage1 from "../../../public/images/general/about/aboutMain2.jpg";
+import AboutImage2 from "../../../public/images/general/about/aboutIntro1.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { easeInOut, motion, useInView } from "framer-motion";
@@ -73,7 +73,7 @@ function MoreDetail() {
       <div className="flex flex-col md:flex-row items-end gap-6 md:pl-[8vw]">
         <div className="flex-1 object-cover overflow-hidden">
           <Image
-            src={AboutMain6}
+            src={AboutImage1}
             alt="self portrait"
             className="w-full h-full scale-110"
             placeholder="blur"
@@ -83,7 +83,7 @@ function MoreDetail() {
         <div className="flex-[1.5]">
           <div className="w-full object-cover overflow-hidden">
             <Image
-              src={AboutIntro1}
+              src={AboutImage2}
               alt="beautiful pink flower"
               className="w-full h-full scale-110"
               placeholder="blur"

@@ -42,20 +42,6 @@ function Intro() {
     },
   };
 
-  const scale = {
-    initial: {
-      scale: 1,
-    },
-    animate: {
-      scale: 1.1,
-      transition: {
-        duration: 1,
-        ease: EASING,
-        delay: 0.45,
-      },
-    },
-  };
-
   const appear = {
     initial: {
       opacity: 0,
@@ -105,9 +91,6 @@ function Intro() {
             >
               <motion.div
                 className=""
-                // variants={scale}
-                // initial="initial"
-                // animate="animate"
               >
                 <Image
                   src={AboutMain}
