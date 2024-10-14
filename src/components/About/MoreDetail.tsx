@@ -71,7 +71,7 @@ function MoreDetail() {
   return (
     <section className="mt-[5vh]">
       <div className="flex flex-col md:flex-row items-end gap-6 md:pl-[8vw]">
-        <div className="flex-1 object-cover overflow-hidden">
+        <div className="w-full flex-1 object-cover overflow-hidden">
           <Image
             src={AboutImage1}
             alt="self portrait"

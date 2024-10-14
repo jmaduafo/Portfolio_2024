@@ -82,7 +82,7 @@ function Intro() {
               </motion.h1>
             </div>
           </div>
-          <div className="min-h-[70vh] w-full sm:w-[80%] lg:w-[60%] mt-[-3.3vh] md:mt-[-5vh] lg:mt-[-6vh]">
+          <div className="min-h-[30vh] lg:min-h-[65vh] w-full sm:w-[80%] lg:w-[60%] mt-[-3.3vh] md:mt-[-5vh] lg:mt-[-6vh]">
             <motion.div
               variants={reveal}
               initial="initial"

@@ -26,7 +26,7 @@ function Closing() {
   };
 
   return (
-    <section className="my-[4vh] md:my-[8vh]">
+    <section className="mt-[8vh] mb-[4vh] sm:my-[5vh] md:my-[8vh]">
       <Header3 phrase={line1} className="indent-[10%]" />
       <Header3 phrase={line2} />
       <Header3 phrase={line3} />
