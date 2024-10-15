@@ -56,7 +56,7 @@ const ServicesList = forwardRef<HTMLDivElement, List>(({ services }, ref) => {
             })}
           </div>
           <div className="mt-4">
-            <p className="text-[16px] 2xl:text-[26px]">
+            <p className="text-[16px] 2xl:text-[26px] text-lightText80 dark:text-darkText80">
               {services.description}
             </p>
           </div>

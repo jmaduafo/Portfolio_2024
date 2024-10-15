@@ -60,7 +60,7 @@ function Services() {
 
   useGSAP(() => {
     gsap.from(topImage1.current, {
-      y: 95,
+      y: "40%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: serviceDiv.current,
@@ -70,7 +70,7 @@ function Services() {
       },
     });
     gsap.from(topImage2.current, {
-      y: 75,
+      y: "50%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: serviceDiv.current,
@@ -80,7 +80,7 @@ function Services() {
       },
     });
     gsap.from(bottomImage1.current, {
-      y: -85,
+      y:"-40%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: serviceDiv.current,
@@ -90,7 +90,7 @@ function Services() {
       },
     });
     gsap.from(bottomImage2.current, {
-      y: -70,
+      y: "-45%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: serviceDiv.current,
@@ -100,7 +100,7 @@ function Services() {
       },
     });
     gsap.from(bottomImage3.current, {
-      y: -80,
+      y: "-35%",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: serviceDiv.current,
