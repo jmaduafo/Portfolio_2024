@@ -34,7 +34,7 @@ const ServicesList = forwardRef<HTMLDivElement, List>(({ services }, ref) => {
       className={`px-3 py-8 ${
         services.id !== allServices.length &&
         "border-b-[1px] border-b-lightText20 dark:border-b-darkText20"
-      } flex flex-col h-[55vh]`}
+      } flex flex-col h-[65vh] md:h-[55vh]`}
     >
       <div className="flex items-center gap-8">
         <StarSpin classNameSize="w-[36px] 2xl:w-[50px]" />
