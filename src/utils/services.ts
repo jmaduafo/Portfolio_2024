@@ -15,6 +15,7 @@ const services = [
             "react.js",
             "next.js",
             "tailwind",
+            "SEO",
             "GSAP",
             "Framer Motion",
             "Lenis Scroll",
