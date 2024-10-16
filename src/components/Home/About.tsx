@@ -83,7 +83,7 @@ function About() {
         <Header3 phrase={bottomline2} className="pl-[15vw]"/>
         </div>
       </div>
-      <div className="mt-10 flex flex-col-reverse md:flex-row gap-y-4 md:gap-y-0 md:max-h-screen">
+      <div className="mt-10 flex flex-col-reverse md:flex-row md:items-center gap-y-4 md:gap-y-0">
         <div className="md:flex-1 object-cover object-center overflow-hidden">
           <Image
             src={Image3}
@@ -95,7 +95,7 @@ function About() {
         </div>
         <div className="md:flex-1 flex justify-center items-center">
           <div
-            className="w-full h-full md:w-[70%] md:h-[80%] object-cover object-left-top overflow-hidden"
+            className="w-full h-full md:w-[70%] object-cover object-left-top overflow-hidden"
             ref={image2Div}
           >
             <Image
