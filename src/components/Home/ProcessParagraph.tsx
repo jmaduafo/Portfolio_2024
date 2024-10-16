@@ -11,7 +11,7 @@ function ProcessParagraph() {
     <section className="my-[15vh]">
       <div className="w-[90%] mx-auto md:ml-auto md:mr-0">
         <div className="flex items-start gap-[8vw]">
-          <p>My mission</p>
+          <p className="text-[12.5px] sm:text-[16px]">My mission</p>
           <div>
             <Header3 phrase={topline1} />
             <Header3 phrase={topline2} />

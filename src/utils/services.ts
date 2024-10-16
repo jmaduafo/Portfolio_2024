@@ -56,7 +56,6 @@ const services = [
             "Figma",
             "Artboard",
             "Brand guidelines",
-            "Brand"
         ],
         description: "Though I don't specialize in brand design, I have gained an avid interest in it, stemmed from my love of creating things. I like to find more ways to build on my skillset, even if that's outside of coding. I believe that it's important to be able to market a product in such a way that customers would be intrigued and encouraged to invest in that product, ensuring that the text, images, and mockups for the brand flow together.",
         image: Image4

@@ -34,7 +34,7 @@ const ServicesList = forwardRef<HTMLDivElement, List>(({ services }, ref) => {
       className={`px-3 py-8 ${
         services.id !== allServices.length &&
         "border-b-[1px] border-b-lightText20 dark:border-b-darkText20"
-      } flex flex-col h-[65vh] md:h-[55vh]`}
+      } flex flex-col h-full md:h-[70vh]`}
     >
       <div className="flex items-center gap-8">
         <StarSpin classNameSize="w-[36px] 2xl:w-[50px]" />
@@ -44,7 +44,7 @@ const ServicesList = forwardRef<HTMLDivElement, List>(({ services }, ref) => {
           {services.title}
         </h6>
       </div>
-      <div className="mt-auto xs:pl-[10vw] md:pl-0">
+      <div className="mt-16 md:mt-auto xs:pl-[10vw] md:pl-0">
         <div className="w-full sm:w-[85%] md:w-full xl:w-[80%]">
           <div className="flex flex-wrap gap-x-3 gap-y-2">
             {services.technologies.map((tech) => {
