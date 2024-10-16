@@ -15,6 +15,10 @@ function Footer() {
       href: "mailto:jmaduafokwa@hotmail.com",
     },
     {
+      title: "github",
+      href: "https://github.com/jmaduafo",
+    },
+    {
       title: "linkedIn",
       href: "https://www.linkedin.com/in/jasmine-maduafokwa-48070a180/",
     },
