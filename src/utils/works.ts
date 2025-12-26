@@ -1,19 +1,21 @@
 import { Projects } from "@/types/type";
 
-import ElysianMiddle1 from "../../public/images/elysian/imagesMiddle1.jpg";
-import ElysianMiddle2 from "../../public/images/elysian/imagesMiddle2.jpg";
-import ElysianMiddle3 from "../../public/images/elysian/imagesMiddle3.jpg";
-import ElysianOutro1 from "../../public/images/elysian/imagesOutro1.jpg";
-import ElysianOutro2 from "../../public/images/elysian/imagesOutro2.jpg";
-import ElysianOutro3 from "../../public/images/elysian/imagesOutro3.jpg";
-import ElysianIntro from "../../public/images/elysian/introImage.jpg";
-import ElysianLandscape1 from "../../public/images/elysian/imageLandscape1.png";
-import ElysianLandscape2 from "../../public/images/elysian/imagesLandscape2.jpg";
-import ElysianLandscape3 from "../../public/images/elysian/imagesLandscape3.jpg";
-import ElysianLandscape4 from "../../public/images/elysian/imagesLandscape4.jpg";
-import ElysianLandscape5 from "../../public/images/elysian/imagesLandscape5.png";
-import ElysianLandscape6 from "../../public/images/elysian/imagesLandscape6.png";
-import ElysianLandscape7 from "../../public/images/elysian/imagesLandscape7.jpg";
+
+import TechstarMain from "../../public/images/techstar/Cover.jpg";
+import TechstarIntro from "../../public/images/techstar/Top cover.jpg";
+import TechstarLandscape1 from "../../public/images/techstar/Techstar 1.jpg";
+import TechstarLandscape2 from "../../public/images/techstar/Techstar 2.jpg";
+import TechstarLandscape3 from "../../public/images/techstar/Techstar 3.jpg";
+import TechstarLandscape4 from "../../public/images/techstar/Techstar 4.jpg";
+import TechstarLandscape5 from "../../public/images/techstar/Techstar 5.jpg";
+import TechstarLandscape6 from "../../public/images/techstar/Techstar 6.jpg";
+import TechstarLandscape7 from "../../public/images/techstar/Techstar 7.jpg";
+import TechstarLandscape8 from "../../public/images/techstar/Techstar 8.jpg";
+import TechstarLandscape9 from "../../public/images/techstar/Techstar 9.jpg";
+import TechstarPortrait1 from "../../public/images/techstar/Techstar 10.jpg";
+import TechstarPortrait2 from "../../public/images/techstar/Techstar 11.jpg";
+import TechstarPortrait3 from "../../public/images/techstar/Techstar 12.jpg";
+import TechstarPortrait4 from "../../public/images/techstar/Techstar 13.jpg";
 
 import SylvanMiddle1 from "../../public/images/sylvan/imagesMiddle1.jpg";
 import SylvanMiddle2 from "../../public/images/sylvan/imagesMiddle2.jpg";
@@ -64,9 +66,9 @@ import LofiLandscape6 from "../../public/images/lofi_train/imagesLandscape6.gif"
 
 const projects = [
   {
-    title: "Elysian",
-    alt: "a couple laughing and enjoying each other's company",
-    year: "2024",
+    title: "Techstar",
+    alt: "techstar poster",
+    year: "2025",
     roles: ["frontend", "backend", "creative direction", "web design"],
     technologies: [
       "Next.js",
@@ -74,66 +76,79 @@ const projects = [
       "Supabase",
       "Tailwind",
       "Shadcn UI",
-      "Chart.js",
-      "Framer Motion",
-      "GSAP",
+      "Recharts",
       "Figma",
     ],
-    github: "jmaduafo/Rate-Date",
-    website: "https://rate-date-one.vercel.app/",
-    duration: "1.5 months",
+    github: "jmaduafo/tech_star_supa",
+    website: "https://tech-star-supa.vercel.app/",
+    duration: "2 months",
     description1: [
-      "Whether it's a romantic evening or a casual meetup, keep track of your experiences and make every date count! Elysian is a comprehensive web application designed for users to record their romantic and non-romantic dates, schedule future meetups, and plan dates effortlessly. Featuring interactive visual charts to showcase dating activity, Elysians helps users track their social life and stay organized. Additionally, users can share date ideas and post their success or horror dating stories, fostering a community of shared experiences and creativity.",
-      "I spearheaded the design, frontend, and backend development of Elysian, tackling each problem systematically and breaking tasks into manageable pieces. This methodical approach ensured that each feature was developed efficiently and effectively, from creating a seamless user interface with engaging design elements to implementing backend functionalities for data management. Throughout the project, I relished the challenges and enjoyed the creative process, ultimately delivering a dynamic and user-friendly web application.",
+      "The finance management application I built is a lightweight, intuitive tool designed to simplify the way contractor payments and financial records are managed. It automates manual data entry, organizes contracts and expenses, and generates real-time visual reports to support clearer decision-making. By combining responsive design and streamlined interactions, the app provides a user-friendly dashboard that makes complex financial data more accessible and actionable for users of varying technical backgrounds.",
+      "I conceptualized and developed the application using Next.js, TypeScript, Supabase, Tailwind CSS, and Recharts to ensure a modern, scalable, and responsive experience. Although my role as an IT Analyst did not require programming, I identified a workflow bottleneck in our team’s manual processes and took the initiative to build this solution. The project strengthened my full-stack development skills and deepened my understanding of user-centered design, while significantly reducing the time spent on administrative tasks and improving operational transparency across the team.",
     ],
     description2: [
-      "A few problems that I faced while working on this project stemmed from utilizing Supabase, a backend-as-a-service, for the first time. I had some run-ins with the CRUD rules, and it took some time for me to figure out why data wasn't coming through from the backend, sometimes even after I had outlined the rules correctly. It also took some trial-and-error to master Supabase storage and how to appropriately categorize the images by user. The project was challenging (and fun) to code, but I also didn't hesitate to be free and creative with it. I approached the creation of the site with an anthropologist mindset, seeking to encourage the user to think about their dating habits and possibly why they date the way they do.",
-      "",
+      
     ],
     size: "w-[10vw]",
     position: "md:justify-end",
     marginBottom: "mb-[20vh]",
     // padding: "translateX-[8vw]",
-    mainImage: ElysianMiddle3,
-    introImage: ElysianIntro,
+    mainImage: TechstarMain,
+    introImage: TechstarIntro,
     imagesLandscape: [
       {
-        image: ElysianLandscape1,
-        alt: "logo with three white rounded stripes",
+        image: TechstarLandscape1,
+        alt: "techstar billboard",
       },
       {
-        image: ElysianLandscape2,
-        alt: "logo with a couple under the lights beside it",
+        image: TechstarLandscape2,
+        alt: "techstar poster",
       },
       {
-        image: ElysianLandscape3,
-        alt: "website designs displayed at an angle",
+        image: TechstarLandscape3,
+        alt: "techstar logo with office background",
       },
       {
-        image: ElysianLandscape4,
-        alt: "elysian profile page",
+        image: TechstarLandscape4,
+        alt: "techstar shirt designs",
       },
       {
-        image: ElysianLandscape5,
-        alt: "elysian sign up page",
+        image: TechstarLandscape5,
+        alt: "techstar dashboard",
       },
       {
-        image: ElysianLandscape6,
-        alt: "elysian create a date page on a desktop computer",
+        image: TechstarLandscape6,
+        alt: "techstar payments page",
       },
       {
-        image: ElysianLandscape7,
-        alt: "elysian mobile view for profile and dashboard",
+        image: TechstarLandscape7,
+        alt: "techstar login",
+      },
+      {
+        image: TechstarLandscape8,
+        alt: "techstar mobile view for profile and projects",
+      },
+      {
+        image: TechstarLandscape9,
+        alt: "techstar contracts page",
       },
     ],
     imagesPortrait: [
       {
-        image: ElysianOutro2,
-        alt: "logo and title of brand with couple behind",
+        image: TechstarPortrait1,
+        alt: "hand mockup on techstar reports page",
       },
       {
-        image: ElysianOutro3,
-        alt: "elysian hero section of landing page",
+        image: TechstarPortrait2,
+        alt: "techstar lanyard",
+      },
+      {
+        image: TechstarPortrait3,
+        alt: "techstar app mobile logo",
+      },
+      {
+        image: TechstarPortrait4,
+        alt: "techstar desktop contractors page",
       },
     ],
   },
