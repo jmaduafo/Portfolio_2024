@@ -30,7 +30,7 @@ export const items : Resume[] = [
     category: "Experience",
     list: [
       {
-        institution: "Cepstar7",
+        institution: "Tecon Oil Services Limited",
         duration: "2024",
         primary_qualification: null,
         primary_concentration: null,
@@ -40,7 +40,7 @@ export const items : Resume[] = [
         location: "Lagos, Nigeria",
       },
       {
-        institution: "Baud Labs",
+        institution: "Baud Labs Limited",
         duration: "2023",
         primary_qualification: null,
         primary_concentration: null,
